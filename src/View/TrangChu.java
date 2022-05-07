@@ -15,7 +15,6 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel_KhachHang = new javax.swing.JPanel();
         jTabbedPaneNhanVien = new javax.swing.JTabbedPane();
         jPanelDoiTac = new javax.swing.JPanel();
-        jPanelDangXuat = new javax.swing.JPanel();
         jTabbedPaneHoaDon = new javax.swing.JTabbedPane();
         jPanelHoaDon326 = new javax.swing.JPanel();
         jScrollPane10 = new javax.swing.JScrollPane();
@@ -60,6 +59,7 @@ public class TrangChu extends javax.swing.JFrame {
         txtMaHoaDon_ChiTietHoaDon326 = new javax.swing.JTextField();
         jLabel57 = new javax.swing.JLabel();
         txtSoLuong_ChiTietHoaDon326 = new javax.swing.JTextField();
+        jPanelDangXuat = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -96,19 +96,6 @@ public class TrangChu extends javax.swing.JFrame {
         );
 
         tbljpanel.addTab("Đối Tác", new javax.swing.ImageIcon(getClass().getResource("/img/doitac.png")), jPanelDoiTac); // NOI18N
-
-        javax.swing.GroupLayout jPanelDangXuatLayout = new javax.swing.GroupLayout(jPanelDangXuat);
-        jPanelDangXuat.setLayout(jPanelDangXuatLayout);
-        jPanelDangXuatLayout.setHorizontalGroup(
-            jPanelDangXuatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1181, Short.MAX_VALUE)
-        );
-        jPanelDangXuatLayout.setVerticalGroup(
-            jPanelDangXuatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 583, Short.MAX_VALUE)
-        );
-
-        tbljpanel.addTab("Đăng Xuất", new javax.swing.ImageIcon(getClass().getResource("/img/thoat.png")), jPanelDangXuat); // NOI18N
 
         jPanelHoaDon326.setBackground(new java.awt.Color(153, 204, 255));
         jPanelHoaDon326.setPreferredSize(new java.awt.Dimension(1176, 581));
@@ -528,6 +515,19 @@ public class TrangChu extends javax.swing.JFrame {
         jTabbedPaneHoaDon.addTab("Phiếu Mua Hàng", jPanelHoaDon326);
 
         tbljpanel.addTab("Hoá Đơn", new javax.swing.ImageIcon(getClass().getResource("/img/hoadon.png")), jTabbedPaneHoaDon); // NOI18N
+
+        javax.swing.GroupLayout jPanelDangXuatLayout = new javax.swing.GroupLayout(jPanelDangXuat);
+        jPanelDangXuat.setLayout(jPanelDangXuatLayout);
+        jPanelDangXuatLayout.setHorizontalGroup(
+            jPanelDangXuatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1181, Short.MAX_VALUE)
+        );
+        jPanelDangXuatLayout.setVerticalGroup(
+            jPanelDangXuatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 583, Short.MAX_VALUE)
+        );
+
+        tbljpanel.addTab("Đăng Xuất", new javax.swing.ImageIcon(getClass().getResource("/img/thoat.png")), jPanelDangXuat); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
 
