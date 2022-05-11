@@ -61,8 +61,6 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         tblSanPham_LoaiSanPham_235 = new javax.swing.JTable();
-        btnXoaSP_LoaiSanPham_235 = new javax.swing.JButton();
-        btnXoaSanPham_LoaiSanPham_235 = new javax.swing.JButton();
         jLabel74 = new javax.swing.JLabel();
         jLabel73 = new javax.swing.JLabel();
         jPanelPhieuNhap235 = new javax.swing.JPanel();
@@ -811,24 +809,6 @@ public class TrangChu extends javax.swing.JFrame {
         });
         jScrollPane5.setViewportView(tblSanPham_LoaiSanPham_235);
 
-        btnXoaSP_LoaiSanPham_235.setBackground(new java.awt.Color(255, 153, 153));
-        btnXoaSP_LoaiSanPham_235.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnXoaSP_LoaiSanPham_235.setText("Xóa Nếu Rỗng");
-        btnXoaSP_LoaiSanPham_235.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnXoaSP_LoaiSanPham_235ActionPerformed(evt);
-            }
-        });
-
-        btnXoaSanPham_LoaiSanPham_235.setBackground(new java.awt.Color(153, 51, 255));
-        btnXoaSanPham_LoaiSanPham_235.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        btnXoaSanPham_LoaiSanPham_235.setText("Thử Xóa Sản Phẩm Trước");
-        btnXoaSanPham_LoaiSanPham_235.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnXoaSanPham_LoaiSanPham_235ActionPerformed(evt);
-            }
-        });
-
         jLabel74.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jLabel74.setForeground(new java.awt.Color(0, 51, 255));
         jLabel74.setText(" Sản Phẩm");
@@ -840,16 +820,12 @@ public class TrangChu extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(77, 77, 77)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnXoaSP_LoaiSanPham_235, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnXoaSanPham_LoaiSanPham_235, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(278, 278, 278)
-                        .addComponent(jLabel74)))
-                .addContainerGap(115, Short.MAX_VALUE))
+                        .addComponent(jLabel74))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(392, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -857,13 +833,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel74)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(btnXoaSP_LoaiSanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41)
-                        .addComponent(btnXoaSanPham_LoaiSanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -1677,19 +1647,20 @@ public class TrangChu extends javax.swing.JFrame {
                                 .addComponent(lblLoiMaKhachHang_KhachHang5, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel_KhachHang231Layout.createSequentialGroup()
                                 .addGap(24, 24, 24)
-                                .addComponent(txtDiaChi_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel_KhachHang231Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtTenKhachHang_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblSDT_KhachHang)
-                                    .addComponent(txtSDT_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblTenKhachHang_KhachHang)
-                                    .addComponent(btnSua_KhachHang231)))))
+                                .addComponent(txtDiaChi_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(5, 5, 5)
+                        .addGroup(jPanel_KhachHang231Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtTenKhachHang_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblSDT_KhachHang)
+                            .addComponent(txtSDT_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblTenKhachHang_KhachHang)))
                     .addGroup(jPanel_KhachHang231Layout.createSequentialGroup()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnThem_KhachHang231)
-                        .addGap(57, 57, 57)))
+                        .addGap(12, 12, 12)
+                        .addComponent(btnSua_KhachHang231)
+                        .addGap(6, 6, 6)))
                 .addGroup(jPanel_KhachHang231Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel_KhachHang231Layout.createSequentialGroup()
                         .addGroup(jPanel_KhachHang231Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1700,7 +1671,7 @@ public class TrangChu extends javax.swing.JFrame {
                                     .addComponent(cbbLoaiKhachHang_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel_KhachHang231Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane25, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane25, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
                                     .addGroup(jPanel_KhachHang231Layout.createSequentialGroup()
                                         .addComponent(jLabel85)
                                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -1718,8 +1689,9 @@ public class TrangChu extends javax.swing.JFrame {
                                         .addComponent(rbtnNu_KhachHang231)))))
                         .addGap(46, 46, 46))
                     .addGroup(jPanel_KhachHang231Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
                         .addComponent(btnXoa_KhachHang231)
-                        .addGap(18, 18, 18)
+                        .addGap(11, 11, 11)
                         .addComponent(btnReset_KhachHang231)
                         .addGap(21, 21, 21))))
             .addGroup(jPanel_KhachHang231Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3504,14 +3476,6 @@ public class TrangChu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnXoa_LoaiSanPham_235ActionPerformed
 
-    private void btnXoaSP_LoaiSanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaSP_LoaiSanPham_235ActionPerformed
-
-    }//GEN-LAST:event_btnXoaSP_LoaiSanPham_235ActionPerformed
-
-    private void btnXoaSanPham_LoaiSanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaSanPham_LoaiSanPham_235ActionPerformed
-
-    }//GEN-LAST:event_btnXoaSanPham_LoaiSanPham_235ActionPerformed
-
     private void jPanelLoaiSanPhamComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jPanelLoaiSanPhamComponentAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanelLoaiSanPhamComponentAdded
@@ -3733,8 +3697,6 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JButton btnThem_SanPham_235;
     private javax.swing.JButton btnThem_TaiKhoan_361;
     private javax.swing.JButton btnXoaNeuRong_ChucVu_361;
-    private javax.swing.JButton btnXoaSP_LoaiSanPham_235;
-    private javax.swing.JButton btnXoaSanPham_LoaiSanPham_235;
     private javax.swing.JButton btnXoaXTPN_PhieuNhap_235;
     private javax.swing.JButton btnXoa_ChiTietHoaDon326;
     private javax.swing.JButton btnXoa_DoiTac231;
