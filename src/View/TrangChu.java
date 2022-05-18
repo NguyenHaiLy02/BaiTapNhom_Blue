@@ -3182,6 +3182,12 @@ public class TrangChu extends javax.swing.JFrame {
 
         tbljpanel.addTab("Hoá Đơn", new javax.swing.ImageIcon(getClass().getResource("/img/hoadon.png")), jTabbedPaneHoaDon); // NOI18N
 
+        jPanelDangXuat.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jPanelDangXuatComponentShown(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelDangXuatLayout = new javax.swing.GroupLayout(jPanelDangXuat);
         jPanelDangXuat.setLayout(jPanelDangXuatLayout);
         jPanelDangXuatLayout.setHorizontalGroup(
@@ -3651,6 +3657,13 @@ public class TrangChu extends javax.swing.JFrame {
     private void jPanelTaiKhoan1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelTaiKhoan1ComponentShown
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanelTaiKhoan1ComponentShown
+
+    private void jPanelDangXuatComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelDangXuatComponentShown
+        // TODO add your handling code here:
+        DangNhap dn = new DangNhap();
+        dn.show();
+        this.dispose();
+    }//GEN-LAST:event_jPanelDangXuatComponentShown
 
     public static void main(String args[]) {
 
