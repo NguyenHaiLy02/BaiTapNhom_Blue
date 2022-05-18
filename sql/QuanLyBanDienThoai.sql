@@ -459,12 +459,11 @@ SET IDENTITY_INSERT [dbo].[PhieuNhap] OFF
 SET IDENTITY_INSERT [dbo].[Quyen] ON 
 
 INSERT [dbo].[Quyen] ([MaQuyen], [TenQuyen], [ChuThich]) VALUES (1, N'Giám Đốc', N'')
-INSERT [dbo].[Quyen] ([MaQuyen], [TenQuyen], [ChuThich]) VALUES (2, N'Thu Ngân', N'')
-INSERT [dbo].[Quyen] ([MaQuyen], [TenQuyen], [ChuThich]) VALUES (3, N'Kế Toán', N'')
-INSERT [dbo].[Quyen] ([MaQuyen], [TenQuyen], [ChuThich]) VALUES (4, N'Bảo Vệ', N'')
-INSERT [dbo].[Quyen] ([MaQuyen], [TenQuyen], [ChuThich]) VALUES (5, N'Lễ tân', N'')
+INSERT [dbo].[Quyen] ([MaQuyen], [TenQuyen], [ChuThich]) VALUES (2, N'Kế Toán', N'')
+INSERT [dbo].[Quyen] ([MaQuyen], [TenQuyen], [ChuThich]) VALUES (3, N'Thu Ngân', N'')
+INSERT [dbo].[Quyen] ([MaQuyen], [TenQuyen], [ChuThich]) VALUES (4, N'Lễ tân', N'')
+INSERT [dbo].[Quyen] ([MaQuyen], [TenQuyen], [ChuThich]) VALUES (5, N'Bảo Vệ', N'')
 INSERT [dbo].[Quyen] ([MaQuyen], [TenQuyen], [ChuThich]) VALUES (6, N'Quản lý', N'')
-
 INSERT [dbo].[Quyen] ([MaQuyen], [TenQuyen], [ChuThich]) VALUES (7, N'New', N'')
 SET IDENTITY_INSERT [dbo].[Quyen] OFF
 SET IDENTITY_INSERT [dbo].[SanPham] ON 
