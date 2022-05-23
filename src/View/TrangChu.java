@@ -3614,6 +3614,47 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void tblNhanVien_NhanVien_361MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblNhanVien_NhanVien_361MouseClicked
         // TODO add your handling code here:
+        int viTriDongVuaBam = tblNhanVien_NhanVien_361.getSelectedRow();
+        txtMaNhanVien_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 1).toString());
+        txtTenNhanVien_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 2).toString());
+        txtDiaChi_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 7).toString());
+        txtSoDT_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 8).toString());
+        txtChuThich_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 9).toString());
+        setSelectedCombobox(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 6).toString(), cbbChucVu_NhanVien_361);
+        String gioitinh = tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 4).toString();
+        if (gioitinh.equals("Nam")) {
+            rbtnNam_NhanVien_361.setSelected(true);
+            rbtnNu_NhanVien_361.setSelected(false);
+        } else {
+            rbtnNu_NhanVien_361.setSelected(true);
+            rbtnNam_NhanVien_361.setSelected(false);
+        }
+        String ngaysinh = tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 3).toString();
+        System.out.println("" + ngaysinh);
+        String strngay, strthang, strnam;
+        strngay = ngaysinh.substring(8, 10);
+        strthang = ngaysinh.substring(5, 7);
+        strnam = ngaysinh.substring(0, 4);
+        int ngay, thang, nam;
+        ngay = Integer.valueOf(strngay);
+        thang = Integer.valueOf(strthang);
+        nam = Integer.valueOf(strnam);
+        cbbNgaySinh_NhanVien_361.setSelectedItem(String.valueOf(ngay));
+        cbbThangSinh_NhanVien_361.setSelectedItem(String.valueOf(thang));
+        cbbNamSinh_NhanVien_361.setSelectedItem(String.valueOf(nam));
+        String ngayVaoLam = tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 5).toString();
+        System.out.println("" + ngayVaoLam);
+        String strngayv, strthangv, strnamv;
+        strngayv = ngayVaoLam.substring(8, 10);
+        strthangv = ngayVaoLam.substring(5, 7);
+        strnamv = ngayVaoLam.substring(0, 4);
+        int ngayv, thangv, namv;
+        ngayv = Integer.valueOf(strngayv);
+        thangv = Integer.valueOf(strthangv);
+        namv = Integer.valueOf(strnamv);
+        cbbNgayVaoLam_NhanVien_361.setSelectedItem(String.valueOf(ngayv));
+        cbbThangVaoLam_NhanVien_361.setSelectedItem(String.valueOf(thangv));
+        cbbNamVaoLam_NhanVien_361.setSelectedItem(String.valueOf(namv));
     }//GEN-LAST:event_tblNhanVien_NhanVien_361MouseClicked
 
     private void btnThem_NhanVien_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_NhanVien_361ActionPerformed
@@ -3654,10 +3695,16 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void jPanelNhanVien1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelNhanVien1ComponentShown
         // TODO add your handling code here:
+        layDuLieuNhanVien();
     }//GEN-LAST:event_jPanelNhanVien1ComponentShown
 
     private void tblChucVu_ChucVu_361MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblChucVu_ChucVu_361MouseClicked
         // TODO add your handling code here:
+        int viTriDongVuaBam = tblChucVu_ChucVu_361.getSelectedRow();
+        txtMaChucVu_ChucVu_361.setText(tblChucVu_ChucVu_361.getValueAt(viTriDongVuaBam, 1).toString());
+        txtTenChucVu_ChucVu_361.setText(tblChucVu_ChucVu_361.getValueAt(viTriDongVuaBam, 2).toString());
+        txtChuThich_ChucVu_361.setText(tblChucVu_ChucVu_361.getValueAt(viTriDongVuaBam, 3).toString());
+        layDuLieuNhanVienofChucVu(txtMaChucVu_ChucVu_361.getText());
     }//GEN-LAST:event_tblChucVu_ChucVu_361MouseClicked
 
     private void btnThem_ChucVu_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_ChucVu_361ActionPerformed
@@ -3682,6 +3729,8 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void jPanelChucVu1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelChucVu1ComponentShown
         // TODO add your handling code here:
+        layDuLieuChucVu();
+        
     }//GEN-LAST:event_jPanelChucVu1ComponentShown
 
     private void tblTaiKhoan_TaiKhoan_361MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblTaiKhoan_TaiKhoan_361MouseClicked
@@ -3702,6 +3751,9 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void jPanelTaiKhoan1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelTaiKhoan1ComponentShown
         // TODO add your handling code here:
+        layDuLieuTaiKhoan();
+        cbbQuyen_TaiKhoan_361.setModel(LayDuLieucbb("Quyen", "TenQuyen", "MaQuyen"));
+        cbbTenNhanVien_TaiKhoan_361.setModel(LayDuLieucbb("NhanVien", "TenNhanVien", "MaNhanVien"));
     }//GEN-LAST:event_jPanelTaiKhoan1ComponentShown
 
     private void jPanelDangXuatComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelDangXuatComponentShown
@@ -3768,7 +3820,113 @@ public class TrangChu extends javax.swing.JFrame {
             }
         }
     }
-    
+    public void layDuLieuNhanVien() {
+        String cautruyvan = "";
+        cautruyvan = "select * from NhanVien,ChucVu "
+                + "where NhanVien.ChucVu=ChucVu.MaChucVu";
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        Object[] obj = new Object[]{"STT", "Mã Nhân Viên", "Tên Nhân Viên", "Ngày Sinh", "Giới Tính", "Ngày Vào Làm", "Chức Vụ", "Dịa Chỉ", "SDT", "Chú Thích"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblNhanVien_NhanVien_361.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                c++;
+                Object[] item = new Object[10];
+                item[0] = c;
+                item[1] = rs.getInt("MaNhanVien");
+                item[2] = rs.getString("TenNhanVien");
+                item[3] = rs.getString("NgaySinh");
+                if (rs.getInt("GioiTinh") == 1) {
+                    item[4] = "Nam";
+                } else {
+                    item[4] = "Nữ";
+                }
+                item[5] = rs.getString("NgayVaoLam");
+                item[6] = rs.getString("ChucVu");
+                item[7] = rs.getString("DiaChi");
+                item[8] = rs.getString("SoDT");
+                item[9] = rs.getString("GhiChu");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+
+    public void layDuLieuTaiKhoan() {
+        String cautruyvan = "";
+        cautruyvan = "select ID, NhanVien.TenNhanVien ,Users.TenDangNhap,Users.Password"
+                + ",Quyen.TenQuyen,Users.ChuThich  from Users,NhanVien,Quyen "
+                + "where Users.MaNhanVien=NhanVien.MaNhanVien and Users.Quyen=Quyen.MaQuyen";
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        Object[] obj = new Object[]{"STT", "ID", "Nhân Viên", "Tên Đăng Nhập", "Password", "Quyền", "Chú Thích"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblTaiKhoan_TaiKhoan_361.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                c++;
+                Object[] item = new Object[7];
+                item[0] = c;
+                item[1] = rs.getString("ID");
+                item[2] = rs.getString("TenNhanVien");
+                item[3] = rs.getString("TenDangNhap");
+                item[4] = rs.getString("Password");
+                item[5] = rs.getString("TenQuyen");
+                item[6] = rs.getString("ChuThich");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+    public void layDuLieuChucVu() {
+        String cautruyvan = "";
+        cautruyvan = "select * from ChucVu ";
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        Object[] obj = new Object[]{"STT", "Mã ", "Tên Chức Vụ", "Ghi Chú"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblChucVu_ChucVu_361.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                c++;
+                Object[] item = new Object[4];
+                item[0] = c;
+                item[1] = rs.getInt("MaChucVu");
+                item[2] = rs.getString("TenChucVu");
+                item[3] = rs.getString("GhiChu");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+
+    public void layDuLieuNhanVienofChucVu(String MaChucVu) {
+        String cautruyvan = "";
+        cautruyvan = "select * from NhanVien,ChucVu "
+                + "where NhanVien.ChucVu=ChucVu.MaChucVu and ChucVu=" + MaChucVu;
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        Object[] obj = new Object[]{"STT", "Mã Nhân Viên", "Tên Nhân Viên", "Chức Vụ"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblNhanVien_ChucVu_361.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                c++;
+                Object[] item = new Object[4];
+                item[0] = c;
+                item[1] = rs.getInt("MaNhanVien");
+                item[2] = rs.getString("TenNhanVien");
+                item[3] = rs.getString("TenChucVu");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
     
     public static void main(String args[]) {
 
