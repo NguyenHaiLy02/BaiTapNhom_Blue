@@ -1,10 +1,13 @@
 package View;
 
 import Main.main;
+import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class TrangChu extends javax.swing.JFrame {
@@ -3448,13 +3451,14 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void cbbMaLoaiSanPham_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbMaLoaiSanPham_SanPham_235ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_cbbMaLoaiSanPham_SanPham_235ActionPerformed
 
     private void tblSanPham_235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblSanPham_235MouseClicked
         int viTriDongVuaBam = tblSanPham_235.getSelectedRow();
         
         setSelectedCombobox(tblSanPham_235.getValueAt(viTriDongVuaBam, 3).toString(), cbbMaLoaiSanPham_SanPham_235);
-        setSelectedCombobox(tblSanPham_235.getValueAt(viTriDongVuaBam, 6).toString(), cbbHangSanXuat_SanPham_235    );
+        setSelectedCombobox(tblSanPham_235.getValueAt(viTriDongVuaBam, 6).toString(), cbbHangSanXuat_SanPham_235 );
         txtMaSanPham_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam, 1).toString());
         txtTenSanPham_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam, 2).toString());
         txtGiaNhap_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam, 4).toString());
@@ -3485,11 +3489,56 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_txtTimKiem_SanPham235KeyReleased
 
     private void btnThem_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_SanPham_235ActionPerformed
+        String TenSanPham, MaLoaiSanPham, GiaNhap, GiaBan, HangSanXuat, TonKho, TrangThai, Image, ChuThich;
+        TenSanPham = txtTenSanPham_SanPham_235.getText();
+        MaLoaiSanPham = GetCbbSelected(cbbMaLoaiSanPham_SanPham_235);
+        GiaNhap = txtGiaNhap_SanPham_235.getText();
+        GiaBan = txtGiaBan_SanPham_235.getText();
+        HangSanXuat = GetCbbSelected(cbbHangSanXuat_SanPham_235);
+        TonKho = txtTonKho_SanPham_235.getText();
+        TrangThai = "1";
+        ChuThich = txtChuThich_SanPham_235.getText();
+        //Image = txtImg_SanPham_.getText();
 
+        String cautruyvan = "insert into SanPham "
+                + "values(N'" + TenSanPham + "'," + MaLoaiSanPham + "," + HangSanXuat + "," + GiaNhap + "," + GiaBan + "," + TonKho + "," + TrangThai  + "',N'" + ChuThich + "')";
+        System.out.println(cautruyvan);
+        boolean kiemtra = KiemTraNhanSanPham(0);
+        if (kiemtra) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+            System.out.println("Đã Thêm Thành Công");
+        } else {
+              System.out.println("Thất Bại");
+        }
+        LayDuLieuSanPham("1");
     }//GEN-LAST:event_btnThem_SanPham_235ActionPerformed
 
     private void bntSua_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSua_SanPham_235ActionPerformed
+        String MaSanPham, TenSanPham, LoaiSanPham, GiaNhap, GiaBan, HangSanXuat, TonKho, TrangThai, Image, ChuThich;
+        MaSanPham = txtMaSanPham_SanPham_235.getText();
+        TenSanPham = txtTenSanPham_SanPham_235.getText();
+        LoaiSanPham = GetCbbSelected(cbbMaLoaiSanPham_SanPham_235);
+        GiaNhap = txtGiaNhap_SanPham_235.getText();
+        GiaBan = txtGiaBan_SanPham_235.getText();
+        HangSanXuat = GetCbbSelected(cbbHangSanXuat_SanPham_235);
+        TonKho = txtTonKho_SanPham_235.getText();
+        TrangThai = "1";
+        //Image = txtImg_SanPham.getText();
 
+        ChuThich = txtChuThich_SanPham_235.getText();
+        String cautruyvan = "update  SanPham set "
+                + "TenSanPham =" + "N'" + TenSanPham + "',LoaiSanPham=" + LoaiSanPham + ",HangSanXuat="
+                + HangSanXuat + ",GiaNhap=" + GiaNhap + ",GiaBan=" + GiaBan + ",TonKho=" + TonKho
+                + ",TrangThai=" + TrangThai  + "',ChuThich =N'" + ChuThich + "' where MaSanPham=" + MaSanPham;
+        System.out.println(cautruyvan);
+        boolean kiemtra = KiemTraNhanSanPham(1);
+        if (kiemtra) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+            System.out.println("Đã Sửa Thành Công Sản Phẩm");
+        } else {
+             System.out.println("Thất Bại");
+        }
+        LayDuLieuSanPham("1");
     }//GEN-LAST:event_bntSua_SanPham_235ActionPerformed
 
     private void btnXoa_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_SanPham_235ActionPerformed
@@ -3497,9 +3546,20 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnXoa_SanPham_235ActionPerformed
 
     private void btnReset_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_SanPham_235ActionPerformed
-
+        ResSanPham();
     }//GEN-LAST:event_btnReset_SanPham_235ActionPerformed
-
+    
+    public void ResSanPham() {
+        txtMaSanPham_SanPham_235.setText("");
+        txtTenSanPham_SanPham_235.setText("");
+        txtGiaNhap_SanPham_235.setText("");
+        txtGiaBan_SanPham_235.setText("");
+        txtTonKho_SanPham_235.setText("");
+        txtChuThich_SanPham_235.setText("");
+        cbbMaLoaiSanPham_SanPham_235.setSelectedIndex(0);
+        cbbHangSanXuat_SanPham_235.setSelectedIndex(0);
+    }    
+    
     private void jPanelSanPhamComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelSanPhamComponentShown
         LayDuLieuSanPham("1");
         rbtnTimKiemTenSanPham_SanPham_235.setSelected(true);
@@ -3926,6 +3986,79 @@ public class TrangChu extends javax.swing.JFrame {
         } catch (SQLException ex) {
             System.out.println(ex.toString());
         }
+    }
+    
+    public String GetCbbSelected(JComboBox cbb) {
+        Object[] obj = cbb.getSelectedObjects();
+        displayvalueModel item = (displayvalueModel) obj[0];
+        return item.displayvalue.toString();
+
+    }
+    
+    public boolean KiemTraNhanSanPham(int ts) {
+        String MaSanPham, TenSanPham, GiaNhap,GiaBan,TonKho;
+        boolean kiemtra = false;
+        MaSanPham = txtMaSanPham_SanPham_235.getText();
+        TenSanPham = txtTenSanPham_SanPham_235.getText();
+        TonKho= txtTonKho_SanPham_235.getText().trim();
+        String  ThongBao = "";
+        GiaNhap = txtGiaNhap_SanPham_235.getText();
+        GiaBan = txtGiaBan_SanPham_235.getText();
+        if (MaSanPham.equals("") && ts == 1) {
+            ThongBao += "bạn chưa chọn khách hàng để lấy  Mã Khách Hàng\n";
+            lblMaSanPham_SanPham.setForeground(Color.red);
+        }
+        if (TenSanPham.equals("")) {
+            ThongBao += "bạn chưa Nhập Tên Sản Phẩm\n";
+            lblTenSanPham_SanPham.setForeground(Color.red);
+        }
+        if (GiaNhap.equals("")) {
+            lblGiaNhap_SanPham.setForeground(Color.red);
+            ThongBao += "bạn chưa Nhập Giá Bán\n";
+        }
+        if (GiaBan.equals("")) {
+            lblGiaBan.setForeground(Color.red);
+            ThongBao += "bạn chưa Nhập Giá Bán \n";
+        }
+              try {
+                  int bien =Integer.valueOf(GiaNhap);
+              } catch (Exception e) {
+                  ThongBao+="Giá Nhập Phải là số !\n";
+              }
+               try {
+                  int bien =Integer.valueOf(GiaBan);
+              } catch (Exception e) {
+                  ThongBao+="Giá Bán Phải là số !\n";
+              }
+              try {
+                   if (Integer.valueOf(GiaNhap)>Integer.valueOf(GiaBan)) {
+            lblGiaBan.setForeground(Color.red);
+            ThongBao += "Nhập Giá Bán Phải Lớn Hơn Giá Nhập \n";
+        } 
+              } catch (Exception e) {
+              }
+      
+         if (TonKho.equals("")) {
+            lblTonKho_SanPham.setForeground(Color.red);
+            ThongBao += "bạn chưa Nhập Tồn Kho \n";
+        }
+        if (ThongBao.equals("")) {
+            kiemtra = true;
+            lblTenSanPham_SanPham.setForeground(Color.black);
+            lblMaSanPham_SanPham.setForeground(Color.black);
+            lblGiaBan.setForeground(Color.black);
+             lblTonKho_SanPham.setForeground(Color.black);
+            lblGiaNhap_SanPham.setForeground(Color.black);
+        } else {
+            kiemtra = false;
+            ThongBao(ThongBao, "lỗi nhập liệu", 2);
+        }
+        return kiemtra;
+    }
+    
+    public void ThongBao(String noiDungThongBao, String tieuDeThongBao, int icon) {
+        JOptionPane.showMessageDialog(new JFrame(), noiDungThongBao,
+                tieuDeThongBao, icon);
     }
     
     public static void main(String args[]) {
