@@ -1744,6 +1744,12 @@ public class TrangChu extends javax.swing.JFrame {
 
         tbljpanel.addTab("Khách Hàng", new javax.swing.ImageIcon(getClass().getResource("/img/khachHang.png")), jPanel_KhachHang); // NOI18N
 
+        jTabbedPaneNhanVien.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jTabbedPaneNhanVienComponentShown(evt);
+            }
+        });
+
         jPanelNhanVien1.setBackground(new java.awt.Color(153, 204, 255));
         jPanelNhanVien1.setPreferredSize(new java.awt.Dimension(1030, 600));
         jPanelNhanVien1.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -2628,7 +2634,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel1.setText("Nhà phân phối");
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thay đổi thông tin đối tác ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 0, 0))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thay đổi thông tin đối tác ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 0, 0))); // NOI18N
 
         jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel75.setText("Mã NPP :");
@@ -2986,7 +2992,7 @@ public class TrangChu extends javax.swing.JFrame {
                                 .addComponent(txtMaPhieuMua_HoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(63, 63, 63)
                                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(199, Short.MAX_VALUE))))
+                                .addContainerGap(202, Short.MAX_VALUE))))
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(btnXoa_HoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3146,12 +3152,12 @@ public class TrangChu extends javax.swing.JFrame {
                         .addComponent(btnSua_ChiTietHoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnReset_ChiTietHoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(49, Short.MAX_VALUE))))
+                        .addContainerGap(57, Short.MAX_VALUE))))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3216,7 +3222,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addGroup(jPanelHoaDon326Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelHoaDon326Layout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
+                        .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelHoaDon326Layout.createSequentialGroup()
@@ -3962,13 +3968,38 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
         // TODO add your handling code here:
         layDuLieuDoiTac();
     }//GEN-LAST:event_jPanelDoiTacComponentShown
+
+    private void jTabbedPaneNhanVienComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jTabbedPaneNhanVienComponentShown
+        // TODO add your handling code here:
+         rbtnNam_NhanVien_361.setSelected(true);
+        layDuLieuNhanVien();
+        cbbChucVu_NhanVien_361.setModel(LayDuLieucbb("ChucVu", "TenChucVu", "MaChucVu"));
+        for (int i = 1; i < 32; i++) {
+            cbbNgaySinh_NhanVien_361.addItem(String.valueOf(i));
+        }
+        for (int i = 1; i < 13; i++) {
+            cbbThangSinh_NhanVien_361.addItem(String.valueOf(i));
+        }
+        for (int i = 2022; i > 1950; i--) {
+            cbbNamSinh_NhanVien_361.addItem(String.valueOf(i));
+        }
+        for (int i = 1; i < 32; i++) {
+            cbbNgayVaoLam_NhanVien_361.addItem(String.valueOf(i));
+        }
+        for (int i = 1; i < 13; i++) {
+            cbbThangVaoLam_NhanVien_361.addItem(String.valueOf(i));
+        }
+        for (int i = 2022; i > 2000; i--) {
+            cbbNamVaoLam_NhanVien_361.addItem(String.valueOf(i));
+        }
+    }//GEN-LAST:event_jTabbedPaneNhanVienComponentShown
     
     public void LayDuLieuSanPham(String TrangThai) {
-        String cautruyvan = "";
-        cautruyvan = "select MaSanPham,SanPham.TenSanPham,SanPham.LoaiSanPham,GiaNhap,GiaBan,HangsanXuat.TenHangSanXuat as THSX,TonKho,LoaiSanPham.TenLoaiSanPham"
+        String cautruyvan235 = "";
+        cautruyvan235 = "select MaSanPham,SanPham.TenSanPham,SanPham.LoaiSanPham,GiaNhap,GiaBan,HangsanXuat.TenHangSanXuat as THSX,TonKho,LoaiSanPham.TenLoaiSanPham"
                 + " as TenLoaiSanPham,Image,SanPham.ChuThich from SanPham,LoaiSanPham,HangSanXuat where "
                 + "SanPham.LoaiSanPham=LoaiSanPham.MaLoaiSanPham and SanPham.HangSanXuat=HangSanXuat.MaHangSanXuat and TrangThai=" + TrangThai;
-        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan235);
         Object[] obj = new Object[]{"STT", "Mã Sản Phẩm", "Tên sản phẩm", "Loại sản phẩm", "Giá nhập", "Giá bán", "Hãng sản Xuất", "Tồn kho", "ảnh", "Chú Thích"};
         DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
         tblSanPham_235.setModel(tableModel);
@@ -4021,10 +4052,10 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
         }
     }
     public void layDuLieuNhanVien() {
-        String cautruyvan = "";
-        cautruyvan = "select * from NhanVien,ChucVu "
+        String cautruyvan_361 = "";
+        cautruyvan_361 = "select * from NhanVien,ChucVu "
                 + "where NhanVien.ChucVu=ChucVu.MaChucVu";
-        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan_361);
         Object[] obj = new Object[]{"STT", "Mã Nhân Viên", "Tên Nhân Viên", "Ngày Sinh", "Giới Tính", "Ngày Vào Làm", "Chức Vụ", "Dịa Chỉ", "SDT", "Chú Thích"};
         DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
         tblNhanVien_NhanVien_361.setModel(tableModel);
@@ -4055,11 +4086,11 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
     }
 
     public void layDuLieuTaiKhoan() {
-        String cautruyvan = "";
-        cautruyvan = "select ID, NhanVien.TenNhanVien ,Users.TenDangNhap,Users.Password"
+        String cautruyvan_361 = "";
+        cautruyvan_361 = "select ID, NhanVien.TenNhanVien ,Users.TenDangNhap,Users.Password"
                 + ",Quyen.TenQuyen,Users.ChuThich  from Users,NhanVien,Quyen "
                 + "where Users.MaNhanVien=NhanVien.MaNhanVien and Users.Quyen=Quyen.MaQuyen";
-        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan_361);
         Object[] obj = new Object[]{"STT", "ID", "Nhân Viên", "Tên Đăng Nhập", "Password", "Quyền", "Chú Thích"};
         DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
         tblTaiKhoan_TaiKhoan_361.setModel(tableModel);
@@ -4082,9 +4113,9 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
         }
     }
     public void layDuLieuChucVu() {
-        String cautruyvan = "";
-        cautruyvan = "select * from ChucVu ";
-        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        String cautruyvan_361 = "";
+        cautruyvan_361 = "select * from ChucVu ";
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan_361);
         Object[] obj = new Object[]{"STT", "Mã ", "Tên Chức Vụ", "Ghi Chú"};
         DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
         tblChucVu_ChucVu_361.setModel(tableModel);
@@ -4105,10 +4136,10 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
     }
 
     public void layDuLieuNhanVienofChucVu(String MaChucVu) {
-        String cautruyvan = "";
-        cautruyvan = "select * from NhanVien,ChucVu "
+        String cautruyvan_361 = "";
+        cautruyvan_361 = "select * from NhanVien,ChucVu "
                 + "where NhanVien.ChucVu=ChucVu.MaChucVu and ChucVu=" + MaChucVu;
-        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan_361);
         Object[] obj = new Object[]{"STT", "Mã Nhân Viên", "Tên Nhân Viên", "Chức Vụ"};
         DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
         tblNhanVien_ChucVu_361.setModel(tableModel);
