@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.DefaultComboBoxModel;
@@ -3782,7 +3784,9 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_tblPhieuNhap_PhieuNhap_235MouseClicked
 
     private void jLabel65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel65MouseClicked
-
+        cbbNgay_PhieuNhap_235.setSelectedItem(String.valueOf(day));
+          cbbThang_PhieuNhap_235.setSelectedItem(String.valueOf(month));
+            cbbNam_PhieuNhap_235.setSelectedItem(String.valueOf(year));
     }//GEN-LAST:event_jLabel65MouseClicked
 
     private void jLabel65KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel65KeyReleased
@@ -3790,11 +3794,62 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel65KeyReleased
 
     private void btnThem_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_PhieuNhap_235ActionPerformed
-
+        String MaPhieuNhap, MaNhanVien235, MaNhaPhanPhoi235, TongTien235, NgayNhap235, ChuThich235;
+        MaPhieuNhap = txtMaPhieuNhap_PhieuNhap_235.getText();
+        MaNhanVien235 = GetCbbSelected(cbbNhanVien_PhieuNhap_235);
+        MaNhaPhanPhoi235 = GetCbbSelected(cbbNhaPhanPhoi_PhieuNhap_235);
+        String ngay235, thang235, nam;
+        ngay235 = cbbNgay_PhieuNhap_235.getSelectedItem().toString();
+        thang235 = cbbThang_PhieuNhap_235.getSelectedItem().toString();
+        nam = cbbNam_PhieuNhap_235.getSelectedItem().toString();
+        NgayNhap235 = nam + "-" + thang235 + "-" + ngay235;
+        TongTien235 = txtTongTien_PhieuNhap_235.getText();
+        ChuThich235 = txtChuTich_PhieuNhap_235.getText();
+        String cautruyvan235 = "insert into PhieuNhap values("
+                + " " + MaNhanVien235 + " , " + MaNhaPhanPhoi235 + " ," + TongTien235
+                + ",'" + NgayNhap235 + "', N'" + ChuThich235 + "')";
+        System.out.println(cautruyvan235);
+        boolean kiemtra235 = true;
+        if(txtTongTien_PhieuNhap_235.getText().equals("")){
+            txtTongTien_PhieuNhap_235.setText("0");
+            TongTien235="0";
+        }
+        if (kiemtra235) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan235);
+            System.out.println("Đã Thêm Thành Công");
+        } else {
+            ThongBao("Không thể Thêm Khách Hàng", "lỗi", 2);
+        }
+        LayDuLieuPhieuNhap();
     }//GEN-LAST:event_btnThem_PhieuNhap_235ActionPerformed
 
     private void btnXoa_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_PhieuNhap_235ActionPerformed
-
+        if (!txtMaPhieuNhap_PhieuNhap_235.getText().equals("")) {
+            String MaPhieuNhap235 = txtMaPhieuNhap_PhieuNhap_235.getText();
+            String cautruyvan235 = "delete PhieuNhap where MaPhieuNhap=" + MaPhieuNhap235;
+            String ctvKiemThu235 = "select count(MaCTPN) as SoChiTietPhieuMua"
+                    + " from PhieuNhap,ChiTietPhieuNhap where PhieuNhap.MaPhieuNhap=ChiTietPhieuNhap.MaPhieuNhap and "
+                    + "PhieuNhap.MaPhieuNhap= " + MaPhieuNhap235;
+            ResultSet rs1 = main.connection.ExcuteQueryGetTable(ctvKiemThu235);
+            System.out.println(ctvKiemThu235);
+            int so1 = 0;
+            try {
+                if (rs1.next()) {
+                    so1 = rs1.getInt("SoChiTietPhieuMua");
+                    if (rs1.getInt("SoChiTietPhieuMua") == 0) {
+                        main.connection.ExcuteQueryUpdateDB(cautruyvan235);
+                        System.out.println("đã xóa");
+                        LayDuLieuPhieuNhap();
+                    } else {
+                        ThongBao("không thể xóa bởi Phiếu nhập đã có " + so1 + " chi tiết Phiếu nhập!", "báo lỗi", 2);
+                    }
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(TrangChu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            ThongBao("bạn chưa chọn Phiếu nhập để xóa", "xóa bằng niềm tin à!khi không biết xóa cái nào", 2);
+        }  
     }//GEN-LAST:event_btnXoa_PhieuNhap_235ActionPerformed
 
     private void btnSua_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_PhieuNhap_235ActionPerformed
@@ -3842,7 +3897,22 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnResetCTPN_PhieuNhap_235ActionPerformed
 
     private void jPanelPhieuNhap235ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelPhieuNhap235ComponentShown
-
+        LayDuLieuPhieuNhap();
+        cbbNhaPhanPhoi_PhieuNhap_235.setModel(LayDuLieucbb("NhaPhanPhoi", "TenNhaPhanPhoi", "MaNhaPhanPhoi"));
+        cbbNhanVien_PhieuNhap_235.setModel(LayDuLieucbb("NhanVien", "TenNhanVien", "MaNhanVien"));
+        cbbSanPhamCTPN_PhieuNhap_235.setModel(LayDuLieucbb("SanPham","TenSanPham","MaSanPham"));
+        for (int i = 1; i < 32; i++) {
+            cbbNgay_PhieuNhap_235.addItem(String.valueOf(i));
+        }
+        for (int i = 1; i < 13; i++) {
+            cbbThang_PhieuNhap_235.addItem(String.valueOf(i));
+        }
+        for (int i = 2016; i > 1950; i--) {
+            cbbNam_PhieuNhap_235.addItem(String.valueOf(i));
+        }
+        cbbNgay_PhieuNhap_235.setSelectedItem(String.valueOf(day));
+          cbbThang_PhieuNhap_235.setSelectedItem(String.valueOf(month));
+            cbbNam_PhieuNhap_235.setSelectedItem(String.valueOf(year));
     }//GEN-LAST:event_jPanelPhieuNhap235ComponentShown
 
     private void txtDiaChi_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDiaChi_KhachHang231ActionPerformed
@@ -4567,6 +4637,33 @@ public void layDuLieuDoiTac() {
                 item[3] = rs.getString("TenSanPham");
                 item[4] = rs.getString("Soluong");
                 item[5] = rs.getString("TongTien");
+                item[6] = rs.getString("ChuThich");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+    
+    public void LayDuLieuPhieuNhap() {
+        String cautruyvan = "";
+        cautruyvan = "select MaPhieuNhap,NhanVien.TenNhanVien,NhaPhanPhoi.TenNhaPhanPhoi,TongTien,NgayNhap,PhieuNhap.ChuThich"
+                + " from PhieuNhap,NhanVien,NhaPhanPhoi where PhieuNhap.MaNhanVien =NhanVien.MaNhanVien and PhieuNhap.MaNhaPhanPhoi=NhaPhanPhoi.MaNhaPhanPhoi ";
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        Object[] obj = new Object[]{"STT", "Mã Phiếu Nhập", "Nhân Viên Nhập", "Tên Nhà Phân phối", "Thành tiền", "Ngày lập", "Chú Thích"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblPhieuNhap_PhieuNhap_235.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                Object[] item = new Object[7];
+                c++;
+                item[0] = c;
+                item[1] = rs.getInt("MaPhieuNhap");
+                item[2] = rs.getString("TenNhanVien");
+                item[3] = rs.getString("TenNhaPhanPhoi");
+                item[4] = rs.getString("TongTien");
+                item[5] = rs.getString("NgayNhap");
                 item[6] = rs.getString("ChuThich");
                 tableModel.addRow(item);
             }
