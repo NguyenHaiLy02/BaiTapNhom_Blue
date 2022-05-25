@@ -3301,7 +3301,7 @@ public class TrangChu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblHoaDon_HoaDon326MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblHoaDon_HoaDon326MouseClicked
-int viTriDongVuaBam = tblHoaDon_HoaDon326.getSelectedRow();
+        int viTriDongVuaBam = tblHoaDon_HoaDon326.getSelectedRow();
         txtMaPhieuMua_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 1).toString());
         txtNgayLapHoaDon_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 4).toString());
         txtTongTien_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 5).toString());
@@ -3399,12 +3399,11 @@ int viTriDongVuaBam = tblHoaDon_HoaDon326.getSelectedRow();
         cbbNhanVien_HoaDon326.setModel(LayDuLieucbb("NhanVien", "TenNhanVien", "MaNhanVien"));
         cbbKhachHang_HoaDon326.setModel(LayDuLieucbb("KhachHang", "TenKhachHang", "MaKhachHang"));
         cbbSanPham_ChiTietHoaDon326.setModel(LayDuLieucbb("SanPham", "TenSanPham", "MaSanPham"));
-         txtNgayLapHoaDon_HoaDon326.setText(year+"-"+month+"-"+day);
+        txtNgayLapHoaDon_HoaDon326.setText(year+"-"+month+"-"+day);
     }//GEN-LAST:event_jPanelHoaDon326ComponentShown
 
     private void tblKhachHang_KhachHang231MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblKhachHang_KhachHang231MouseClicked
-int viTriDongVuaBam = tblKhachHang_KhachHang231.getSelectedRow();
-
+        int viTriDongVuaBam = tblKhachHang_KhachHang231.getSelectedRow();
         txtMaKhachHang_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam, 1).toString());
         txtTenKhachHang_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam, 2).toString());
         txtDiaChi_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam, 5).toString());
@@ -3516,7 +3515,7 @@ int viTriDongVuaBam = tblKhachHang_KhachHang231.getSelectedRow();
     }//GEN-LAST:event_jPanel_KhachHang231ComponentShown
 
     private void tblDoiTac_DoiTac231MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDoiTac_DoiTac231MouseClicked
-int viTriDongVuaBam = tblDoiTac_DoiTac231.getSelectedRow();
+        int viTriDongVuaBam = tblDoiTac_DoiTac231.getSelectedRow();
         txtMaNPP_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 1).toString());
         txtTenNhaPhanPhoi_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 2).toString());
         txtDiaChi_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 3).toString());
@@ -3531,7 +3530,7 @@ int viTriDongVuaBam = tblDoiTac_DoiTac231.getSelectedRow();
     }//GEN-LAST:event_txtDiaChi_DoiTac231ActionPerformed
 
     private void btnThem_DoiTac231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_DoiTac231ActionPerformed
-String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
+        String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
         MaDoiTac = txtMaNPP_DoiTac231.getText();
         TenDoiTac = txtTenNhaPhanPhoi_DoiTac231.getText();
         DiaChi = txtDiaChi_DoiTac231.getText();
@@ -3574,16 +3573,16 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
     }//GEN-LAST:event_cbbMaLoaiSanPham_SanPham_235ActionPerformed
 
     private void tblSanPham_235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblSanPham_235MouseClicked
-        int viTriDongVuaBam = tblSanPham_235.getSelectedRow();
+        int viTriDongVuaBam235 = tblSanPham_235.getSelectedRow();
         
-        setSelectedCombobox(tblSanPham_235.getValueAt(viTriDongVuaBam, 3).toString(), cbbMaLoaiSanPham_SanPham_235);
-        setSelectedCombobox(tblSanPham_235.getValueAt(viTriDongVuaBam, 6).toString(), cbbHangSanXuat_SanPham_235 );
-        txtMaSanPham_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam, 1).toString());
-        txtTenSanPham_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam, 2).toString());
-        txtGiaNhap_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam, 4).toString());
-        txtGiaBan_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam, 5).toString());
-        txtTonKho_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam, 7).toString());
-        txtChuThich_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam, 9).toString());
+        setSelectedCombobox(tblSanPham_235.getValueAt(viTriDongVuaBam235, 3).toString(), cbbMaLoaiSanPham_SanPham_235);
+        setSelectedCombobox(tblSanPham_235.getValueAt(viTriDongVuaBam235, 6).toString(), cbbHangSanXuat_SanPham_235 );
+        txtMaSanPham_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam235, 1).toString());
+        txtTenSanPham_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam235, 2).toString());
+        txtGiaNhap_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam235, 4).toString());
+        txtGiaBan_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam235, 5).toString());
+        txtTonKho_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam235, 7).toString());
+        txtChuThich_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam235, 9).toString());
 //        try {
 //            if (!tblSanPham.getValueAt(viTriDongVuaBam, 8).toString().equals("")) {
 //                txtImg_SanPham.setText(tblSanPham_235.getValueAt(viTriDongVuaBam, 8).toString());
@@ -3596,7 +3595,8 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
     }//GEN-LAST:event_tblSanPham_235MouseClicked
 
     private void cbbTimKiemLoaiSanPham_SanPham_235ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbTimKiemLoaiSanPham_SanPham_235ItemStateChanged
-
+        rbtnTimKiemLoaiSanPham_SanPham_235.setSelected(true);
+        TimKiemSanPham();
     }//GEN-LAST:event_cbbTimKiemLoaiSanPham_SanPham_235ItemStateChanged
 
     private void cbbTimKiemLoaiSanPham_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbTimKiemLoaiSanPham_SanPham_235ActionPerformed
@@ -3604,27 +3604,28 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
     }//GEN-LAST:event_cbbTimKiemLoaiSanPham_SanPham_235ActionPerformed
 
     private void txtTimKiem_SanPham235KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTimKiem_SanPham235KeyReleased
-
+        txtTimKiem_SanPham235.getText().trim();
+        TimKiemSanPham();
     }//GEN-LAST:event_txtTimKiem_SanPham235KeyReleased
 
     private void btnThem_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_SanPham_235ActionPerformed
-        String TenSanPham, MaLoaiSanPham, GiaNhap, GiaBan, HangSanXuat, TonKho, TrangThai, Image, ChuThich;
-        TenSanPham = txtTenSanPham_SanPham_235.getText();
-        MaLoaiSanPham = GetCbbSelected(cbbMaLoaiSanPham_SanPham_235);
-        GiaNhap = txtGiaNhap_SanPham_235.getText();
-        GiaBan = txtGiaBan_SanPham_235.getText();
-        HangSanXuat = GetCbbSelected(cbbHangSanXuat_SanPham_235);
-        TonKho = txtTonKho_SanPham_235.getText();
-        TrangThai = "1";
-        ChuThich = txtChuThich_SanPham_235.getText();
+        String TenSanPham235, MaLoaiSanPham235, GiaNhap235, GiaBan235, HangSanXuat235, TonKho235, TrangThai235, Image, ChuThich235;
+        TenSanPham235 = txtTenSanPham_SanPham_235.getText();
+        MaLoaiSanPham235 = GetCbbSelected(cbbMaLoaiSanPham_SanPham_235);
+        GiaNhap235 = txtGiaNhap_SanPham_235.getText();
+        GiaBan235 = txtGiaBan_SanPham_235.getText();
+        HangSanXuat235 = GetCbbSelected(cbbHangSanXuat_SanPham_235);
+        TonKho235 = txtTonKho_SanPham_235.getText();
+        TrangThai235 = "1";
+        ChuThich235 = txtChuThich_SanPham_235.getText();
         //Image = txtImg_SanPham_.getText();
 
-        String cautruyvan = "insert into SanPham "
-                + "values(N'" + TenSanPham + "'," + MaLoaiSanPham + "," + HangSanXuat + "," + GiaNhap + "," + GiaBan + "," + TonKho + "," + TrangThai  + "',N'" + ChuThich + "')";
-        System.out.println(cautruyvan);
-        boolean kiemtra = KiemTraNhanSanPham(0);
-        if (kiemtra) {
-            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+        String cautruyvan235 = "insert into SanPham "
+                + "values(N'" + TenSanPham235 + "'," + MaLoaiSanPham235 + "," + HangSanXuat235 + "," + GiaNhap235 + "," + GiaBan235 + "," + TonKho235 + "," + TrangThai235  + "',N'" + ChuThich235 + "')";
+        System.out.println(cautruyvan235);
+        boolean kiemtra235 = KiemTraNhanSanPham(0);
+        if (kiemtra235) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan235);
             System.out.println("Đã Thêm Thành Công");
         } else {
               System.out.println("Thất Bại");
@@ -3633,26 +3634,26 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
     }//GEN-LAST:event_btnThem_SanPham_235ActionPerformed
 
     private void bntSua_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSua_SanPham_235ActionPerformed
-        String MaSanPham, TenSanPham, LoaiSanPham, GiaNhap, GiaBan, HangSanXuat, TonKho, TrangThai, Image, ChuThich;
-        MaSanPham = txtMaSanPham_SanPham_235.getText();
-        TenSanPham = txtTenSanPham_SanPham_235.getText();
-        LoaiSanPham = GetCbbSelected(cbbMaLoaiSanPham_SanPham_235);
-        GiaNhap = txtGiaNhap_SanPham_235.getText();
-        GiaBan = txtGiaBan_SanPham_235.getText();
-        HangSanXuat = GetCbbSelected(cbbHangSanXuat_SanPham_235);
-        TonKho = txtTonKho_SanPham_235.getText();
-        TrangThai = "1";
+        String MaSanPham235, TenSanPham235, LoaiSanPham235, GiaNhap235, GiaBan235, HangSanXuat235, TonKho235, TrangThai235, Image, ChuThich235;
+        MaSanPham235 = txtMaSanPham_SanPham_235.getText();
+        TenSanPham235 = txtTenSanPham_SanPham_235.getText();
+        LoaiSanPham235 = GetCbbSelected(cbbMaLoaiSanPham_SanPham_235);
+        GiaNhap235 = txtGiaNhap_SanPham_235.getText();
+        GiaBan235 = txtGiaBan_SanPham_235.getText();
+        HangSanXuat235 = GetCbbSelected(cbbHangSanXuat_SanPham_235);
+        TonKho235 = txtTonKho_SanPham_235.getText();
+        TrangThai235 = "1";
         //Image = txtImg_SanPham.getText();
 
-        ChuThich = txtChuThich_SanPham_235.getText();
-        String cautruyvan = "update  SanPham set "
-                + "TenSanPham =" + "N'" + TenSanPham + "',LoaiSanPham=" + LoaiSanPham + ",HangSanXuat="
-                + HangSanXuat + ",GiaNhap=" + GiaNhap + ",GiaBan=" + GiaBan + ",TonKho=" + TonKho
-                + ",TrangThai=" + TrangThai  + "',ChuThich =N'" + ChuThich + "' where MaSanPham=" + MaSanPham;
-        System.out.println(cautruyvan);
-        boolean kiemtra = KiemTraNhanSanPham(1);
-        if (kiemtra) {
-            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+        ChuThich235 = txtChuThich_SanPham_235.getText();
+        String cautruyvan235 = "update  SanPham set "
+                + "TenSanPham =" + "N'" + TenSanPham235 + "',LoaiSanPham=" + LoaiSanPham235 + ",HangSanXuat="
+                + HangSanXuat235 + ",GiaNhap=" + GiaNhap235 + ",GiaBan=" + GiaBan235 + ",TonKho=" + TonKho235
+                + ",TrangThai=" + TrangThai235  + "',ChuThich =N'" + ChuThich235 + "' where MaSanPham=" + MaSanPham235;
+        System.out.println(cautruyvan235);
+        boolean kiemtra235 = KiemTraNhanSanPham(1);
+        if (kiemtra235) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan235);
             System.out.println("Đã Sửa Thành Công Sản Phẩm");
         } else {
              System.out.println("Thất Bại");
@@ -3661,7 +3662,7 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
     }//GEN-LAST:event_bntSua_SanPham_235ActionPerformed
 
     private void btnXoa_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_SanPham_235ActionPerformed
-
+        
     }//GEN-LAST:event_btnXoa_SanPham_235ActionPerformed
 
     private void btnReset_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_SanPham_235ActionPerformed
@@ -3688,39 +3689,96 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
     }//GEN-LAST:event_jPanelSanPhamComponentShown
 
     private void tblLoaiSanPham_LoaiSanPham_235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblLoaiSanPham_LoaiSanPham_235MouseClicked
+        int viTriDongVuaBam235 = tblLoaiSanPham_LoaiSanPham_235.getSelectedRow();
+        txtMaLoaiSanPham_LoaiSanPham_235.setText(tblLoaiSanPham_LoaiSanPham_235.getValueAt(viTriDongVuaBam235, 1).toString());
+        txtTenLoaiSanPham_LoaiSanPham_235.setText(tblLoaiSanPham_LoaiSanPham_235.getValueAt(viTriDongVuaBam235, 2).toString());
 
+        LayDuLieuSanPhamofLoaiSanPham(txtMaLoaiSanPham_LoaiSanPham_235.getText());
     }//GEN-LAST:event_tblLoaiSanPham_LoaiSanPham_235MouseClicked
 
     private void tblLoaiSanPham_LoaiSanPham_235ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_tblLoaiSanPham_LoaiSanPham_235ComponentShown
-
+        
     }//GEN-LAST:event_tblLoaiSanPham_LoaiSanPham_235ComponentShown
 
     private void btnThem_LoaiSanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_LoaiSanPham_235ActionPerformed
-
+        String MaLoaiSanPham, TenLoai235;
+        MaLoaiSanPham = txtMaLoaiSanPham_LoaiSanPham_235.getText();
+        TenLoai235 = txtTenLoaiSanPham_LoaiSanPham_235.getText();
+        String cautruyvan235 = "insert into LoaiSanPham values("
+                + " N'" + TenLoai235 + "')";
+        System.out.println(cautruyvan235);
+        boolean kiemtra235 = true;
+        if (!txtTenLoaiSanPham_LoaiSanPham_235.equals("")) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan235);
+            System.out.println("Đã Thêm Thành Công");
+        } else {
+            ThongBao("Bạn chưa nhập tên loại sản phẩm", TenLoai235, i);
+        }
+        layDuLieuLoaiSanPham();
     }//GEN-LAST:event_btnThem_LoaiSanPham_235ActionPerformed
 
     private void btnSua_LoaiSanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_LoaiSanPham_235ActionPerformed
-
+        String MaLoaiSanPham, TenLoai235;
+        MaLoaiSanPham = txtMaLoaiSanPham_LoaiSanPham_235.getText();
+        TenLoai235 = txtTenLoaiSanPham_LoaiSanPham_235.getText();
+        String cautruyvan235 = "update LoaiSanPham set"
+                + " TenLoaiSanPham=N'" + TenLoai235 + "'where MaLoaiSanPham=" + MaLoaiSanPham;
+        if (!txtTenLoaiSanPham_LoaiSanPham_235.equals("")) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan235);
+            System.out.println("Đã sửa Thành Công");
+        } else {
+            ThongBao("Bạn chưa nhập tên loại sản phẩm", TenLoai235, i);
+        }
+        layDuLieuLoaiSanPham();
     }//GEN-LAST:event_btnSua_LoaiSanPham_235ActionPerformed
 
     private void btnXoa_LoaiSanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_LoaiSanPham_235ActionPerformed
-
+        
     }//GEN-LAST:event_btnXoa_LoaiSanPham_235ActionPerformed
 
     private void jPanelLoaiSanPhamComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jPanelLoaiSanPhamComponentAdded
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jPanelLoaiSanPhamComponentAdded
 
     private void jPanelLoaiSanPhamComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelLoaiSanPhamComponentShown
-
+        layDuLieuLoaiSanPham();
+        System.out.println("Vô sản Phẩm");
     }//GEN-LAST:event_jPanelLoaiSanPhamComponentShown
 
     private void tblChiTietPhieuNhap_PhieuNhap_235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblChiTietPhieuNhap_PhieuNhap_235MouseClicked
-
+        int viTriDongVuaBam235 = tblChiTietPhieuNhap_PhieuNhap_235.getSelectedRow();
+        txtMaCTPN_PhieuNhap_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 1).toString());
+        txtMaPhieuNhap_CTPN_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 2).toString());
+        setSelectedCombobox(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 3).toString(), cbbSanPhamCTPN_PhieuNhap_235);
+          txtSoLuongCTPN_PhieuNhap_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 4).toString());
+          txtTongTienCTPN_PhieuNhap_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 5).toString());
+        txtChuThichCTPN_PhieuNhap_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 6).toString());
     }//GEN-LAST:event_tblChiTietPhieuNhap_PhieuNhap_235MouseClicked
 
     private void tblPhieuNhap_PhieuNhap_235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblPhieuNhap_PhieuNhap_235MouseClicked
+        int viTriDongVuaBam235 = tblPhieuNhap_PhieuNhap_235.getSelectedRow();
+        txtMaPhieuNhap_PhieuNhap_235.setText(tblPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 1).toString());
+        txtTongTien_PhieuNhap_235.setText(tblPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 4).toString());
+        txtChuTich_PhieuNhap_235.setText(tblPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 6).toString());
+        setSelectedCombobox(tblPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 3).toString(), cbbNhaPhanPhoi_PhieuNhap_235 );
+        setSelectedCombobox(tblPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 2).toString(), cbbNhanVien_PhieuNhap_235);
 
+        LayDuLieuChiTietPhieuNhap(txtMaPhieuNhap_PhieuNhap_235.getText());
+        String ngaynhap235 = tblPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 5).toString();
+        System.out.println("" + ngaynhap235);
+        String strngay235, strthang235, strnam235;
+        strngay235 = ngaynhap235.substring(8, 10);
+        strthang235 = ngaynhap235.substring(5, 7);
+        strnam235 = ngaynhap235.substring(0, 4);
+        int ngay235, thang235, nam235;
+        ngay235 = Integer.valueOf(strngay235);
+        thang235 = Integer.valueOf(strthang235);
+        nam235 = Integer.valueOf(strnam235);
+        cbbNgay_PhieuNhap_235.setSelectedItem(String.valueOf(ngay235));
+        cbbThang_PhieuNhap_235.setSelectedItem(String.valueOf(thang235));
+        cbbNam_PhieuNhap_235.setSelectedItem(String.valueOf(nam235));
+        txtMaPhieuNhap_CTPN_235.setText(tblPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 1).toString());
     }//GEN-LAST:event_tblPhieuNhap_PhieuNhap_235MouseClicked
 
     private void jLabel65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel65MouseClicked
@@ -4167,64 +4225,64 @@ String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
     }
     
     public boolean KiemTraNhanSanPham(int ts) {
-        String MaSanPham, TenSanPham, GiaNhap,GiaBan,TonKho;
-        boolean kiemtra = false;
-        MaSanPham = txtMaSanPham_SanPham_235.getText();
-        TenSanPham = txtTenSanPham_SanPham_235.getText();
-        TonKho= txtTonKho_SanPham_235.getText().trim();
-        String  ThongBao = "";
-        GiaNhap = txtGiaNhap_SanPham_235.getText();
-        GiaBan = txtGiaBan_SanPham_235.getText();
-        if (MaSanPham.equals("") && ts == 1) {
-            ThongBao += "bạn chưa chọn khách hàng để lấy  Mã Khách Hàng\n";
+        String MaSanPham235, TenSanPham235, GiaNhap235,GiaBan235,TonKho235;
+        boolean kiemtra235 = false;
+        MaSanPham235 = txtMaSanPham_SanPham_235.getText();
+        TenSanPham235 = txtTenSanPham_SanPham_235.getText();
+        TonKho235= txtTonKho_SanPham_235.getText().trim();
+        String  ThongBao235 = "";
+        GiaNhap235 = txtGiaNhap_SanPham_235.getText();
+        GiaBan235 = txtGiaBan_SanPham_235.getText();
+        if (MaSanPham235.equals("") && ts == 1) {
+            ThongBao235 += "bạn chưa chọn khách hàng để lấy  Mã Khách Hàng\n";
             lblMaSanPham_SanPham.setForeground(Color.red);
         }
-        if (TenSanPham.equals("")) {
-            ThongBao += "bạn chưa Nhập Tên Sản Phẩm\n";
+        if (TenSanPham235.equals("")) {
+            ThongBao235 += "bạn chưa Nhập Tên Sản Phẩm\n";
             lblTenSanPham_SanPham.setForeground(Color.red);
         }
-        if (GiaNhap.equals("")) {
+        if (GiaNhap235.equals("")) {
             lblGiaNhap_SanPham.setForeground(Color.red);
-            ThongBao += "bạn chưa Nhập Giá Bán\n";
+            ThongBao235 += "bạn chưa Nhập Giá Bán\n";
         }
-        if (GiaBan.equals("")) {
+        if (GiaBan235.equals("")) {
             lblGiaBan.setForeground(Color.red);
-            ThongBao += "bạn chưa Nhập Giá Bán \n";
+            ThongBao235 += "bạn chưa Nhập Giá Bán \n";
         }
               try {
-                  int bien =Integer.valueOf(GiaNhap);
+                  int bien235 =Integer.valueOf(GiaNhap235);
               } catch (Exception e) {
-                  ThongBao+="Giá Nhập Phải là số !\n";
+                  ThongBao235+="Giá Nhập Phải là số !\n";
               }
                try {
-                  int bien =Integer.valueOf(GiaBan);
+                  int bien235 =Integer.valueOf(GiaBan235);
               } catch (Exception e) {
-                  ThongBao+="Giá Bán Phải là số !\n";
+                  ThongBao235+="Giá Bán Phải là số !\n";
               }
               try {
-                   if (Integer.valueOf(GiaNhap)>Integer.valueOf(GiaBan)) {
+                   if (Integer.valueOf(GiaNhap235)>Integer.valueOf(GiaBan235)) {
             lblGiaBan.setForeground(Color.red);
-            ThongBao += "Nhập Giá Bán Phải Lớn Hơn Giá Nhập \n";
+            ThongBao235 += "Nhập Giá Bán Phải Lớn Hơn Giá Nhập \n";
         } 
               } catch (Exception e) {
               }
       
-         if (TonKho.equals("")) {
+         if (TonKho235.equals("")) {
             lblTonKho_SanPham.setForeground(Color.red);
-            ThongBao += "bạn chưa Nhập Tồn Kho \n";
+            ThongBao235 += "bạn chưa Nhập Tồn Kho \n";
         }
-        if (ThongBao.equals("")) {
-            kiemtra = true;
+        if (ThongBao235.equals("")) {
+            kiemtra235 = true;
             lblTenSanPham_SanPham.setForeground(Color.black);
             lblMaSanPham_SanPham.setForeground(Color.black);
             lblGiaBan.setForeground(Color.black);
              lblTonKho_SanPham.setForeground(Color.black);
             lblGiaNhap_SanPham.setForeground(Color.black);
         } else {
-            kiemtra = false;
-            ThongBao(ThongBao, "lỗi nhập liệu", 2);
+            kiemtra235 = false;
+            ThongBao(ThongBao235, "lỗi nhập liệu", 2);
         }
-        return kiemtra;
+        return kiemtra235;
     }
      public void layDuLieuKhachHang() {
         String cautruyvan = "";
@@ -4396,6 +4454,125 @@ public void layDuLieuDoiTac() {
     public void ThongBao(String noiDungThongBao, String tieuDeThongBao, int icon) {
         JOptionPane.showMessageDialog(new JFrame(), noiDungThongBao,
                 tieuDeThongBao, icon);
+    }
+    
+    public void TimKiemSanPham() {
+        String wheretk = "";
+        if (rbtnTimKiemMaSanPham_SanPham_235.isSelected()) {
+            wheretk = "MaSanPham= " + txtTimKiem_SanPham235.getText();
+        } else if (rbtnTimKiemTenSanPham_SanPham_235.isSelected()) {
+            wheretk = "TenSanPham like N'%" + txtTimKiem_SanPham235.getText() + "%'";;
+        } else if (rbtnTimKiemLoaiSanPham_SanPham_235.isSelected()) {
+            wheretk = "LoaiSanPham= " + GetCbbSelected(cbbTimKiemLoaiSanPham_SanPham_235);
+        }
+        String cautruyvan235 = "";
+        cautruyvan235 = "select MaSanPham,SanPham.TenSanPham,SanPham.LoaiSanPham,GiaNhap,GiaBan,HangsanXuat.TenHangSanXuat as THSX,TonKho,LoaiSanPham.TenLoaiSanPham"
+                + " as TenLoaiSanPham,Image,SanPham.ChuThich from SanPham,LoaiSanPham,HangSanXuat where "
+                + "SanPham.LoaiSanPham=LoaiSanPham.MaLoaiSanPham and SanPham.HangSanXuat=HangSanXuat.MaHangSanXuat and TrangThai=1 and " + wheretk;
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan235);
+        Object[] obj = new Object[]{"STT", "Mã Sản Phẩm", "Tên sản phẩm", "Loại sản phẩm", "Giá nhập", "Giá bán", "Hãng sản Xuất", "Tồn kho", "ảnh", "Chú Thích"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblSanPham_235.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                c++;
+                Object[] item = new Object[10];
+                item[0] = c;
+                item[1] = rs.getInt("MaSanPham");
+                item[2] = rs.getString("TenSanPham");
+                item[3] = rs.getString("TenLoaiSanPham");
+                item[4] = rs.getInt("GiaNhap");
+                item[5] = rs.getInt("GiaBan");
+                item[6] = rs.getString("THSX");
+                item[7] = rs.getInt("TonKho");
+                item[8] = rs.getString("Image");
+                item[9] = rs.getString("ChuThich");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+    
+    public void LayDuLieuSanPhamofLoaiSanPham(String MaLoaiSanPham) {
+        String cautruyvan235 = "";
+        cautruyvan235 = "select MaSanPham,SanPham.TenSanPham,LoaiSanPham.TenLoaiSanPham"
+                + " as TenLoaiSanPham,SanPham.ChuThich from SanPham,LoaiSanPham where"
+                + " SanPham.LoaiSanPham=LoaiSanPham.MaLoaiSanPham and MaLoaiSanPham=" + MaLoaiSanPham;
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan235);
+        Object[] obj = new Object[]{"STT", "Mã Sản Phẩm", "Tên sản phẩm", "Loại sản phẩm"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblSanPham_LoaiSanPham_235.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                c++;
+                Object[] item = new Object[4];
+                item[0] = c;
+                item[1] = rs.getInt("MaSanPham");
+                item[2] = rs.getString("TenSanPham");
+                item[3] = rs.getString("TenLoaiSanPham");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+    
+    public void layDuLieuLoaiSanPham() {
+        String cautruyvan = "";
+        cautruyvan = "select * from LoaiSanPham ";
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        Object[] obj = new Object[]{"STT", "Mã Loại", "Tên Loại"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblLoaiSanPham_LoaiSanPham_235.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                c++;
+                Object[] item = new Object[3];
+                item[0] = c;
+                item[1] = rs.getInt("MaLoaiSanPham");
+                item[2] = rs.getString("TenLoaiSanPham");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+    
+    
+    public static int i = -1, k = 0, x = 600, y = 600;
+    
+    public void LayDuLieuChiTietPhieuNhap(String MaPhieuNhap) {
+        String cautruyvan = "";
+        cautruyvan = "select MaCTPN,ChiTietPhieuNhap.MaPhieuNhap ,SanPham.TenSanPham,ChiTietPhieuNhap.SoLuong,"
+                + "ChiTietPhieuNhap.TongTien,ChiTietPhieuNhap.ChuThich"
+                + " from PhieuNhap,ChiTietPhieuNhap,SanPham where "
+                + "PhieuNhap.MaPhieuNhap=ChiTietPhieuNhap.MaPhieuNhap and"
+                + " SanPham.MaSanPham=ChiTietPhieuNhap.MaSanPham and ChiTietPhieuNhap.MaphieuNhap=" + MaPhieuNhap;
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        Object[] obj = new Object[]{"STT", "Mã CTPN", "Mã Phiếu Nhập", "Sản Phẩm", "Số Lượng", "Tổng Tiền", "Chú Thích"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblChiTietPhieuNhap_PhieuNhap_235.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                Object[] item = new Object[7];
+                c++;
+                item[0] = c;
+                item[1] = rs.getInt("MaCTPN");
+                item[2] = rs.getInt("MaPhieuNhap");
+                item[3] = rs.getString("TenSanPham");
+                item[4] = rs.getString("Soluong");
+                item[5] = rs.getString("TongTien");
+                item[6] = rs.getString("ChuThich");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
     }
     
     public static void main(String args[]) {
