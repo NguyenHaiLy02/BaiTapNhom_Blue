@@ -489,11 +489,11 @@ SET IDENTITY_INSERT [dbo].[SanPham] OFF
 SET IDENTITY_INSERT [dbo].[Users] ON 
 
 INSERT [dbo].[Users] ([ID], [MaNhanVien], [TenDangNhap], [Password], [Quyen], [ChuThich]) VALUES (1, 1, N'admin', N'admin', 1, N'')
-INSERT [dbo].[Users] ([ID], [MaNhanVien], [TenDangNhap], [Password], [Quyen], [ChuThich]) VALUES (2, 3, N'haily', N'Haily2305', 2, N'')
+INSERT [dbo].[Users] ([ID], [MaNhanVien], [TenDangNhap], [Password], [Quyen], [ChuThich]) VALUES (2, 8, N'haily', N'Haily2305', 2, N'')
 INSERT [dbo].[Users] ([ID], [MaNhanVien], [TenDangNhap], [Password], [Quyen], [ChuThich]) VALUES (3, 6, N'thanhtu', N'ThanhTu1008', 3, N'')
-INSERT [dbo].[Users] ([ID], [MaNhanVien], [TenDangNhap], [Password], [Quyen], [ChuThich]) VALUES (5, 6, N'anhvy', N'AnhVy02', 5, N' ')
-INSERT [dbo].[Users] ([ID], [MaNhanVien], [TenDangNhap], [Password], [Quyen], [ChuThich]) VALUES (6, 13, N'mainga', N'Mainga07', 5, N' ')
-INSERT [dbo].[Users] ([ID], [MaNhanVien], [TenDangNhap], [Password], [Quyen], [ChuThich]) VALUES (7, 6, N'hoangle', N'Hoang1002', 5, N' ')
+INSERT [dbo].[Users] ([ID], [MaNhanVien], [TenDangNhap], [Password], [Quyen], [ChuThich]) VALUES (5, 10, N'anhvy', N'AnhVy02', 5, N' ')
+INSERT [dbo].[Users] ([ID], [MaNhanVien], [TenDangNhap], [Password], [Quyen], [ChuThich]) VALUES (6, 3, N'mainga', N'Mainga07', 5, N' ')
+INSERT [dbo].[Users] ([ID], [MaNhanVien], [TenDangNhap], [Password], [Quyen], [ChuThich]) VALUES (7, 1, N'hoangle', N'Hoang1002', 5, N' ')
 SET IDENTITY_INSERT [dbo].[Users] OFF
 ALTER TABLE [dbo].[ChiTietHoaDon]  WITH CHECK ADD  CONSTRAINT [FK_ChiTietHoaDon_HoaDon] FOREIGN KEY([MaHoaDon])
 REFERENCES [dbo].[HoaDon] ([MaHoaDon])
