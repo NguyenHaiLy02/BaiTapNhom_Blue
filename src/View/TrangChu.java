@@ -3295,11 +3295,37 @@ public class TrangChu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblHoaDon_HoaDon326MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblHoaDon_HoaDon326MouseClicked
-
+int viTriDongVuaBam = tblHoaDon_HoaDon326.getSelectedRow();
+        txtMaPhieuMua_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 1).toString());
+        txtNgayLapHoaDon_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 4).toString());
+        txtTongTien_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 5).toString());
+        txtGhiChu_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 6).toString());
+        setSelectedCombobox(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 3).toString(), cbbNhanVien_HoaDon326);
+        setSelectedCombobox(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 2).toString(), cbbKhachHang_HoaDon326);
+        LayDuLieuChiTietHoaDon(txtMaPhieuMua_HoaDon326.getText());
+        if (tblCTHoaDon_ChiTietHoaDon326.getRowCount() > 0) {
+            cbbSanPham_ChiTietHoaDon326.setModel(LayDuLieucbb("SanPham", "TenSanPham", "MaSanPham"));
+            txtMaCTH_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(0, 1).toString());
+            txtMaHoaDon_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(0, 2).toString());
+            txtSoLuong_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(0, 4).toString());
+            txtTongTien_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(0, 5).toString());
+            txtGhiChu_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(0, 6).toString());
+            setSelectedCombobox(tblCTHoaDon_ChiTietHoaDon326.getValueAt(0, 3).toString(), cbbSanPham_ChiTietHoaDon326);
+        } else {
+            reset_chitiethoadon();
+            txtMaHoaDon_ChiTietHoaDon326.setText(txtMaPhieuMua_HoaDon326.getText());
+        }
     }//GEN-LAST:event_tblHoaDon_HoaDon326MouseClicked
 
     private void tblCTHoaDon_ChiTietHoaDon326MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblCTHoaDon_ChiTietHoaDon326MouseClicked
-
+        int viTriDongVuaBam = tblCTHoaDon_ChiTietHoaDon326.getSelectedRow();
+        txtMaCTH_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 1).toString());
+        txtMaHoaDon_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 2).toString());
+        txtSoLuong_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 4).toString());
+        txtTongTien_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 5).toString());
+        txtGhiChu_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 6).toString());
+        setSelectedCombobox(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 3).toString(), cbbSanPham_ChiTietHoaDon326);
+        LayDuLieuChiTietHoaDon(txtMaPhieuMua_HoaDon326.getText());
     }//GEN-LAST:event_tblCTHoaDon_ChiTietHoaDon326MouseClicked
 
     private void jLabel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel30MouseClicked
@@ -3323,7 +3349,7 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSua_HoaDon326ActionPerformed
 
     private void btnReset_HoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_HoaDon326ActionPerformed
-
+    reset_chitiethoadon();
     }//GEN-LAST:event_btnReset_HoaDon326ActionPerformed
 
     private void lblNgayLapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNgayLapMouseClicked
@@ -3363,7 +3389,11 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_txtSoLuong_ChiTietHoaDon326KeyReleased
 
     private void jPanelHoaDon326ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelHoaDon326ComponentShown
-
+        LayDuLieuHoaDon();
+        cbbNhanVien_HoaDon326.setModel(LayDuLieucbb("NhanVien", "TenNhanVien", "MaNhanVien"));
+        cbbKhachHang_HoaDon326.setModel(LayDuLieucbb("KhachHang", "TenKhachHang", "MaKhachHang"));
+        cbbSanPham_ChiTietHoaDon326.setModel(LayDuLieucbb("SanPham", "TenSanPham", "MaSanPham"));
+         txtNgayLapHoaDon_HoaDon326.setText(year+"-"+month+"-"+day);
     }//GEN-LAST:event_jPanelHoaDon326ComponentShown
 
     private void tblKhachHang_KhachHang231MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblKhachHang_KhachHang231MouseClicked
@@ -4272,6 +4302,66 @@ public void layDuLieuDoiTac() {
         kq=m.matches();
         return kq;
    }
+     public void LayDuLieuHoaDon() {
+        String cautruyvan = "";
+        cautruyvan = "select MaHoaDon,KhachHang.TenKhachHang as TenKhachHang,NhanVien.TenNhanVien,TongTien,NgayLapHoaDon,HoaDon.GhiChu from HoaDon,KhachHang,NhanVien where HoaDon.MaKhachHang =KhachHang.MaKhachHang "
+                + "and HoaDon.MaNhanVien=NhanVien.MaNhanVien ";
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        Object[] obj = new Object[]{"STT", "Mã hóa đơn", "Khách Hàng ", "Nhân viên", "Ngày lập hóa dơn", "tổng tiền", "Chú Thích"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblHoaDon_HoaDon326.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                Object[] item = new Object[7];
+                c++;
+                item[0] = c;
+                item[1] = rs.getInt("MaHoaDon");
+                item[2] = rs.getString("TenKhachHang");
+                item[3] = rs.getString("TenNhanVien");
+                item[4] = rs.getString("NgayLapHoaDon");
+                item[5] = rs.getInt("TongTien");
+                item[6] = rs.getString("GhiChu");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+     public void LayDuLieuChiTietHoaDon(String MaHoaDon) {
+        String cautruyvan = "";
+        cautruyvan = "select MaCTHD,MaHoaDon,SanPham.TenSanPham,SoLuong,TongTien,ChiTietHoaDon.GhiChu "
+                + " from ChiTietHoaDon,SanPham where ChiTietHoaDon.MaSanPham=SanPham.MaSanPham  and MaHoaDon=" + MaHoaDon;
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        Object[] obj = new Object[]{"STT", "Mã CTHD", "Mã Hóa Đơn", "Sản Phẩm", "Số Lượng", "tổng tiền", "Chú Thích"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblCTHoaDon_ChiTietHoaDon326.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                c++;
+                Object[] item = new Object[7];
+                item[0] = c;
+                item[1] = rs.getInt("MaCTHD");
+                item[2] = rs.getString("MaHoaDon");
+                item[3] = rs.getString("TenSanPham");
+                item[4] = rs.getString("SoLuong");
+                item[5] = rs.getDouble("TongTien");
+                item[6] = rs.getString("GhiChu");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+       public void reset_chitiethoadon() {
+        txtMaCTH_ChiTietHoaDon326.setText("");
+        txtMaHoaDon_ChiTietHoaDon326.setText("");
+        txtSoLuong_ChiTietHoaDon326.setText("");
+        txtTongTien_ChiTietHoaDon326.setText("");
+        txtGhiChu_ChiTietHoaDon326.setText("");
+        cbbSanPham_ChiTietHoaDon326.setSelectedIndex(0);
+    }
     public void ThongBao(String noiDungThongBao, String tieuDeThongBao, int icon) {
         JOptionPane.showMessageDialog(new JFrame(), noiDungThongBao,
                 tieuDeThongBao, icon);
