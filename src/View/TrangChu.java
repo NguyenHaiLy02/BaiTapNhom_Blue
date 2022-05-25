@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -18,7 +20,7 @@ public class TrangChu extends javax.swing.JFrame {
     public TrangChu() {
         initComponents();
     }
-    Calendar cal = Calendar.getInstance();
+   Calendar cal = Calendar.getInstance();
 
     int day = cal.get(Calendar.DAY_OF_MONTH);
     int month = cal.get(Calendar.MONTH) + 1;
@@ -26,7 +28,6 @@ public class TrangChu extends javax.swing.JFrame {
 
     Date dt = cal.getTime();
 // Dinh dang lai hien thi thong tin ngay gio ra man hinh
-    SimpleDateFormat fm = new SimpleDateFormat("dd-MM-yyyy");
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -2583,6 +2584,12 @@ public class TrangChu extends javax.swing.JFrame {
 
         tbljpanel.addTab("Nhân Viên", new javax.swing.ImageIcon(getClass().getResource("/img/nhanvien.png")), jTabbedPaneNhanVien); // NOI18N
 
+        jPanelDoiTac.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jPanelDoiTacComponentShown(evt);
+            }
+        });
+
         jPanelDoiTac231.setBackground(new java.awt.Color(153, 204, 255));
         jPanelDoiTac231.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -3473,6 +3480,13 @@ int viTriDongVuaBam = tblKhachHang_KhachHang231.getSelectedRow();
     }//GEN-LAST:event_jPanel_KhachHang231ComponentShown
 
     private void tblDoiTac_DoiTac231MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDoiTac_DoiTac231MouseClicked
+int viTriDongVuaBam = tblDoiTac_DoiTac231.getSelectedRow();
+        txtMaNPP_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 1).toString());
+        txtTenNhaPhanPhoi_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 2).toString());
+        txtDiaChi_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 3).toString());
+        txtSDT_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 4).toString());
+        txtEmail_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 5).toString());
+        txtChuThich_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 6).toString());
 
     }//GEN-LAST:event_tblDoiTac_DoiTac231MouseClicked
 
@@ -3481,7 +3495,25 @@ int viTriDongVuaBam = tblKhachHang_KhachHang231.getSelectedRow();
     }//GEN-LAST:event_txtDiaChi_DoiTac231ActionPerformed
 
     private void btnThem_DoiTac231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_DoiTac231ActionPerformed
-
+String MaDoiTac, TenDoiTac, DiaChi, SDT, Email, ChuThich;
+        MaDoiTac = txtMaNPP_DoiTac231.getText();
+        TenDoiTac = txtTenNhaPhanPhoi_DoiTac231.getText();
+        DiaChi = txtDiaChi_DoiTac231.getText();
+        SDT = txtSDT_DoiTac231.getText();
+        Email = txtEmail_DoiTac231.getText();
+        ChuThich = txtGhiChu_KhachHang231.getText();
+        String cautruyvan = "insert into NhaPhanPhoi values("
+                + " N'" + TenDoiTac + "' , N'" + DiaChi + "' ,'" + SDT
+                + "','" + Email + "', N'" + ChuThich + "')";
+        System.out.println(cautruyvan);
+        boolean kiemtra = KiemTraNhapDoiTac(0);
+        if (kiemtra) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+            System.out.println("Đã Thêm Thành Công");
+        } else {
+              System.out.println("Thất bại");;
+        }
+        layDuLieuDoiTac();
     }//GEN-LAST:event_btnThem_DoiTac231ActionPerformed
 
     private void btnSua_DoiTac231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_DoiTac231ActionPerformed
@@ -3875,7 +3907,7 @@ int viTriDongVuaBam = tblKhachHang_KhachHang231.getSelectedRow();
     }//GEN-LAST:event_jPanelDangXuatComponentShown
 
     private void jPanel_KhachHangComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel_KhachHangComponentShown
-          rbtnNam_KhachHang231.setSelected(true);
+ rbtnNam_KhachHang231.setSelected(true);
         layDuLieuKhachHang();
         cbbLoaiKhachHang_KhachHang231.setModel(LayDuLieucbb("LoaiKhachHang", "TenLoaiKhachHang", "MaLoaiKhachHang"));
         for (int i = 1; i < 32; i++) {
@@ -3893,8 +3925,13 @@ int viTriDongVuaBam = tblKhachHang_KhachHang231.getSelectedRow();
         for (int i = 1; i < 70; i++) {
             cbbTimKiemTuoi2_KhachHang231.addItem(String.valueOf(i));
         }
-        cbbTimKiemLoaiKhachHang_KhachHang231.setModel(LayDuLieucbb("LoaiKhachHang", "TenLoaiKhachHang", "MaLoaiKhachHang"));
+        cbbTimKiemLoaiKhachHang_KhachHang231.setModel(LayDuLieucbb("LoaiKhachHang", "TenLoaiKhachHang", "MaLoaiKhachHang"));       
     }//GEN-LAST:event_jPanel_KhachHangComponentShown
+
+    private void jPanelDoiTacComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelDoiTacComponentShown
+        // TODO add your handling code here:
+        layDuLieuDoiTac();
+    }//GEN-LAST:event_jPanelDoiTacComponentShown
     
     public void LayDuLieuSanPham(String TrangThai) {
         String cautruyvan = "";
@@ -4160,8 +4197,81 @@ int viTriDongVuaBam = tblKhachHang_KhachHang231.getSelectedRow();
             System.out.println(ex.toString());
         }
     }
+public void layDuLieuDoiTac() {
+        String cautruyvan = "";
+        cautruyvan = "select * from NhaPhanPhoi ";
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        Object[] obj = new Object[]{"STT", "Mã", "Tên Đối Tác", "Địa chỉ", "Số DT", "Email", "Chú Thích"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblDoiTac_DoiTac231.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                c++;
+                Object[] item = new Object[7];
+                item[0] = c;
+                item[1] = rs.getInt("MaNhaPhanPhoi");
+                item[2] = rs.getString("TenNhaPhanPhoi");
+                item[3] = rs.getString("DiaChi");
+                item[4] = rs.getString("SDT");
+                item[5] = rs.getString("Email");
+                item[6] = rs.getString("ChuThich");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+    public boolean KiemTraNhapDoiTac(int ts) {
+        String MaDoiTac,ThongBao="", TenDoiTac, DiaChi, SDT, Email, ChuThich;
+        boolean kiemtra=true;
+        MaDoiTac = txtMaNPP_DoiTac231.getText();
+        TenDoiTac = txtTenNhaPhanPhoi_DoiTac231.getText();
+        DiaChi = txtDiaChi_DoiTac231.getText();
+        SDT = txtSDT_DoiTac231.getText();
+        Email = txtEmail_DoiTac231.getText();
+        ChuThich = txtGhiChu_KhachHang231.getText();
+        if (MaDoiTac.equals("") && ts == 1) {
+            ThongBao += "bạn chưa chọn khách hàng để lấy  Mã Đối Tác\n";
+            lblMaKhachHang_KhachHang.setForeground(Color.red);
+        }
+        if (TenDoiTac.equals("")) {
+            ThongBao += "bạn chưa Nhập Tên Đối Tác\n";
+            lblTenKhachHang_KhachHang.setForeground(Color.red);
+        }
+        if (DiaChi.equals("")) {
+            lblDiaChi_KhachHang.setForeground(Color.red);
+            ThongBao += "bạn chưa Nhập Địa Chỉ\n";
+        }
+          if (!KiemTraEmail(Email)) {
+            lblDiaChi_KhachHang.setForeground(Color.red);
+            ThongBao += "bạn chưa Nhập Đúng Email\n";
 
-    
+        }
+        if (SDT.equals("")) {
+            lblSDT_KhachHang.setForeground(Color.red);
+            ThongBao += "bạn chưa Nhập Số ĐT \n";
+        }
+        if (ThongBao.equals("")) {
+            kiemtra = true;
+            lblDiaChi_KhachHang.setForeground(Color.black);
+            lblSDT_KhachHang.setForeground(Color.black);
+            lblMaKhachHang_KhachHang.setForeground(Color.black);
+            lblTenKhachHang_KhachHang.setForeground(Color.black);
+        } else {
+            kiemtra = false;
+            ThongBao(ThongBao, "lỗi nhập liệu", 2);
+        }
+        return kiemtra;
+    }
+     public boolean KiemTraEmail(String email){
+        boolean kq=false;
+       String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+        Pattern v = Pattern.compile(EMAIL_PATTERN);
+        Matcher m= v.matcher(email);
+        kq=m.matches();
+        return kq;
+   }
     public void ThongBao(String noiDungThongBao, String tieuDeThongBao, int icon) {
         JOptionPane.showMessageDialog(new JFrame(), noiDungThongBao,
                 tieuDeThongBao, icon);
