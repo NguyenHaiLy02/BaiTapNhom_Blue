@@ -186,26 +186,26 @@ public class DangNhap extends javax.swing.JFrame {
         String strPassword150 = String.valueOf(Pass150.getPassword()).trim();
 
         String cautruyvan150 = "select * from Users where TenDangNhap= '" + strUsername150 + "' and Password= '" + strPassword150 + "'";
-        ResultSet rs = Main.main.connection.ExcuteQueryGetTable(cautruyvan150);
-        String luumk = "", luutdn = "";
+        ResultSet rs150 = Main.main.connection.ExcuteQueryGetTable(cautruyvan150);
+        String luumk150 = "", luutdn150 = "";
         if (NhoMatKhau150.isSelected()) {
-            luutdn = strUsername150;
-            luumk = strPassword150;
+            luutdn150 = strUsername150;
+            luumk150 = strPassword150;
             System.out.println("lưu mật khẩu");
         } else {
-            luutdn = "";
-            luumk = "";
+            luutdn150 = "";
+            luumk150 = "";
             System.out.println("không lưu mật khẩu");
         }
         try {
-            File file = new File("luumk.txt");
-            if (!file.exists()) {
-                file.createNewFile();
+            File file150 = new File("luumk.txt");
+            if (!file150.exists()) {
+                file150.createNewFile();
             }
-            FileWriter fw = new FileWriter(file.getAbsoluteFile());
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(luutdn + "\n" + luumk);
-            bw.close();
+            FileWriter fw150 = new FileWriter(file150.getAbsoluteFile());
+            BufferedWriter bw150 = new BufferedWriter(fw150);
+            bw150.write(luutdn150 + "\n" + luumk150);
+            bw150.close();
             if (NhoMatKhau150.isSelected()) {
                 System.out.println("lưu phiên đăng nhập thành công");
             }
@@ -222,35 +222,35 @@ public class DangNhap extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_DangNhap150ActionPerformed
     private boolean KiemTra150(String tdn, String mk) {
-        boolean kq = false;
+        boolean kq150 = false;
 
         String cautruyvan150 = "select * from Users where TenDangNhap= '" + tdn + "' and Password= '" + mk + "'";
         System.out.println(cautruyvan150);
-        ResultSet rs = Main.main.connection.ExcuteQueryGetTable(cautruyvan150);
+        ResultSet rs150 = Main.main.connection.ExcuteQueryGetTable(cautruyvan150);
 
         try {
-            if (rs.next()) {
-                kq = true;
-                quyen150 = rs.getInt("Quyen");
-                ten150 = rs.getString("TenNhanVien");
-                user150 = rs.getString("UserName");
+            if (rs150.next()) {
+                kq150 = true;
+                quyen150 = rs150.getInt("Quyen");
+                ten150 = rs150.getString("TenNhanVien");
+                user150 = rs150.getString("UserName");
                 System.out.println(" " + quyen150);
             }
         } catch (SQLException ex) {
             System.out.println("lỗi đăng nhập");
         }
 
-        return kq;
+        return kq150;
     }
 
     private boolean KiemTraChuaChuVaSo150(String chuoiCanKiemTra) {
-        boolean ketQua = false;
-        Pattern p = Pattern.compile(".*[a-zA-Z].*");
-        Matcher m = p.matcher(chuoiCanKiemTra);
+        boolean ketQua150 = false;
+        Pattern p150 = Pattern.compile(".*[a-zA-Z].*");
+        Matcher m150 = p150.matcher(chuoiCanKiemTra);
         if (!(chuoiCanKiemTra == chuoiCanKiemTra.toLowerCase())) {
-            ketQua = m.find();
+            ketQua150 = m150.find();
         }
-        return ketQua;
+        return ketQua150;
     }
 
     public static void ThongBao150(String noiDungThongBao, String tieuDeThongBao, int icon) {

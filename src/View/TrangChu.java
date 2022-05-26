@@ -22,14 +22,14 @@ public class TrangChu extends javax.swing.JFrame {
     public TrangChu() {
         initComponents();
     }
-   Calendar cal = Calendar.getInstance();
+   Calendar cal150 = Calendar.getInstance();
 
-    int day = cal.get(Calendar.DAY_OF_MONTH);
-    int month = cal.get(Calendar.MONTH) + 1;
-    int year = cal.get(Calendar.YEAR);
+    int day = cal150.get(Calendar.DAY_OF_MONTH);
+    int month = cal150.get(Calendar.MONTH) + 1;
+    int year = cal150.get(Calendar.YEAR);
 
-    Date dt = cal.getTime();
-// Dinh dang lai hien thi thong tin ngay gio ra man hinh
+    Date dt = cal150.getTime();
+// Dinh dang lai hien thi thong tin ngay231 gio ra man hinh
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -3405,14 +3405,14 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelHoaDon326ComponentShown
 
     private void tblKhachHang_KhachHang231MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblKhachHang_KhachHang231MouseClicked
-        int viTriDongVuaBam = tblKhachHang_KhachHang231.getSelectedRow();
-        txtMaKhachHang_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam, 1).toString());
-        txtTenKhachHang_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam, 2).toString());
-        txtDiaChi_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam, 5).toString());
-        txtSDT_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam, 6).toString());
-        txtGhiChu_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam, 8).toString());
-        setSelectedCombobox(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam, 7).toString(), cbbLoaiKhachHang_KhachHang231);
-        String gioitinh = tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam, 4).toString();
+        int viTriDongVuaBam231 = tblKhachHang_KhachHang231.getSelectedRow();
+        txtMaKhachHang_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam231, 1).toString());
+        txtTenKhachHang_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam231, 2).toString());
+        txtDiaChi_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam231, 5).toString());
+        txtSDT_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam231, 6).toString());
+        txtGhiChu_KhachHang231.setText(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam231, 8).toString());
+        setSelectedCombobox(tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam231, 7).toString(), cbbLoaiKhachHang_KhachHang231);
+        String gioitinh = tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam231, 4).toString();
 
         if (gioitinh.equals("Nam")) {
             rbtnNam_KhachHang231.setSelected(true);
@@ -3421,19 +3421,19 @@ public class TrangChu extends javax.swing.JFrame {
             rbtnNam_KhachHang231.setSelected(false);
             rbtnNu_KhachHang231.setSelected(true);
         }
-        String ngaysinh = tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam, 3).toString();
-        System.out.println("" + ngaysinh);
-        String strngay, strthang, strnam;
-        strngay = ngaysinh.substring(8, 10);
-        strthang = ngaysinh.substring(5, 7);
-        strnam = ngaysinh.substring(0, 4);
-        int ngay, thang, nam;
-        ngay = Integer.valueOf(strngay);
-        thang = Integer.valueOf(strthang);
-        nam = Integer.valueOf(strnam);
-        cbbNgay231.setSelectedItem(String.valueOf(ngay));
-        cbbThang231.setSelectedItem(String.valueOf(thang));
-        cbbNam231.setSelectedItem(String.valueOf(nam));
+        String ngaysinh231 = tblKhachHang_KhachHang231.getValueAt(viTriDongVuaBam231, 3).toString();
+        System.out.println("" + ngaysinh231);
+        String strngay231, strthang231, strnam231;
+        strngay231 = ngaysinh231.substring(8, 10);
+        strthang231 = ngaysinh231.substring(5, 7);
+        strnam231 = ngaysinh231.substring(0, 4);
+        int ngay231, thang231, nam231;
+        ngay231 = Integer.valueOf(strngay231);
+        thang231 = Integer.valueOf(strthang231);
+        nam231 = Integer.valueOf(strnam231);
+        cbbNgay231.setSelectedItem(String.valueOf(ngay231));
+        cbbThang231.setSelectedItem(String.valueOf(thang231));
+        cbbNam231.setSelectedItem(String.valueOf(nam231));
         lblMaKhachHang_KhachHang.setForeground(Color.black);
         lblTenKhachHang_KhachHang.setForeground(Color.black);
         lblDiaChi_KhachHang.setForeground(Color.black);
@@ -3517,13 +3517,13 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel_KhachHang231ComponentShown
 
     private void tblDoiTac_DoiTac231MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDoiTac_DoiTac231MouseClicked
-        int viTriDongVuaBam = tblDoiTac_DoiTac231.getSelectedRow();
-        txtMaNPP_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 1).toString());
-        txtTenNhaPhanPhoi_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 2).toString());
-        txtDiaChi_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 3).toString());
-        txtSDT_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 4).toString());
-        txtEmail_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 5).toString());
-        txtChuThich_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam, 6).toString());
+        int viTriDongVuaBam231 = tblDoiTac_DoiTac231.getSelectedRow();
+        txtMaNPP_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam231, 1).toString());
+        txtTenNhaPhanPhoi_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam231, 2).toString());
+        txtDiaChi_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam231, 3).toString());
+        txtSDT_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam231, 4).toString());
+        txtEmail_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam231, 5).toString());
+        txtChuThich_DoiTac231.setText(tblDoiTac_DoiTac231.getValueAt(viTriDongVuaBam231, 6).toString());
 
     }//GEN-LAST:event_tblDoiTac_DoiTac231MouseClicked
 
@@ -3539,13 +3539,13 @@ public class TrangChu extends javax.swing.JFrame {
         SDT = txtSDT_DoiTac231.getText();
         Email = txtEmail_DoiTac231.getText();
         ChuThich = txtGhiChu_KhachHang231.getText();
-        String cautruyvan = "insert into NhaPhanPhoi values("
+        String cautruyvan231 = "insert into NhaPhanPhoi values("
                 + " N'" + TenDoiTac + "' , N'" + DiaChi + "' ,'" + SDT
                 + "','" + Email + "', N'" + ChuThich + "')";
-        System.out.println(cautruyvan);
-        boolean kiemtra = KiemTraNhapDoiTac(0);
-        if (kiemtra) {
-            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+        System.out.println(cautruyvan231);
+        boolean kiemtra231 = KiemTraNhapDoiTac(0);
+        if (kiemtra231) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan231);
             System.out.println("Đã Thêm Thành Công");
         } else {
               System.out.println("Thất bại");;
@@ -3586,8 +3586,8 @@ public class TrangChu extends javax.swing.JFrame {
         txtTonKho_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam235, 7).toString());
         txtChuThich_SanPham_235.setText(tblSanPham_235.getValueAt(viTriDongVuaBam235, 9).toString());
 //        try {
-//            if (!tblSanPham.getValueAt(viTriDongVuaBam, 8).toString().equals("")) {
-//                txtImg_SanPham.setText(tblSanPham_235.getValueAt(viTriDongVuaBam, 8).toString());
+//            if (!tblSanPham.getValueAt(viTriDongVuaBam231, 8).toString().equals("")) {
+//                txtImg_SanPham.setText(tblSanPham_235.getValueAt(viTriDongVuaBam231, 8).toString());
 //                 setLabelImage(txtImg_SanPham.getText());
 //            }
 //           
@@ -3921,47 +3921,47 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void tblNhanVien_NhanVien_361MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblNhanVien_NhanVien_361MouseClicked
         // TODO add your handling code here:
-        int viTriDongVuaBam = tblNhanVien_NhanVien_361.getSelectedRow();
-        txtMaNhanVien_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 1).toString());
-        txtTenNhanVien_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 2).toString());
-        txtDiaChi_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 7).toString());
-        txtSoDT_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 8).toString());
-        txtChuThich_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 9).toString());
-        setSelectedCombobox(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 6).toString(), cbbChucVu_NhanVien_361);
-        String gioitinh = tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 4).toString();
-        if (gioitinh.equals("Nam")) {
+        int viTriDongVuaBam361 = tblNhanVien_NhanVien_361.getSelectedRow();
+        txtMaNhanVien_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam361, 1).toString());
+        txtTenNhanVien_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam361, 2).toString());
+        txtDiaChi_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam361, 7).toString());
+        txtSoDT_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam361, 8).toString());
+        txtChuThich_NhanVien_361.setText(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam361, 9).toString());
+        setSelectedCombobox(tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam361, 6).toString(), cbbChucVu_NhanVien_361);
+        String gioitinh361 = tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam361, 4).toString();
+        if (gioitinh361.equals("Nam")) {
             rbtnNam_NhanVien_361.setSelected(true);
             rbtnNu_NhanVien_361.setSelected(false);
         } else {
             rbtnNu_NhanVien_361.setSelected(true);
             rbtnNam_NhanVien_361.setSelected(false);
         }
-        String ngaysinh = tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 3).toString();
-        System.out.println("" + ngaysinh);
-        String strngay, strthang, strnam;
-        strngay = ngaysinh.substring(8, 10);
-        strthang = ngaysinh.substring(5, 7);
-        strnam = ngaysinh.substring(0, 4);
-        int ngay, thang, nam;
-        ngay = Integer.valueOf(strngay);
-        thang = Integer.valueOf(strthang);
-        nam = Integer.valueOf(strnam);
-        cbbNgaySinh_NhanVien_361.setSelectedItem(String.valueOf(ngay));
-        cbbThangSinh_NhanVien_361.setSelectedItem(String.valueOf(thang));
-        cbbNamSinh_NhanVien_361.setSelectedItem(String.valueOf(nam));
-        String ngayVaoLam = tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam, 5).toString();
-        System.out.println("" + ngayVaoLam);
-        String strngayv, strthangv, strnamv;
-        strngayv = ngayVaoLam.substring(8, 10);
-        strthangv = ngayVaoLam.substring(5, 7);
-        strnamv = ngayVaoLam.substring(0, 4);
-        int ngayv, thangv, namv;
-        ngayv = Integer.valueOf(strngayv);
-        thangv = Integer.valueOf(strthangv);
-        namv = Integer.valueOf(strnamv);
-        cbbNgayVaoLam_NhanVien_361.setSelectedItem(String.valueOf(ngayv));
-        cbbThangVaoLam_NhanVien_361.setSelectedItem(String.valueOf(thangv));
-        cbbNamVaoLam_NhanVien_361.setSelectedItem(String.valueOf(namv));
+        String ngaysinh361 = tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam361, 3).toString();
+        System.out.println("" + ngaysinh361);
+        String strngay361, strthang361, strnam361;
+        strngay361 = ngaysinh361.substring(8, 10);
+        strthang361 = ngaysinh361.substring(5, 7);
+        strnam361 = ngaysinh361.substring(0, 4);
+        int ngay361, thang361, nam361;
+        ngay361 = Integer.valueOf(strngay361);
+        thang361 = Integer.valueOf(strthang361);
+        nam361 = Integer.valueOf(strnam361);
+        cbbNgaySinh_NhanVien_361.setSelectedItem(String.valueOf(ngay361));
+        cbbThangSinh_NhanVien_361.setSelectedItem(String.valueOf(thang361));
+        cbbNamSinh_NhanVien_361.setSelectedItem(String.valueOf(nam361));
+        String ngayVaoLam361 = tblNhanVien_NhanVien_361.getValueAt(viTriDongVuaBam361, 5).toString();
+        System.out.println("" + ngayVaoLam361);
+        String strngayv361, strthangv361, strnamv361;
+        strngayv361 = ngayVaoLam361.substring(8, 10);
+        strthangv361 = ngayVaoLam361.substring(5, 7);
+        strnamv361 = ngayVaoLam361.substring(0, 4);
+        int ngayv361, thangv361, namv361;
+        ngayv361 = Integer.valueOf(strngayv361);
+        thangv361 = Integer.valueOf(strthangv361);
+        namv361 = Integer.valueOf(strnamv361);
+        cbbNgayVaoLam_NhanVien_361.setSelectedItem(String.valueOf(ngayv361));
+        cbbThangVaoLam_NhanVien_361.setSelectedItem(String.valueOf(thangv361));
+        cbbNamVaoLam_NhanVien_361.setSelectedItem(String.valueOf(namv361));
     }//GEN-LAST:event_tblNhanVien_NhanVien_361MouseClicked
 
     private void btnThem_NhanVien_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_NhanVien_361ActionPerformed
@@ -4154,27 +4154,27 @@ public class TrangChu extends javax.swing.JFrame {
     }
     
     public DefaultComboBoxModel LayDuLieucbb(String bang, String Ten, String Ma) {
-        String cautruyvan = "select *from " + bang;
-        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
-        DefaultComboBoxModel cbbmodel = new DefaultComboBoxModel();
+        String cautruyvan150 = "select *from " + bang;
+        ResultSet rs150 = main.connection.ExcuteQueryGetTable(cautruyvan150);
+        DefaultComboBoxModel cbbmodel150 = new DefaultComboBoxModel();
         try {
-            while (rs.next()) {
-                displayvalueModel valueModel = new displayvalueModel(rs.getString(Ten), rs.getString(Ma));
-                cbbmodel.addElement(valueModel);
+            while (rs150.next()) {
+                displayvalueModel valueModel = new displayvalueModel(rs150.getString(Ten), rs150.getString(Ma));
+                cbbmodel150.addElement(valueModel);
             }
         } catch (SQLException ex) {
             System.out.println(ex.toString());
         }
-        return cbbmodel;
+        return cbbmodel150;
     }
     
     public void setSelectedCombobox(String cbbselected, JComboBox cbb) {
         for (int i = 0; i < cbb.getItemCount(); i++) {
-            Object obj = cbb.getItemAt(i);
-            if (obj != null) {
-                displayvalueModel m = (displayvalueModel) obj;
-                if (cbbselected.trim().equals(m.displayMember)) {
-                    cbb.setSelectedItem(m);
+            Object obj150 = cbb.getItemAt(i);
+            if (obj150 != null) {
+                displayvalueModel m150 = (displayvalueModel) obj150;
+                if (cbbselected.trim().equals(m150.displayMember)) {
+                    cbb.setSelectedItem(m150);
                 }
             }
         }
@@ -4454,12 +4454,12 @@ public void layDuLieuDoiTac() {
         return kiemtra;
     }
      public boolean KiemTraEmail(String email){
-        boolean kq=false;
-       String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-        Pattern v = Pattern.compile(EMAIL_PATTERN);
-        Matcher m= v.matcher(email);
-        kq=m.matches();
-        return kq;
+        boolean kq150=false;
+       String EMAIL_PATTERN150 = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+        Pattern v150 = Pattern.compile(EMAIL_PATTERN150);
+        Matcher m150= v150.matcher(email);
+        kq150=m150.matches();
+        return kq150;
    }
      public void LayDuLieuHoaDon() {
         String cautruyvan = "";
