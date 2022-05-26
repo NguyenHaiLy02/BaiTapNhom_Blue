@@ -3303,13 +3303,13 @@ public class TrangChu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblHoaDon_HoaDon326MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblHoaDon_HoaDon326MouseClicked
-        int viTriDongVuaBam = tblHoaDon_HoaDon326.getSelectedRow();
-        txtMaPhieuMua_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 1).toString());
-        txtNgayLapHoaDon_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 4).toString());
-        txtTongTien_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 5).toString());
-        txtGhiChu_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 6).toString());
-        setSelectedCombobox(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 3).toString(), cbbNhanVien_HoaDon326);
-        setSelectedCombobox(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam, 2).toString(), cbbKhachHang_HoaDon326);
+        int viTriDongVuaBam326 = tblHoaDon_HoaDon326.getSelectedRow();
+        txtMaPhieuMua_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam326, 1).toString());
+        txtNgayLapHoaDon_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam326, 4).toString());
+        txtTongTien_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam326, 5).toString());
+        txtGhiChu_HoaDon326.setText(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam326, 6).toString());
+        setSelectedCombobox(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam326, 3).toString(), cbbNhanVien_HoaDon326);
+        setSelectedCombobox(tblHoaDon_HoaDon326.getValueAt(viTriDongVuaBam326, 2).toString(), cbbKhachHang_HoaDon326);
         LayDuLieuChiTietHoaDon(txtMaPhieuMua_HoaDon326.getText());
         if (tblCTHoaDon_ChiTietHoaDon326.getRowCount() > 0) {
             cbbSanPham_ChiTietHoaDon326.setModel(LayDuLieucbb("SanPham", "TenSanPham", "MaSanPham"));
@@ -3326,13 +3326,13 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_tblHoaDon_HoaDon326MouseClicked
 
     private void tblCTHoaDon_ChiTietHoaDon326MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblCTHoaDon_ChiTietHoaDon326MouseClicked
-        int viTriDongVuaBam = tblCTHoaDon_ChiTietHoaDon326.getSelectedRow();
-        txtMaCTH_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 1).toString());
-        txtMaHoaDon_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 2).toString());
-        txtSoLuong_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 4).toString());
-        txtTongTien_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 5).toString());
-        txtGhiChu_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 6).toString());
-        setSelectedCombobox(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam, 3).toString(), cbbSanPham_ChiTietHoaDon326);
+        int viTriDongVuaBam326 = tblCTHoaDon_ChiTietHoaDon326.getSelectedRow();
+        txtMaCTH_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam326, 1).toString());
+        txtMaHoaDon_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam326, 2).toString());
+        txtSoLuong_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam326, 4).toString());
+        txtTongTien_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam326, 5).toString());
+        txtGhiChu_ChiTietHoaDon326.setText(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam326, 6).toString());
+        setSelectedCombobox(tblCTHoaDon_ChiTietHoaDon326.getValueAt(viTriDongVuaBam326, 3).toString(), cbbSanPham_ChiTietHoaDon326);
         LayDuLieuChiTietHoaDon(txtMaPhieuMua_HoaDon326.getText());
     }//GEN-LAST:event_tblCTHoaDon_ChiTietHoaDon326MouseClicked
 
@@ -4462,52 +4462,52 @@ public void layDuLieuDoiTac() {
         return kq150;
    }
      public void LayDuLieuHoaDon() {
-        String cautruyvan = "";
-        cautruyvan = "select MaHoaDon,KhachHang.TenKhachHang as TenKhachHang,NhanVien.TenNhanVien,TongTien,NgayLapHoaDon,HoaDon.GhiChu from HoaDon,KhachHang,NhanVien where HoaDon.MaKhachHang =KhachHang.MaKhachHang "
+        String cautruyvan326 = "";
+        cautruyvan326 = "select MaHoaDon,KhachHang.TenKhachHang as TenKhachHang,NhanVien.TenNhanVien,TongTien,NgayLapHoaDon,HoaDon.GhiChu from HoaDon,KhachHang,NhanVien where HoaDon.MaKhachHang =KhachHang.MaKhachHang "
                 + "and HoaDon.MaNhanVien=NhanVien.MaNhanVien ";
-        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
-        Object[] obj = new Object[]{"STT", "Mã hóa đơn", "Khách Hàng ", "Nhân viên", "Ngày lập hóa dơn", "tổng tiền", "Chú Thích"};
-        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
-        tblHoaDon_HoaDon326.setModel(tableModel);
+        ResultSet rs326 = main.connection.ExcuteQueryGetTable(cautruyvan326);
+        Object[] obj326 = new Object[]{"STT", "Mã hóa đơn", "Khách Hàng ", "Nhân viên", "Ngày lập hóa dơn", "tổng tiền", "Chú Thích"};
+        DefaultTableModel tableModel326 = new DefaultTableModel(obj326, 0);
+        tblHoaDon_HoaDon326.setModel(tableModel326);
         int c = 0;
         try {
-            while (rs.next()) {
-                Object[] item = new Object[7];
+            while (rs326.next()) {
+                Object[] item326 = new Object[7];
                 c++;
-                item[0] = c;
-                item[1] = rs.getInt("MaHoaDon");
-                item[2] = rs.getString("TenKhachHang");
-                item[3] = rs.getString("TenNhanVien");
-                item[4] = rs.getString("NgayLapHoaDon");
-                item[5] = rs.getInt("TongTien");
-                item[6] = rs.getString("GhiChu");
-                tableModel.addRow(item);
+                item326[0] = c;
+                item326[1] = rs326.getInt("MaHoaDon");
+                item326[2] = rs326.getString("TenKhachHang");
+                item326[3] = rs326.getString("TenNhanVien");
+                item326[4] = rs326.getString("NgayLapHoaDon");
+                item326[5] = rs326.getInt("TongTien");
+                item326[6] = rs326.getString("GhiChu");
+                tableModel326.addRow(item326);
             }
         } catch (SQLException ex) {
             System.out.println(ex.toString());
         }
     }
      public void LayDuLieuChiTietHoaDon(String MaHoaDon) {
-        String cautruyvan = "";
-        cautruyvan = "select MaCTHD,MaHoaDon,SanPham.TenSanPham,SoLuong,TongTien,ChiTietHoaDon.GhiChu "
+        String cautruyvan326 = "";
+        cautruyvan326 = "select MaCTHD,MaHoaDon,SanPham.TenSanPham,SoLuong,TongTien,ChiTietHoaDon.GhiChu "
                 + " from ChiTietHoaDon,SanPham where ChiTietHoaDon.MaSanPham=SanPham.MaSanPham  and MaHoaDon=" + MaHoaDon;
-        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
-        Object[] obj = new Object[]{"STT", "Mã CTHD", "Mã Hóa Đơn", "Sản Phẩm", "Số Lượng", "tổng tiền", "Chú Thích"};
-        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
-        tblCTHoaDon_ChiTietHoaDon326.setModel(tableModel);
+        ResultSet rs326 = main.connection.ExcuteQueryGetTable(cautruyvan326);
+        Object[] obj326 = new Object[]{"STT", "Mã CTHD", "Mã Hóa Đơn", "Sản Phẩm", "Số Lượng", "tổng tiền", "Chú Thích"};
+        DefaultTableModel tableModel326 = new DefaultTableModel(obj326, 0);
+        tblCTHoaDon_ChiTietHoaDon326.setModel(tableModel326);
         int c = 0;
         try {
-            while (rs.next()) {
+            while (rs326.next()) {
                 c++;
-                Object[] item = new Object[7];
-                item[0] = c;
-                item[1] = rs.getInt("MaCTHD");
-                item[2] = rs.getString("MaHoaDon");
-                item[3] = rs.getString("TenSanPham");
-                item[4] = rs.getString("SoLuong");
-                item[5] = rs.getDouble("TongTien");
-                item[6] = rs.getString("GhiChu");
-                tableModel.addRow(item);
+                Object[] item326 = new Object[7];
+                item326[0] = c;
+                item326[1] = rs326.getInt("MaCTHD");
+                item326[2] = rs326.getString("MaHoaDon");
+                item326[3] = rs326.getString("TenSanPham");
+                item326[4] = rs326.getString("SoLuong");
+                item326[5] = rs326.getDouble("TongTien");
+                item326[6] = rs326.getString("GhiChu");
+                tableModel326.addRow(item326);
             }
         } catch (SQLException ex) {
             System.out.println(ex.toString());
