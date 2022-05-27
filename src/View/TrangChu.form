@@ -2321,7 +2321,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanelNhanVien1">
+            <Container class="javax.swing.JPanel" name="jPanelNhanVien_361">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="cc" red="99" type="rgb"/>
@@ -2331,7 +2331,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelNhanVien1ComponentShown"/>
+                <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelNhanVien_361ComponentShown"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -2443,14 +2443,14 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="lblDiaChi_NhanVien1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lblDiaChi_NhanVien_361" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel58" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="lblSDT_NhanVien1" min="-2" pref="85" max="-2" attributes="0"/>
+                                              <Component id="lblSDT_NhanVien_361" min="-2" pref="85" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -2496,12 +2496,12 @@
                                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="txtDiaChi_NhanVien_361" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblDiaChi_NhanVien1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblDiaChi_NhanVien_361" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblSDT_NhanVien1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtSoDT_NhanVien_361" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="txtSoDT_NhanVien_361" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblSDT_NhanVien_361" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -2525,12 +2525,12 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="lblDiaChi_NhanVien1">
+                    <Component class="javax.swing.JLabel" name="lblDiaChi_NhanVien_361">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="&#x110;&#x1ecb;a Ch&#x1ec9;"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="lblSDT_NhanVien1">
+                    <Component class="javax.swing.JLabel" name="lblSDT_NhanVien_361">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="S&#x1ed1; &#x110;T"/>
                       </Properties>
@@ -2741,11 +2741,11 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblMaNhanVien_NhanVien1" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="lblMaNhanVien_NhanVien_361" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
                                   <Component id="jLabel49" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel50" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
                                   <Component id="jLabel51" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblTenNhanVien_NhanVien1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblTenNhanVien_NhanVien_361" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -2791,12 +2791,12 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblMaNhanVien_NhanVien1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblMaNhanVien_NhanVien_361" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtMaNhanVien_NhanVien_361" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblTenNhanVien_NhanVien1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblTenNhanVien_NhanVien_361" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtTenNhanVien_NhanVien_361" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
@@ -2829,12 +2829,12 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="lblTenNhanVien_NhanVien1">
+                    <Component class="javax.swing.JLabel" name="lblTenNhanVien_NhanVien_361">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="T&#xea;n Nh&#xe2;n Vi&#xea;n"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="lblMaNhanVien_NhanVien1">
+                    <Component class="javax.swing.JLabel" name="lblMaNhanVien_NhanVien_361">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="M&#xe3; Nh&#xe2;n Vi&#xea;n"/>
                       </Properties>
@@ -4130,7 +4130,7 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jPanel14" pref="239" max="32767" attributes="0"/>
+                                  <Component id="jPanel14" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel19" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -4263,7 +4263,7 @@
                                               <Component id="txtMaPhieuMua_HoaDon326" min="-2" pref="142" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                               <Component id="jLabel33" min="-2" pref="66" max="-2" attributes="0"/>
-                                              <EmptySpace pref="199" max="32767" attributes="0"/>
+                                              <EmptySpace pref="202" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -4530,7 +4530,7 @@
                                       <Component id="btnSua_ChiTietHoaDon326" min="-2" pref="96" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="btnReset_ChiTietHoaDon326" min="-2" pref="90" max="-2" attributes="0"/>
-                                      <EmptySpace pref="49" max="32767" attributes="0"/>
+                                      <EmptySpace pref="57" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -4539,7 +4539,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="23" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel36" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
