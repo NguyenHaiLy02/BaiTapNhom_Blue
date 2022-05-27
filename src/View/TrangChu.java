@@ -3853,39 +3853,155 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnXoa_PhieuNhap_235ActionPerformed
 
     private void btnSua_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_PhieuNhap_235ActionPerformed
-
+        String MaPhieuNhap, MaNhanVien235, MaNhaPhanPhoi235, TongTien, NgayNhap235, ChuThich235;
+        MaPhieuNhap = txtMaPhieuNhap_PhieuNhap_235.getText();
+        MaNhanVien235 = GetCbbSelected(cbbNhanVien_PhieuNhap_235);
+        MaNhaPhanPhoi235 = GetCbbSelected(cbbNhaPhanPhoi_PhieuNhap_235);
+        String ngay235, thang235, nam235;
+        ngay235 = cbbNgay_PhieuNhap_235.getSelectedItem().toString();
+        thang235 = cbbThang_PhieuNhap_235.getSelectedItem().toString();
+        nam235 = cbbNam_PhieuNhap_235.getSelectedItem().toString();
+        NgayNhap235 = nam235 + "-" + thang235 + "-" + ngay235;
+        TongTien = txtTongTien_PhieuNhap_235.getText();
+        ChuThich235 = txtChuTich_PhieuNhap_235.getText();
+        String cautruyvan235 = "update  PhieuNhap set "
+                + " MaNhanVien= " + MaNhanVien235 + " , MaNhaPhanPhoi=" + MaNhaPhanPhoi235 + " ,TongTien=" + TongTien
+                + ",NgayNhap='" + NgayNhap235 + "', ChuThich=N'" + ChuThich235 + "'where MaPhieuNhap=" + MaPhieuNhap;
+        System.out.println(cautruyvan235);
+        boolean kiemtra235 = true;
+        if (!txtMaPhieuNhap_PhieuNhap_235.equals("")) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan235);
+            System.out.println("Đã Sửa Thành Công");
+        } else {
+            ThongBao("Bạn chọn phiếu nhập!", "lỗi", 2);
+        }
+        LayDuLieuPhieuNhap();
     }//GEN-LAST:event_btnSua_PhieuNhap_235ActionPerformed
 
     private void btnReset_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_PhieuNhap_235ActionPerformed
-
+        String MaPhieuNhap235, TongTien235, NgayLap235, ChuThich235;
+        txtMaKhachHang_KhachHang231.setText("");
+        txtTenKhachHang_KhachHang231.setText("");
+        cbbNgay_PhieuNhap_235.setSelectedIndex(1);
+        cbbThang_PhieuNhap_235.setSelectedIndex(1);
+        cbbNam_PhieuNhap_235.setSelectedIndex(1);
+        txtMaPhieuNhap_PhieuNhap_235.setText("");
+        txtTongTien_PhieuNhap_235.setText("");
+        txtChuTich_PhieuNhap_235.setText("");
+        cbbNhanVien_PhieuNhap_235.setSelectedIndex(1);
     }//GEN-LAST:event_btnReset_PhieuNhap_235ActionPerformed
-
+    public int tam1 = 0;
     private void cbbThang_PhieuNhap_235ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbThang_PhieuNhap_235ItemStateChanged
+        String thang235 = cbbThang_PhieuNhap_235.getSelectedItem().toString();
+        DefaultComboBoxModel cbbmodel = new DefaultComboBoxModel();
+        String thanght235;
+        if (tam1 == 0) {
+            thanght235 = "0";
+        } else {
+            thanght235 = cbbNgay_PhieuNhap_235.getSelectedItem().toString();
+        }
+        tam1 = 1;
 
+        if (thang235.equals("4") || thang235.equals("6") || thang235.equals("9") || thang235.equals("11")) {
+            cbbNgay_PhieuNhap_235.setModel(cbbmodel);
+            for (int i = 1; i < 31; i++) {
+                cbbNgay_PhieuNhap_235.addItem(String.valueOf(i));
+            }
+            if (Integer.valueOf(thanght235) < 31) {
+                cbbNgay_PhieuNhap_235.setSelectedItem(thanght235);
+            }
+        } else if (thang235.equals("1") || thang235.equals("3") || thang235.equals("5")
+                || thang235.equals("7") || thang235.equals("8") || thang235.equals("12") || thang235.equals("10")) {
+
+            cbbNgay_PhieuNhap_235.setModel(cbbmodel);
+            for (int i = 1; i < 32; i++) {
+                cbbNgay_PhieuNhap_235.addItem(String.valueOf(i));
+            }
+            if (Integer.valueOf(thanght235) < 32) {
+                cbbNgay_PhieuNhap_235.setSelectedItem(thanght235);
+            }
+        } else {
+            cbbNgay_PhieuNhap_235.setModel(cbbmodel);
+            for (int i = 1; i < 29; i++) {
+                cbbNgay_PhieuNhap_235.addItem(String.valueOf(i));
+            }
+            if (Integer.valueOf(thanght235) < 29) {
+                cbbNgay_PhieuNhap_235.setSelectedItem(thanght235);
+            }
+        }
     }//GEN-LAST:event_cbbThang_PhieuNhap_235ItemStateChanged
 
     private void cbbNam_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbNam_PhieuNhap_235ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_cbbNam_PhieuNhap_235ActionPerformed
 
     private void txtSoLuongCTPN_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSoLuongCTPN_PhieuNhap_235ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtSoLuongCTPN_PhieuNhap_235ActionPerformed
 
     private void txtSoLuongCTPN_PhieuNhap_235KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSoLuongCTPN_PhieuNhap_235KeyReleased
-
+        int SoLuong235 = 0;
+        double Tien235 = 0;
+        try {
+            SoLuong235 = Integer.valueOf(txtSoLuongCTPN_PhieuNhap_235.getText());
+        } catch (Exception e) {
+        }
+        int Gia235 = GetGiaSanPham(GetCbbSelected(cbbSanPhamCTPN_PhieuNhap_235));
+        Tien235 = (double) Gia235 * SoLuong235;
+        txtTongTienCTPN_PhieuNhap_235.setText(String.valueOf(Tien235));
     }//GEN-LAST:event_txtSoLuongCTPN_PhieuNhap_235KeyReleased
 
     private void cbbSanPhamCTPN_PhieuNhap_235ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbSanPhamCTPN_PhieuNhap_235ItemStateChanged
-
+        int SoLuong = 0;
+        double Tien235 = 0;
+        try {
+            SoLuong = Integer.valueOf(txtSoLuongCTPN_PhieuNhap_235.getText());
+        } catch (Exception e) {
+        }
+        int Gia235 = GetGiaSanPham(GetCbbSelected(cbbSanPhamCTPN_PhieuNhap_235));
+        Tien235 = (double) Gia235 * SoLuong;
+        txtTongTienCTPN_PhieuNhap_235.setText(String.valueOf(Tien235));
     }//GEN-LAST:event_cbbSanPhamCTPN_PhieuNhap_235ItemStateChanged
 
     private void btnThemCTPN_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemCTPN_PhieuNhap_235ActionPerformed
-
+        String MaCTPN,MaPhieuNhap235,MaSanPham235,SoLuong235,TongTien235,ChuThich235;
+  MaCTPN=txtMaCTPN_PhieuNhap_235.getText();
+  MaPhieuNhap235=txtMaPhieuNhap_PhieuNhap_235.getText();
+  MaSanPham235=GetCbbSelected(cbbSanPhamCTPN_PhieuNhap_235);
+  SoLuong235=txtSoLuongCTPN_PhieuNhap_235.getText();
+  TongTien235=txtTongTienCTPN_PhieuNhap_235.getText();
+  ChuThich235=txtChuThichCTPN_PhieuNhap_235.getText();
+  
+    String tb235="", cautruyvan235 = "insert into ChiTietPhieuNhap values("
+                + " " + MaPhieuNhap235 + " , " + MaSanPham235 + " ," + SoLuong235
+                + "," + TongTien235 + ", N'" + ChuThich235 + "')";
+        System.out.println(cautruyvan235);
+        boolean kiemtra235 = true;
+        if(txtSoLuongCTPN_PhieuNhap_235.equals("")){
+            tb235+="Chưa nhập Số lượng";
+        kiemtra235=false;}
+        try {
+                int bien235= Integer.valueOf(txtSoLuongCTPN_PhieuNhap_235.getText());
+          
+        } catch (Exception e) {
+                kiemtra235=false;
+              tb235+="Số lượng phải nhập bằng số";
+        }
+        if (!txtMaPhieuNhap_CTPN_235.equals("") && kiemtra235==true) {
+            
+            main.connection.ExcuteQueryUpdateDB(cautruyvan235);
+            System.out.println("Đã Thêm Thành Công");
+        } else {
+            ThongBao("Không thể Thêm ", "lỗi", 2);
+        }
+        LayDuLieuChiTietPhieuNhap(txtMaPhieuNhap_CTPN_235.getText());
     }//GEN-LAST:event_btnThemCTPN_PhieuNhap_235ActionPerformed
 
     private void btnXoaXTPN_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaXTPN_PhieuNhap_235ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnXoaXTPN_PhieuNhap_235ActionPerformed
 
     private void btnSuaCTPN_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaCTPN_PhieuNhap_235ActionPerformed
@@ -4786,6 +4902,20 @@ public void layDuLieuDoiTac() {
         } catch (SQLException ex) {
             System.out.println(ex.toString());
         }
+    }
+    
+    public int GetGiaSanPham(String MaSP) {
+        int Gia235 = 0;
+        String cautruyvan235 = "select * from SanPham where MaSanPham=" + MaSP;
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan235);
+        try {
+            if (rs.next()) {
+                Gia235 = rs.getInt("Giaban");
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+        return Gia235;
     }
     
     public static void main(String args[]) {
