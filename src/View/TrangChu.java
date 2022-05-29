@@ -2483,6 +2483,11 @@ public class TrangChu extends javax.swing.JFrame {
         btnReset_TaiKhoan_361.setBackground(new java.awt.Color(0, 255, 204));
         btnReset_TaiKhoan_361.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnReset_TaiKhoan_361.setText("Reset");
+        btnReset_TaiKhoan_361.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReset_TaiKhoan_361ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -4160,14 +4165,65 @@ public boolean KiemTraNhapNhanVien(int ts) {
 
     private void btnSua_NhanVien_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_NhanVien_361ActionPerformed
         // TODO add your handling code here:
+        String MaNhanVien_361, TenNhanVien_361, NgaySinh_361, GioiTinh_361, NgayVaoLam_361, ChucVu_361, DiaChi_361, SoDT_361, GhiChu_361;
+        MaNhanVien_361 = txtMaNhanVien_NhanVien_361.getText();
+        if (rbtnNam_NhanVien_361.isSelected()) {
+            GioiTinh_361 = "1";
+        } else {
+            GioiTinh_361 = "0";
+        }
+        ChucVu_361 = GetCbbSelected(cbbChucVu_NhanVien_361);
+        TenNhanVien_361 = txtTenNhanVien_NhanVien_361.getText();
+        String ngay_361, thang_361, nam_361;
+        ngay_361 = cbbNgaySinh_NhanVien_361.getSelectedItem().toString();
+        thang_361 = cbbThangSinh_NhanVien_361.getSelectedItem().toString();
+        nam_361 = cbbNamSinh_NhanVien_361.getSelectedItem().toString();
+        NgaySinh_361 = nam_361 + "-" + thang_361 + "-" + ngay_361;
+        String ngayv_361, thangv_361, namv_361;
+        ngayv_361 = cbbNgayVaoLam_NhanVien_361.getSelectedItem().toString();
+        thangv_361 = cbbThangVaoLam_NhanVien_361.getSelectedItem().toString();
+        namv_361 = cbbNamVaoLam_NhanVien_361.getSelectedItem().toString();
+        NgayVaoLam_361 = namv_361 + "-" + thangv_361 + "-" + ngayv_361;
+        DiaChi_361 = txtDiaChi_NhanVien_361.getText();
+        SoDT_361 = txtSoDT_NhanVien_361.getText();
+        GhiChu_361 = txtChuThich_NhanVien_361.getText();
+        String cautruyvan_361 = "update NhanVien set TenNhanVien=" + "N'" + TenNhanVien_361
+                + "',NgaySinh='" + NgaySinh_361 + "',GioiTinh=" + GioiTinh_361
+                + ",NgayVaoLam='" + NgayVaoLam_361 + "',ChucVu="
+                + ChucVu_361 + ",DiaChi=N'" + DiaChi_361 + "',SoDT='" + SoDT_361 + "',GhiChu=N'" + GhiChu_361 + "'where MaNhanVien=" + MaNhanVien_361;
+        boolean kiemtra_361 = KiemTraNhapNhanVien(1);
+        if (kiemtra_361) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan_361);
+            System.out.println("Đã sửa Thành Công");
+        } else {
+            ThongBao("Không thể sửa Nhân Viên", "lỗi", 2);
+        }
+        layDuLieuNhanVien();
     }//GEN-LAST:event_btnSua_NhanVien_361ActionPerformed
 
     private void btnXoa_NhanVien_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_NhanVien_361ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnXoa_NhanVien_361ActionPerformed
+    public void ResNhanVien_361() {
+        txtMaNhanVien_NhanVien_361.setText("");
+        txtTenNhanVien_NhanVien_361.setText("");
+        cbbNgaySinh_NhanVien_361.setSelectedItem("1");
+        cbbThangSinh_NhanVien_361.setSelectedItem("1");
+        cbbNamSinh_NhanVien_361.setSelectedItem("2000");
+        cbbNgayVaoLam_NhanVien_361.setSelectedItem("1");
+        cbbThangVaoLam_NhanVien_361.setSelectedItem("1");
+        cbbNamVaoLam_NhanVien_361.setSelectedItem("2000");
+        txtDiaChi_NhanVien_361.setText("");
+        txtSoDT_NhanVien_361.setText("");
+        txtChuThich_NhanVien_361.setText("");
+        cbbChucVu_NhanVien_361.setSelectedIndex(0);
+        rbtnNam_NhanVien_361.setSelected(true);
+        rbtnNu_NhanVien_361.setSelected(false);
 
+    }
     private void btnReset_NhanVien_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_NhanVien_361ActionPerformed
         // TODO add your handling code here:
+        ResNhanVien_361();
     }//GEN-LAST:event_btnReset_NhanVien_361ActionPerformed
 
     private void txtDiaChi_NhanVien_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDiaChi_NhanVien_361ActionPerformed
@@ -4210,12 +4266,12 @@ public boolean KiemTraNhapNhanVien(int ts) {
         MaChucVu_361 = txtMaChucVu_ChucVu_361.getText();
         TenChucVu_361 = txtTenChucVu_ChucVu_361.getText();
         GhiChu_361 = txtChuThich_ChucVu_361.getText();
-        String cautruyvan = "insert into ChucVu values("
+        String cautruyvan_361 = "insert into ChucVu values("
                 + " N'" + TenChucVu_361 + "', N'" + GhiChu_361 + "')";
-        System.out.println(cautruyvan);
+        System.out.println(cautruyvan_361);
         boolean kiemtra_361 = true;
         if (kiemtra_361) {
-            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+            main.connection.ExcuteQueryUpdateDB(cautruyvan_361);
             System.out.println("Đã Thêm Thành Công");
         } else {
             ThongBao("Không thể Thêm chức Vụ", "lỗi", 2);
@@ -4225,10 +4281,30 @@ public boolean KiemTraNhapNhanVien(int ts) {
 
     private void btnSua_ChucVu_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_ChucVu_361ActionPerformed
         // TODO add your handling code here:
+        String MaChucVu_361, TenChucVu_361, GhiChu_361;
+        MaChucVu_361 = txtMaChucVu_ChucVu_361.getText();
+        TenChucVu_361 = txtTenChucVu_ChucVu_361.getText();
+        GhiChu_361 = txtChuThich_ChucVu_361.getText();
+        String cautruyvan_361 = "update  ChucVu set TenChucVu="
+                + " N'" + TenChucVu_361 + "',GhiChu= N'" + GhiChu_361 + "'Where MaChucVu=" + MaChucVu_361;
+        System.out.println(cautruyvan_361);
+        boolean kiemtra_361 = true;
+        if (kiemtra_361) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan_361);
+            System.out.println("Đã Sửa Thành Công");
+        } else {
+            ThongBao("Không thể Sửa chức Vụ", "lỗi", 2);
+        }
+        layDuLieuChucVu();
     }//GEN-LAST:event_btnSua_ChucVu_361ActionPerformed
-
+    public void ResChucVu_361() {
+        txtMaChucVu_ChucVu_361.setText("");
+        txtTenChucVu_ChucVu_361.setText("");
+        txtChuThich_ChucVu_361.setText("");
+    }
     private void btnReset_ChucVu_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_ChucVu_361ActionPerformed
         // TODO add your handling code here:
+        ResChucVu_361();
     }//GEN-LAST:event_btnReset_ChucVu_361ActionPerformed
 
     private void txtMaChucVu_ChucVu_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMaChucVu_ChucVu_361ActionPerformed
@@ -4282,6 +4358,24 @@ public boolean KiemTraNhapNhanVien(int ts) {
 
     private void btnSua_TaiKhoan_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_TaiKhoan_361ActionPerformed
         // TODO add your handling code here:
+        String ID_361, MaNhanVien_361, TenDangNhap_361, Password_361, Quyen_361, ChuThich_361;
+        ID_361 = txtID_TaiKhoan_361.getText();
+        MaNhanVien_361 = GetCbbSelected(cbbTenNhanVien_TaiKhoan_361);
+        TenDangNhap_361 = txtUser_TaiKhoan_361.getText();
+        Password_361 = String.valueOf(txtPassword_TaiKhoan_361.getPassword()).trim();
+        Quyen_361 = GetCbbSelected(cbbQuyen_TaiKhoan_361);
+        ChuThich_361 = txtChuThich_TaiKhoan_361.getText();
+        String cautruyvan_361 = "update  Users set MaNhanVien=" + MaNhanVien_361
+                + " ,TenDangNhap='" + TenDangNhap_361 + "' ,Password= '" + Password_361 + "' ,Quyen=" + Quyen_361
+                + ",ChuThich= N'" + ChuThich_361 + "'Where ID=" + ID_361;
+        boolean kiemtra_361 = true;
+        if (kiemtra_361) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan_361);
+            System.out.println("Đã Sửa Thành Công tài khoản có id=" + ID_361);
+        } else {
+            ThongBao("Không thể Sửa tài Khoản với Tên đăng nhập là =" + TenDangNhap_361, "lỗi", 2);
+        }
+        layDuLieuTaiKhoan();
     }//GEN-LAST:event_btnSua_TaiKhoan_361ActionPerformed
 
     private void txtPassword_TaiKhoan_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassword_TaiKhoan_361ActionPerformed
@@ -4353,6 +4447,19 @@ public boolean KiemTraNhapNhanVien(int ts) {
             cbbNamVaoLam_NhanVien_361.addItem(String.valueOf(i));
         }
     }//GEN-LAST:event_jTabbedPaneNhanVienComponentShown
+
+    public void ResTaiKhoan_361() {
+        txtID_TaiKhoan_361.setText("");
+        cbbTenNhanVien_TaiKhoan_361.setSelectedItem("1");
+        txtUser_TaiKhoan_361.setText("");
+        txtPassword_TaiKhoan_361.setText("");
+        cbbQuyen_TaiKhoan_361.setSelectedItem("1");
+        txtChuThich_NhanVien_361.setText("");
+    }
+    private void btnReset_TaiKhoan_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_TaiKhoan_361ActionPerformed
+        // TODO add your handling code here:
+        ResTaiKhoan_361();
+    }//GEN-LAST:event_btnReset_TaiKhoan_361ActionPerformed
     
     public void LayDuLieuSanPham(String TrangThai) {
         String cautruyvan235 = "";
