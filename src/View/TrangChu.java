@@ -522,6 +522,11 @@ public class TrangChu extends javax.swing.JFrame {
         rbtnTimKiemTenSanPham_SanPham_235.setBackground(new java.awt.Color(153, 204, 255));
         rbtnTimKiemTenSanPham_SanPham_235.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         rbtnTimKiemTenSanPham_SanPham_235.setText("Tên Sản Phẩm");
+        rbtnTimKiemTenSanPham_SanPham_235.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtnTimKiemTenSanPham_SanPham_235ActionPerformed(evt);
+            }
+        });
 
         rbtnTimKiemLoaiSanPham_SanPham_235.setBackground(new java.awt.Color(153, 204, 255));
         rbtnTimKiemLoaiSanPham_SanPham_235.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -984,6 +989,11 @@ public class TrangChu extends javax.swing.JFrame {
         cbbNhanVien_PhieuNhap_235.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         txtMaPhieuNhap_PhieuNhap_235.setEditable(false);
+        txtMaPhieuNhap_PhieuNhap_235.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMaPhieuNhap_PhieuNhap_235ActionPerformed(evt);
+            }
+        });
 
         txtChuTich_PhieuNhap_235.setColumns(20);
         txtChuTich_PhieuNhap_235.setRows(5);
@@ -2641,7 +2651,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel1.setText("Nhà phân phối");
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thay đổi thông tin đối tác ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 0, 0))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thay đổi thông tin đối tác ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 0, 0))); // NOI18N
 
         jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel75.setText("Mã NPP :");
@@ -2999,7 +3009,7 @@ public class TrangChu extends javax.swing.JFrame {
                                 .addComponent(txtMaPhieuMua_HoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(63, 63, 63)
                                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(199, Short.MAX_VALUE))))
+                                .addContainerGap(202, Short.MAX_VALUE))))
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(btnXoa_HoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3159,12 +3169,12 @@ public class TrangChu extends javax.swing.JFrame {
                         .addComponent(btnSua_ChiTietHoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnReset_ChiTietHoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(49, Short.MAX_VALUE))))
+                        .addContainerGap(57, Short.MAX_VALUE))))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3229,7 +3239,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addGroup(jPanelHoaDon326Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelHoaDon326Layout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
+                        .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelHoaDon326Layout.createSequentialGroup()
@@ -4028,14 +4038,14 @@ String MaKhachHang = txtMaKhachHang_KhachHang231.getText();
 
     private void btnThemCTPN_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemCTPN_PhieuNhap_235ActionPerformed
         String MaCTPN,MaPhieuNhap235,MaSanPham235,SoLuong235,TongTien235,ChuThich235;
-  MaCTPN=txtMaCTPN_PhieuNhap_235.getText();
-  MaPhieuNhap235=txtMaPhieuNhap_PhieuNhap_235.getText();
-  MaSanPham235=GetCbbSelected(cbbSanPhamCTPN_PhieuNhap_235);
-  SoLuong235=txtSoLuongCTPN_PhieuNhap_235.getText();
-  TongTien235=txtTongTienCTPN_PhieuNhap_235.getText();
-  ChuThich235=txtChuThichCTPN_PhieuNhap_235.getText();
+        MaCTPN=txtMaCTPN_PhieuNhap_235.getText();
+        MaPhieuNhap235=txtMaPhieuNhap_PhieuNhap_235.getText();
+        MaSanPham235=GetCbbSelected(cbbSanPhamCTPN_PhieuNhap_235);
+        SoLuong235=txtSoLuongCTPN_PhieuNhap_235.getText();
+        TongTien235=txtTongTienCTPN_PhieuNhap_235.getText();
+        ChuThich235=txtChuThichCTPN_PhieuNhap_235.getText();
   
-    String tb235="", cautruyvan235 = "insert into ChiTietPhieuNhap values("
+        String tb235="", cautruyvan235 = "insert into ChiTietPhieuNhap values("
                 + " " + MaPhieuNhap235 + " , " + MaSanPham235 + " ," + SoLuong235
                 + "," + TongTien235 + ", N'" + ChuThich235 + "')";
         System.out.println(cautruyvan235);
@@ -4066,11 +4076,46 @@ String MaKhachHang = txtMaKhachHang_KhachHang231.getText();
     }//GEN-LAST:event_btnXoaXTPN_PhieuNhap_235ActionPerformed
 
     private void btnSuaCTPN_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaCTPN_PhieuNhap_235ActionPerformed
-
+        String MaCTPN,MaPhieuNhap,MaSanPham,SoLuong,TongTien,ChuThich;
+        MaCTPN=txtMaCTPN_PhieuNhap_235.getText();
+        MaPhieuNhap=txtMaPhieuNhap_PhieuNhap_235.getText();
+        MaSanPham=GetCbbSelected(cbbSanPhamCTPN_PhieuNhap_235);
+        SoLuong=txtSoLuongCTPN_PhieuNhap_235.getText();
+        TongTien=txtTongTienCTPN_PhieuNhap_235.getText();
+        ChuThich=txtChuThichCTPN_PhieuNhap_235.getText();
+  
+        String tb="", cautruyvan = "update  ChiTietPhieuNhap set "
+                + " "  + " MaSanPham= " + MaSanPham + " ,SoLuong=" + SoLuong
+                + ",TongTien=" + TongTien + ", ChuThich=N'" + ChuThich + "'where MaCTPN="+MaCTPN;
+        System.out.println(cautruyvan);
+        boolean kiemtra = true;
+        if(txtSoLuongCTPN_PhieuNhap_235.equals("")){
+            tb+="Chưa nhập Số lượng";
+        kiemtra=false;}
+        try {
+                int bien= Integer.valueOf(txtSoLuongCTPN_PhieuNhap_235.getText());
+          
+        } catch (Exception e) {
+                kiemtra=false;
+              tb+="Số lượng phải nhập bằng số";
+        }
+        if (!txtMaPhieuNhap_CTPN_235.equals("") && kiemtra==true) {
+            
+            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+            System.out.println("Đã sửa Thành Công");
+        } else {
+            ThongBao("Không thể Thêm ", "lỗi", 2);
+        }
+        LayDuLieuChiTietPhieuNhap(txtMaPhieuNhap_CTPN_235.getText());
     }//GEN-LAST:event_btnSuaCTPN_PhieuNhap_235ActionPerformed
 
     private void btnResetCTPN_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetCTPN_PhieuNhap_235ActionPerformed
-
+        txtMaCTPN_PhieuNhap_235.setText("");
+        txtMaPhieuNhap_CTPN_235.setText("");
+        cbbSanPhamCTPN_PhieuNhap_235.setSelectedIndex(1);
+        txtSoLuongCTPN_PhieuNhap_235.setText("");
+        txtTongTienCTPN_PhieuNhap_235.setText("");
+        txtChuThichCTPN_PhieuNhap_235.setText("");
     }//GEN-LAST:event_btnResetCTPN_PhieuNhap_235ActionPerformed
 
     private void jPanelPhieuNhap235ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelPhieuNhap235ComponentShown
@@ -4516,6 +4561,14 @@ public boolean KiemTraNhapNhanVien(int ts) {
         // TODO add your handling code here:
         ResTaiKhoan_361();
     }//GEN-LAST:event_btnReset_TaiKhoan_361ActionPerformed
+
+    private void txtMaPhieuNhap_PhieuNhap_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMaPhieuNhap_PhieuNhap_235ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMaPhieuNhap_PhieuNhap_235ActionPerformed
+
+    private void rbtnTimKiemTenSanPham_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnTimKiemTenSanPham_SanPham_235ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtnTimKiemTenSanPham_SanPham_235ActionPerformed
     
     public void LayDuLieuSanPham(String TrangThai) {
         String cautruyvan235 = "";
