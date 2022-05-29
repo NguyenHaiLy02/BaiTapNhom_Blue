@@ -147,19 +147,19 @@ public class DangKy extends javax.swing.JFrame {
         TenDangNhap150 = txtUserName150.getText();
         Password150 = String.valueOf(txtPassword150.getText()).trim();
         NhapLai150 = String.valueOf(txtRetypePasswword150.getText());
-        String cautruyvan = "select *from Quyen ";
-        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        String cautruyvan150 = "select *from Quyen ";
+        ResultSet rs150 = main.connection.ExcuteQueryGetTable(cautruyvan150);
         try {
-            while (rs.next()) {
-                if (rs.getString("TenQuyen").equals("New")) {
-                    Quyen150 = rs.getString("MaQuyen");
+            while (rs150.next()) {
+                if (rs150.getString("TenQuyen").equals("New")) {
+                    Quyen150 = rs150.getString("MaQuyen");
                 }
             }
         } catch (SQLException ex) {
             System.out.println(ex.toString());
         }
 
-        boolean kt = true;
+        boolean kt150 = true;
 
         if (MaNhanVien150.equals("")) {
             ThongBao150("Tên đăng nhập phải từ 6-10 ký tự", "Thông báo lỗi", JOptionPane.ERROR_MESSAGE);
@@ -174,25 +174,25 @@ public class DangKy extends javax.swing.JFrame {
                 ThongBao150("nhập lại mật khẩu không khớp", "Thông báo", 2);
             } else {
 
-                String cautruyvan2 = "select * from Users where MaNhanVien= '" + MaNhanVien150 + "'";
-                ResultSet rs2 = Main.main.connection.ExcuteQueryGetTable(cautruyvan2);
+                String cautruyvan150_2 = "select * from Users where MaNhanVien= '" + MaNhanVien150 + "'";
+                ResultSet rs150_2 = Main.main.connection.ExcuteQueryGetTable(cautruyvan150_2);
                 try {
-                    rs2.next();
-                    if (rs.getString("MaNhanVien").equals(MaNhanVien150)) {
-                        kt = false;
+                    rs150_2.next();
+                    if (rs150.getString("MaNhanVien").equals(MaNhanVien150)) {
+                        kt150 = false;
                         ThongBao150("tài khoản  của nhân viên có mã: " + MaNhanVien150 + " đã  có trong sql yêu cầu tạo tk với tên đăng nhập khác!", "Thông báo", 2);
                     }
 
                 } catch (SQLException ex) {
                     System.out.println("không có trong sql !có thể tạo thêm");
-                    kt = true;
+                    kt150 = true;
                 }
-                if (kt == true) {
-                    String ctv = "insert into Users values(" + MaNhanVien150
+                if (kt150 == true) {
+                    String ctv150 = "insert into Users values(" + MaNhanVien150
                             + " ,'" + TenDangNhap150 + "' , '" + Password150 + "' ," + Quyen150
                             + ", N' ')";
-                    System.out.println(cautruyvan);
-                    main.connection.ExcuteQueryUpdateDB(ctv);
+                    System.out.println(cautruyvan150);
+                    main.connection.ExcuteQueryUpdateDB(ctv150);
                     System.out.println("Đã Thêm Thành Công");
                 } else {
                     ThongBao150("Không thể Thêm tài Khoản", "lỗi", 2);
@@ -221,32 +221,32 @@ public class DangKy extends javax.swing.JFrame {
         l.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_QuayLai150ActionPerformed
-    private boolean KiemTra150(String tdn, String mk) {
-        boolean kq = false;
-        String cautruyvan150 = "select * from Users where TenDangNhap= '" + tdn + "' and Password= '" + mk + "'";
+    private boolean KiemTra150(String tdn150, String mk150) {
+        boolean kq150 = false;
+        String cautruyvan150 = "select * from Users where TenDangNhap= '" + tdn150 + "' and Password= '" + mk150 + "'";
         System.out.println(cautruyvan150);
-        ResultSet rs = Main.main.connection.ExcuteQueryGetTable(cautruyvan150);
+        ResultSet rs150 = Main.main.connection.ExcuteQueryGetTable(cautruyvan150);
         try {
-            if (rs.next()) {
-                kq = true;
-                quyen150 = rs.getInt("Quyen");
-                ten150 = rs.getString("TenDangNhap");
+            if (rs150.next()) {
+                kq150 = true;
+                quyen150 = rs150.getInt("Quyen");
+                ten150 = rs150.getString("TenDangNhap");
                 System.out.println(" " + quyen150);
             }
         } catch (SQLException ex) {
             System.out.println("lỗi đăng nhập");
         }
-        return kq;
+        return kq150;
     }
 
     private boolean KiemTraChuaChuVaSo150(String chuoi) {
-        boolean ketqua = false;
-        Pattern p = Pattern.compile("[a-zA-Z][0-9]");
-        Matcher m = p.matcher(chuoi);
+        boolean ketqua150 = false;
+        Pattern p150 = Pattern.compile("[a-zA-Z][0-9]");
+        Matcher m150 = p150.matcher(chuoi);
         if (!(chuoi == chuoi.toLowerCase())) {
-            ketqua = m.find();
+            ketqua150 = m150.find();
         }
-        return ketqua;
+        return ketqua150;
     }
 
     private void ThongBao150(String noiDungThongBao, String tieuDeThongBao, int icon) {
