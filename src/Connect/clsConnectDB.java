@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 public class clsConnectDB {
-    String connectionString = "jdbc:sqlserver://localhost:1433;" 
-            + "databaseName=QuanLyBanDienThoai;user=sa;password=12345;";
+    String connectionString = "jdbc:sqlserver://MTN\\localhost:1433;" 
+            + "databaseName=QuanLyBanDienThoai;user=sa;password=123456;";
     
     Connection conn;
     public clsConnectDB(){
