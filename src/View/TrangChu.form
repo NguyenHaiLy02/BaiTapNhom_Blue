@@ -1722,8 +1722,8 @@
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="lblMaKhachHang_KhachHang" min="-2" pref="82" max="-2" attributes="0"/>
-                                              <Component id="lblTenKhachHang_KhachHang" alignment="1" min="-2" pref="82" max="-2" attributes="0"/>
+                                              <Component id="lblMaKhachHang_KhachHang231" min="-2" pref="82" max="-2" attributes="0"/>
+                                              <Component id="lblTenKhachHang_KhachHang231" alignment="1" min="-2" pref="82" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1766,7 +1766,7 @@
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="lblLoaiKhachHang_KhachHang" min="-2" pref="89" max="-2" attributes="0"/>
-                                                      <Component id="lblSDT_KhachHang" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lblSDT_KhachHang231" min="-2" max="-2" attributes="0"/>
                                                       <Component id="jLabel85" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
@@ -1775,7 +1775,7 @@
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
-                                          <Component id="lblDiaChi_KhachHang" min="-2" pref="62" max="-2" attributes="0"/>
+                                          <Component id="lblDiaChi_KhachHang231" min="-2" pref="62" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1824,10 +1824,10 @@
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="lblMaKhachHang_KhachHang" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lblMaKhachHang_KhachHang231" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="txtMaKhachHang_KhachHang231" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="lblDiaChi_KhachHang" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblDiaChi_KhachHang231" alignment="1" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                           <Component id="lblLoiMaKhachHang_KhachHang5" min="-2" pref="14" max="-2" attributes="0"/>
@@ -1840,9 +1840,9 @@
                                   <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="txtTenKhachHang_KhachHang231" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblSDT_KhachHang" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblSDT_KhachHang231" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtSDT_KhachHang231" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblTenKhachHang_KhachHang" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblTenKhachHang_KhachHang231" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
@@ -1954,12 +1954,12 @@
                     <Property name="text" type="java.lang.String" value="Kh&#xe1;ch H&#xe0;ng"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="lblMaKhachHang_KhachHang">
+                <Component class="javax.swing.JLabel" name="lblMaKhachHang_KhachHang231">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="M&#xe3; KH"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="lblTenKhachHang_KhachHang">
+                <Component class="javax.swing.JLabel" name="lblTenKhachHang_KhachHang231">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="T&#xea;n KH"/>
                   </Properties>
@@ -1997,7 +1997,7 @@
                     <Property name="text" type="java.lang.String" value="Gi&#x1edb;i T&#xed;nh"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="lblDiaChi_KhachHang">
+                <Component class="javax.swing.JLabel" name="lblDiaChi_KhachHang231">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&#x110;&#x1ecb;a Ch&#x1ec9;"/>
                   </Properties>
@@ -2008,7 +2008,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDiaChi_KhachHang231ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="lblSDT_KhachHang">
+                <Component class="javax.swing.JLabel" name="lblSDT_KhachHang231">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="SDT"/>
                   </Properties>
@@ -4141,7 +4141,7 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jPanel14" max="32767" attributes="0"/>
+                                  <Component id="jPanel14" pref="239" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel19" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -4274,7 +4274,7 @@
                                               <Component id="txtMaPhieuMua_HoaDon326" min="-2" pref="142" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                               <Component id="jLabel33" min="-2" pref="66" max="-2" attributes="0"/>
-                                              <EmptySpace pref="202" max="32767" attributes="0"/>
+                                              <EmptySpace pref="199" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -4541,7 +4541,7 @@
                                       <Component id="btnSua_ChiTietHoaDon326" min="-2" pref="96" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="btnReset_ChiTietHoaDon326" min="-2" pref="90" max="-2" attributes="0"/>
-                                      <EmptySpace pref="57" max="32767" attributes="0"/>
+                                      <EmptySpace pref="49" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -4550,7 +4550,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="23" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel36" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
