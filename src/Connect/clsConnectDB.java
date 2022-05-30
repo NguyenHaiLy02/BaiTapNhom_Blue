@@ -10,6 +10,7 @@ public class clsConnectDB {
             + "databaseName=QuanLyBanDienThoai;user=sa;password=123456;";
     
     Connection conn;
+    
     public clsConnectDB(){
        
         try {

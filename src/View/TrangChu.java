@@ -85,6 +85,7 @@ public class TrangChu extends javax.swing.JFrame {
         btnSua_LoaiSanPham_235 = new javax.swing.JButton();
         btnXoa_LoaiSanPham_235 = new javax.swing.JButton();
         txtMaLoaiSanPham_LoaiSanPham_235 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         tblSanPham_LoaiSanPham_235 = new javax.swing.JTable();
@@ -776,10 +777,19 @@ public class TrangChu extends javax.swing.JFrame {
 
         btnXoa_LoaiSanPham_235.setBackground(new java.awt.Color(255, 102, 102));
         btnXoa_LoaiSanPham_235.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnXoa_LoaiSanPham_235.setText("Reset");
+        btnXoa_LoaiSanPham_235.setText("Xóa");
         btnXoa_LoaiSanPham_235.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnXoa_LoaiSanPham_235ActionPerformed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(102, 255, 102));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setText("Reset");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -798,13 +808,16 @@ public class TrangChu extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtTenLoaiSanPham_LoaiSanPham_235)
-                            .addComponent(txtMaLoaiSanPham_LoaiSanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtMaLoaiSanPham_LoaiSanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(btnSua_LoaiSanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
-                        .addComponent(btnXoa_LoaiSanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnXoa_LoaiSanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -821,7 +834,8 @@ public class TrangChu extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnThem_LoaiSanPham_235)
                     .addComponent(btnSua_LoaiSanPham_235)
-                    .addComponent(btnXoa_LoaiSanPham_235))
+                    .addComponent(btnXoa_LoaiSanPham_235)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(85, Short.MAX_VALUE))
         );
 
@@ -896,7 +910,7 @@ public class TrangChu extends javax.swing.JFrame {
                     .addGroup(jPanelLoaiSanPhamLayout.createSequentialGroup()
                         .addGap(276, 276, 276)
                         .addComponent(jLabel73)))
-                .addContainerGap(337, Short.MAX_VALUE))
+                .addContainerGap(250, Short.MAX_VALUE))
         );
         jPanelLoaiSanPhamLayout.setVerticalGroup(
             jPanelLoaiSanPhamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3882,7 +3896,32 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSua_LoaiSanPham_235ActionPerformed
 
     private void btnXoa_LoaiSanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_LoaiSanPham_235ActionPerformed
-        
+        String MaLoai = txtMaLoaiSanPham_LoaiSanPham_235.getText();
+        if (!MaLoai.equals("")) {
+            String cautruyvan = "delete LoaiSanPham where MaLoaiSanPham=" + MaLoai;
+            String ctvKiemThu = "select count(MaSanPham) as SoSanPham"
+                    + " from SanPham,LoaiSanPham where SanPham.LoaiSanPham=LoaiSanPham.MaLoaiSanPham"
+                    + " and  LoaiSanPham.MaLoaiSanPham=" + MaLoai;
+            ResultSet rs1 = main.connection.ExcuteQueryGetTable(ctvKiemThu);
+            System.out.println(ctvKiemThu);
+            int so1 = 0;
+            try {
+                if (rs1.next()) {
+                    so1 = rs1.getInt("SoSanPham");
+                    if (rs1.getInt("SoSanPham") == 0) {
+                        main.connection.ExcuteQueryUpdateDB(cautruyvan);
+                        System.out.println("đã xóa");
+                        layDuLieuLoaiSanPham();
+                    } else {
+                        ThongBao("không thể xóa bởi Loại Sản Phẩm đã có " + so1 + " Sản Phẩm!", "báo lỗi", 2);
+                    }
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(TrangChu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            ThongBao("bạn chưa click chuột vô bảng!", "làm ơn! hãy chứng minh bạn còn khả năng của cánh tay!!", 2);
+        }
     }//GEN-LAST:event_btnXoa_LoaiSanPham_235ActionPerformed
 
     private void jPanelLoaiSanPhamComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jPanelLoaiSanPhamComponentAdded
@@ -3900,8 +3939,8 @@ public class TrangChu extends javax.swing.JFrame {
         txtMaCTPN_PhieuNhap_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 1).toString());
         txtMaPhieuNhap_CTPN_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 2).toString());
         setSelectedCombobox(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 3).toString(), cbbSanPhamCTPN_PhieuNhap_235);
-          txtSoLuongCTPN_PhieuNhap_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 4).toString());
-          txtTongTienCTPN_PhieuNhap_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 5).toString());
+        txtSoLuongCTPN_PhieuNhap_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 4).toString());
+        txtTongTienCTPN_PhieuNhap_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 5).toString());
         txtChuThichCTPN_PhieuNhap_235.setText(tblChiTietPhieuNhap_PhieuNhap_235.getValueAt(viTriDongVuaBam235, 6).toString());
     }//GEN-LAST:event_tblChiTietPhieuNhap_PhieuNhap_235MouseClicked
 
@@ -3965,7 +4004,7 @@ public class TrangChu extends javax.swing.JFrame {
             main.connection.ExcuteQueryUpdateDB(cautruyvan235);
             System.out.println("Đã Thêm Thành Công");
         } else {
-            ThongBao("Không thể Thêm Khách Hàng", "lỗi", 2);
+            ThongBao("Không thể Thêm phiếu nhập", "lỗi", 2);
         }
         LayDuLieuPhieuNhap();
     }//GEN-LAST:event_btnThem_PhieuNhap_235ActionPerformed
@@ -4141,7 +4180,7 @@ public class TrangChu extends javax.swing.JFrame {
             main.connection.ExcuteQueryUpdateDB(cautruyvan235);
             System.out.println("Đã Thêm Thành Công");
         } else {
-            ThongBao("Không thể Thêm ", "lỗi", 2);
+            ThongBao("Không thể Thêm Chi Tiết Phiếu Nhập", "lỗi", 2);
         }
         LayDuLieuChiTietPhieuNhap(txtMaPhieuNhap_CTPN_235.getText());
     }//GEN-LAST:event_btnThemCTPN_PhieuNhap_235ActionPerformed
@@ -4180,7 +4219,7 @@ public class TrangChu extends javax.swing.JFrame {
             main.connection.ExcuteQueryUpdateDB(cautruyvan);
             System.out.println("Đã sửa Thành Công");
         } else {
-            ThongBao("Không thể Thêm ", "lỗi", 2);
+            ThongBao("Không thể sửa CTPN ", "lỗi", 2);
         }
         LayDuLieuChiTietPhieuNhap(txtMaPhieuNhap_CTPN_235.getText());
     }//GEN-LAST:event_btnSuaCTPN_PhieuNhap_235ActionPerformed
@@ -4205,7 +4244,7 @@ public class TrangChu extends javax.swing.JFrame {
         for (int i = 1; i < 13; i++) {
             cbbThang_PhieuNhap_235.addItem(String.valueOf(i));
         }
-        for (int i = 2016; i > 1950; i--) {
+        for (int i = 2022; i > 1950; i--) {
             cbbNam_PhieuNhap_235.addItem(String.valueOf(i));
         }
         cbbNgay_PhieuNhap_235.setSelectedItem(String.valueOf(day));
@@ -4781,6 +4820,16 @@ public boolean KiemTraNhapNhanVien_361(int ts) {
             ThongBao("bạn chưa nhập ID", "lỗi khi cố xóa mà chưa click chuột vô ", 2);
         }*/
     }//GEN-LAST:event_btnXoa_TaiKhoan_361ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        ResLoaiSanPham();
+    }//GEN-LAST:event_jButton1ActionPerformed
+    
+    public void ResLoaiSanPham() {
+        txtMaLoaiSanPham_LoaiSanPham_235.setText("");
+        txtTenLoaiSanPham_LoaiSanPham_235.setText("");
+    }    
     
     public void LayDuLieuSanPham(String TrangThai) {
         String cautruyvan235 = "";
@@ -5483,6 +5532,7 @@ public boolean KiemTraNhapNhanVien_361(int ts) {
     private javax.swing.JComboBox<String> cbbTimKiemTuoi2_KhachHang231;
     private javax.swing.JComboBox<String> cbbTuoi_KhachHang231;
     private javax.swing.JCheckBox ckbTimKiem_KhachHang231;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
