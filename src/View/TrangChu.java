@@ -3524,7 +3524,7 @@ public class TrangChu extends javax.swing.JFrame {
         String cautruyvan231 = "insert into KhachHang values("
                 + " N'" + TenKhachHang231 + "' , '" + NgaySinh231 + "' ," + GioiTinh231
                 + ",N'" + DiaChi231 + "','" + SDT231 + "'," + LoaiKhachHang231 + ", N'" + ChuThich231 + "')";
-        boolean kiemtra = KiemTraNhapKhachHang(0);
+        boolean kiemtra = KiemTraNhapKhachHang_231(0);
         if (kiemtra) {
             main.connection.ExcuteQueryUpdateDB(cautruyvan231);
             System.out.println("Đã Thêm Thành Công");
@@ -3533,11 +3533,39 @@ public class TrangChu extends javax.swing.JFrame {
         } else {
             System.out.println("Thêm Thất Bại");
         }
-        layDuLieuKhachHang();
+        layDuLieuKhachHang_231();
     }//GEN-LAST:event_btnThem_KhachHang231ActionPerformed
 
     private void btnSua_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_KhachHang231ActionPerformed
-
+        String MaKhachHang231, TenKhachHang231, NgaySinh231, GioiTinh231, DiaChi231, SDT231, LoaiKhachHang231, ChuThich231;
+        MaKhachHang231 = txtMaKhachHang_KhachHang231.getText();
+        TenKhachHang231 = txtTenKhachHang_KhachHang231.getText();
+        String ngay231, thang231, nam231;
+        ngay231 = cbbNgay231.getSelectedItem().toString();
+        thang231 = cbbThang231.getSelectedItem().toString();
+        nam231 = cbbNam231.getSelectedItem().toString();
+        NgaySinh231 = nam231 + "-" + thang231 + "-" + ngay231;
+        if (rbtnNam_KhachHang231.isSelected()) {
+            GioiTinh231 = "1";
+        } else {
+            GioiTinh231 = "0";
+        }
+        DiaChi231 = txtDiaChi_KhachHang231.getText();
+        SDT231 = txtSDT_KhachHang231.getText();
+        LoaiKhachHang231 = GetCbbSelected(cbbLoaiKhachHang_KhachHang231);
+        ChuThich231 = txtGhiChu_KhachHang231.getText();
+        String cautruyvan231 = "update  KhachHang set "
+                + "TenKhachHang= N'" + TenKhachHang231 + "' , NgaySinh='" + NgaySinh231 + "' ,GioiTinh=" + GioiTinh231
+                + ",DiaChi=N'" + DiaChi231 + "',SDT='" + SDT231 + "',LoaiKhachHang=" + LoaiKhachHang231 + ",GhiChu= N'" + ChuThich231 + "'where MaKhachHang=" + MaKhachHang231;
+        System.out.println(cautruyvan231);
+        boolean kiemtra231 = KiemTraNhapKhachHang_231(1);
+        if (kiemtra231) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan231);
+            System.out.println("Sửa Thành Công");
+        } else {
+            System.out.println("Sửa thất bại");
+        }
+        layDuLieuKhachHang_231();
     }//GEN-LAST:event_btnSua_KhachHang231ActionPerformed
 
     private void btnReset_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_KhachHang231ActionPerformed
@@ -3560,7 +3588,7 @@ public class TrangChu extends javax.swing.JFrame {
                     if (rs1_231.getInt("SoPhieuMua") == 0) {
                         Main.main.connection.ExcuteQueryUpdateDB(cautruyvan231);
                         System.out.println("đã xóa");
-                        layDuLieuKhachHang();
+                        layDuLieuKhachHang_231();
                         ResKhachHang_231();
                     } else {
                         ThongBao("Không thể xóa bởi Khách Hàng đã có " + so1_231 + " hóa đơn!", "báo lỗi", 2);
@@ -4507,7 +4535,7 @@ public boolean KiemTraNhapNhanVien(int ts) {
 
     private void jPanel_KhachHangComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel_KhachHangComponentShown
     rbtnNam_KhachHang231.setSelected(true);
-        layDuLieuKhachHang();
+        layDuLieuKhachHang_231();
         cbbLoaiKhachHang_KhachHang231.setModel(LayDuLieucbb("LoaiKhachHang", "TenLoaiKhachHang", "MaLoaiKhachHang"));
         for (int i = 1; i < 32; i++) {
             cbbNgay231.addItem(String.valueOf(i));
@@ -4810,7 +4838,7 @@ public boolean KiemTraNhapNhanVien(int ts) {
         }
         return kiemtra235;
     }
-     public void layDuLieuKhachHang() {
+     public void layDuLieuKhachHang_231() {
         String cautruyvan231 = "";
         cautruyvan231 = "select * from KhachHang,LoaiKhachHang "
                 + "where KhachHang.LoaiKhachHang=LoaiKhachHang.MaLoaiKhachHang";
@@ -4842,7 +4870,7 @@ public boolean KiemTraNhapNhanVien(int ts) {
             System.out.println(ex.toString());
         }
     }
-          public boolean KiemTraNhapKhachHang(int ts) {
+    public boolean KiemTraNhapKhachHang_231(int ts) {
         String MaKhachHang231, TenKhachHang231, Ngaysinh231, DiaChi231, SDT231;
         boolean kiemtra231 = false;
         MaKhachHang231 = txtMaKhachHang_KhachHang231.getText();
