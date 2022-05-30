@@ -3662,7 +3662,33 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSua_DoiTac231ActionPerformed
 
     private void btnXoa_DoiTac231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_DoiTac231ActionPerformed
-
+        String MaDoiTac231 = txtMaNPP_DoiTac231.getText();
+        if (!MaDoiTac231.equals("")) {
+            String cautruyvan231 = "delete NhaPhanPhoi where MaNhaPhanPhoi=" + MaDoiTac231;
+            String ctvKiemThu231 = "select count(MaPhieuNhap) as SoPhieuNhap"
+                    + " from NhaPhanPhoi,PhieuNhap where NhaPhanPhoi.MaNhaPhanPhoi=PhieuNhap.MaNhaPhanPhoi"
+                    + " and  NhaPhanPhoi.MaNhaPhanPhoi=" + MaDoiTac231;
+            ResultSet rs1_231 = Main.main.connection.ExcuteQueryGetTable(ctvKiemThu231);
+            System.out.println(ctvKiemThu231);
+            int so1_231 = 0;
+            try {
+                if (rs1_231.next()) {
+                    so1_231 = rs1_231.getInt("SoPhieuNhap");
+                    if (rs1_231.getInt("SoPhieuNhap") == 0) {
+                        Main.main.connection.ExcuteQueryUpdateDB(cautruyvan231);
+                        System.out.println("đã xóa");
+                        layDuLieuDoiTac();
+                        ResDoiTac_231();
+                    } else {
+                        ThongBao("Không thể xóa bởi Đối Tác đã có " + so1_231 + " Phiếu Nhập!", "báo lỗi", 2);
+                    }
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(TrangChu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            ThongBao("Hãy chọn đối tác cần xóa!", "Lỗi", 2);
+        }
     }//GEN-LAST:event_btnXoa_DoiTac231ActionPerformed
 
     public void ResDoiTac_231() {
