@@ -72,7 +72,7 @@ public class TrangChu extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         btnThem_SanPham_235 = new javax.swing.JButton();
         bntSua_SanPham_235 = new javax.swing.JButton();
-        btnXoa_SanPham_235 = new javax.swing.JButton();
+        btnXoa_SanPham_150 = new javax.swing.JButton();
         btnReset_SanPham_235 = new javax.swing.JButton();
         jPanelLoaiSanPham = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -628,12 +628,12 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
-        btnXoa_SanPham_235.setBackground(new java.awt.Color(255, 51, 51));
-        btnXoa_SanPham_235.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnXoa_SanPham_235.setText("Xóa");
-        btnXoa_SanPham_235.addActionListener(new java.awt.event.ActionListener() {
+        btnXoa_SanPham_150.setBackground(new java.awt.Color(255, 51, 51));
+        btnXoa_SanPham_150.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnXoa_SanPham_150.setText("Xóa");
+        btnXoa_SanPham_150.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnXoa_SanPham_235ActionPerformed(evt);
+                btnXoa_SanPham_150ActionPerformed(evt);
             }
         });
 
@@ -667,7 +667,7 @@ public class TrangChu extends javax.swing.JFrame {
                         .addGroup(jPanelSanPhamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(bntSua_SanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnThem_SanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnXoa_SanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnXoa_SanPham_150, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnReset_SanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(113, Short.MAX_VALUE))
         );
@@ -687,7 +687,7 @@ public class TrangChu extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addComponent(bntSua_SanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnXoa_SanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnXoa_SanPham_150, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnReset_SanPham_235, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(74, 74, 74))
@@ -3866,9 +3866,42 @@ public class TrangChu extends javax.swing.JFrame {
         LayDuLieuSanPham("1");
     }//GEN-LAST:event_bntSua_SanPham_235ActionPerformed
 
-    private void btnXoa_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_SanPham_235ActionPerformed
-        
-    }//GEN-LAST:event_btnXoa_SanPham_235ActionPerformed
+    private void btnXoa_SanPham_150ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_SanPham_150ActionPerformed
+    String MaSanPham150 = txtMaSanPham_SanPham_235.getText();
+        String cautruyvan150 = "delete SanPham where MaSanPham=" + MaSanPham150;
+        String ctvKiemThu = "select count(MaCTHD) as SoChiTietHoaDon"
+                + " from SanPham,ChiTietHoaDon where SanPham.MaSanPham=ChiTietHoaDon.MaSanPham and SanPham.MaSanPham=" + MaSanPham150;
+        ResultSet rs1 = Main.main.connection.ExcuteQueryGetTable(ctvKiemThu);
+        String ctvKiemThu2 = "select count(MaCTPN) as SoChiTietPhieuNhap"
+                + " from SanPham,ChiTietPhieuNhap where SanPham.MaSanPham=ChiTietPhieuNhap.MaSanPham and SanPham.MaSanPham=" + MaSanPham150;
+        ResultSet rs2 = Main.main.connection.ExcuteQueryGetTable(ctvKiemThu2);
+        int so1 = 0, so2 = 0;
+
+        try {
+            if (rs1.next()) {
+                so1 = rs1.getInt("SoChiTietHoaDon");
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+        try {
+
+            if (rs2.next()) {
+                so2 = rs2.getInt("SoChiTietPhieuNhap");
+                if (rs2.getInt("SoChiTietPhieuNhap") == 0 && so1 == 0) {
+                    Main.main.connection.ExcuteQueryUpdateDB(cautruyvan150);
+                    System.out.println("đã xóa");
+                    LayDuLieuSanPham("1");                    
+                } else {
+                    ThongBao("không thể xóa bởi có trong " + so1 + "  Chi tiết hóa đơn hóa đơn \n và có trong "
+                            + so2 + "  chi tiết phiếu Nhập", "báo lỗi", 2);
+                }
+            }
+
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }//GEN-LAST:event_btnXoa_SanPham_150ActionPerformed
 
     private void btnReset_SanPham_235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_SanPham_235ActionPerformed
         ResSanPham();
@@ -5606,7 +5639,7 @@ public boolean KiemTraNhapNhanVien_361(int ts) {
     private javax.swing.JButton btnXoa_LoaiSanPham_235;
     private javax.swing.JButton btnXoa_NhanVien_361;
     private javax.swing.JButton btnXoa_PhieuNhap_235;
-    private javax.swing.JButton btnXoa_SanPham_235;
+    private javax.swing.JButton btnXoa_SanPham_150;
     private javax.swing.JButton btnXoa_TaiKhoan_361;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbbChucVu_NhanVien_361;
