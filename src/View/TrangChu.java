@@ -3442,14 +3442,14 @@ public class TrangChu extends javax.swing.JFrame {
             String cautruyvan = "delete HoaDon where MaHoaDon=" + MaHoaDon;
             String ctvKiemThu = "select count(MaCTHD) as SoChiTietPhieuMua"
             + " from HoaDon,ChiTietHoaDon where HoaDon.MaHoaDon=ChiTietHoaDon.MaHoaDon and HoaDon.MaHoaDon=" + MaHoaDon;
-            ResultSet rs1 = main.connection.ExcuteQueryGetTable(ctvKiemThu);
+            ResultSet rs1 = Main.main.connection.ExcuteQueryGetTable(ctvKiemThu);
             System.out.println(ctvKiemThu);
             int so1 = 0;
             try {
                 if (rs1.next()) {
                     so1 = rs1.getInt("SoChiTietPhieuMua");
                     if (rs1.getInt("SoChiTietPhieuMua") == 0) {
-                        main.connection.ExcuteQueryUpdateDB(cautruyvan);
+                        Main.main.connection.ExcuteQueryUpdateDB(cautruyvan);
                         System.out.println("đã xóa");
                         LayDuLieuHoaDon();
                     } else {
