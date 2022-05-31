@@ -4873,25 +4873,27 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_rbtnTimKiemTenSanPham_SanPham_235ActionPerformed
 
     private void btnXoa_TaiKhoan_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_TaiKhoan_361ActionPerformed
-        // TODO add your handling code here:
-        /*String ID_TaiKhoan_361 = txtID_TaiKhoan_361.getText();
-        if (!ID_TaiKhoan_361.equals("")) {
-            String cautruyvan_361 = "delete Users where ID=" + ID_TaiKhoan_361;
-            String ctvKiemThu_361 = "select count(Users.MaNhanVien) as SoNhanVien"
-                    + " from Users,NhanVien where NhanVien.MaNhanVien=Users.MaNhanVien and Users.ID=" + ID_TaiKhoan_361;
-            ResultSet rs_361 = main.connection.ExcuteQueryGetTable(ctvKiemThu_361);
-            int so_361 = 0;
-
+        if (!txtID_TaiKhoan_361.getText().equals("")) {
+            String ID_TaiKhoan_361 = txtID_TaiKhoan_361.getText();
+            String cautruyvan = "delete Users where ID=" + ID_TaiKhoan_361;
+            ResultSet rs1  = main.connection.ExcuteQueryGetTable("Select ID from Users where ID = " + ID_TaiKhoan_361);
+            /*String ctvKiemThu = "select count(NhanVien.MaNhanVien) as SoNhanVien"
+                    + " from Users,NhanVien where Users.MaNhanVien=NhanVien.MaNhanVien and "
+                    + "Users.ID= " + ID_TaiKhoan_361;
+            ResultSet rs1 = main.connection.ExcuteQueryGetTable(ctvKiemThu);
+            System.out.println(ctvKiemThu);*/
             try {
-                if (rs_361.next()) {
-                    so_361 = rs_361.getInt("MaNhanVien");
+                if (rs1.next()) {
+                    main.connection.ExcuteQueryUpdateDB(cautruyvan);
+                    System.out.println("đã xóa");
+                    layDuLieuTaiKhoan_361();                   
                 }
             } catch (SQLException ex) {
-                System.out.println(ex.toString());
+                Logger.getLogger(TrangChu.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
-            ThongBao("bạn chưa nhập ID", "lỗi khi cố xóa mà chưa click chuột vô ", 2);
-        }*/
+            ThongBao("bạn chưa chọn ID cần xóa", "lỗi khi cố xóa tài khoản mà chưa click chuột vào tài khoản bạn cần xóa", 2);
+        }
     }//GEN-LAST:event_btnXoa_TaiKhoan_361ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
