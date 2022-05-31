@@ -1036,7 +1036,7 @@
                                   <Component id="jPanel25" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="245" max="32767" attributes="0"/>
+                          <EmptySpace pref="292" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1193,7 +1193,6 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtTongTien_PhieuNhap_235" alignment="0" max="32767" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="cbbNgay_PhieuNhap_235" min="-2" pref="68" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1203,6 +1202,7 @@
                                           </Group>
                                           <Component id="cbbNhaPhanPhoi_PhieuNhap_235" alignment="0" max="32767" attributes="0"/>
                                           <Component id="cbbNhanVien_PhieuNhap_235" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtTongTien_PhieuNhap_235" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jScrollPane20" min="-2" pref="125" max="-2" attributes="0"/>
@@ -1240,11 +1240,12 @@
                                           <Component id="jLabel63" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="cbbNhaPhanPhoi_PhieuNhap_235" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="22" max="32767" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel71" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtTongTien_PhieuNhap_235" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel71" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane20" alignment="0" max="32767" attributes="0"/>
                               </Group>
@@ -1404,11 +1405,6 @@
                         <Property name="text" type="java.lang.String" value="T&#x1ed5;ng Ti&#x1ec1;n"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtTongTien_PhieuNhap_235">
-                      <Properties>
-                        <Property name="editable" type="boolean" value="false"/>
-                      </Properties>
-                    </Component>
                     <Component class="javax.swing.JComboBox" name="cbbNgay_PhieuNhap_235">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -1445,6 +1441,8 @@
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
                     </Component>
+                    <Component class="javax.swing.JTextField" name="txtTongTien_PhieuNhap_235">
+                    </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel25">
@@ -1466,7 +1464,7 @@
                                       <Component id="btnXoaXTPN_PhieuNhap_235" min="-2" pref="99" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="btnSuaCTPN_PhieuNhap_235" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
@@ -1479,8 +1477,8 @@
                                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="txtSoLuongCTPN_PhieuNhap_235" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="txtTongTienCTPN_PhieuNhap_235" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="cbbSanPhamCTPN_PhieuNhap_235" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtTongTienCTPN_PhieuNhap_235" alignment="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
@@ -1495,8 +1493,8 @@
                                                   </Group>
                                               </Group>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="txtMaCTPN_PhieuNhap_235" alignment="0" pref="219" max="32767" attributes="0"/>
-                                                  <Component id="txtMaPhieuNhap_CTPN_235" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtMaPhieuNhap_CTPN_235" max="32767" attributes="0"/>
+                                                  <Component id="txtMaCTPN_PhieuNhap_235" pref="219" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -1508,10 +1506,10 @@
                                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                                       <Component id="jLabel70" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="btnResetCTPN_PhieuNhap_235" alignment="0" min="-2" pref="107" max="-2" attributes="0"/>
                                   <Component id="jScrollPane21" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="btnResetCTPN_PhieuNhap_235" alignment="0" min="-2" pref="107" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1609,11 +1607,6 @@
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtMaCTPN_PhieuNhap_235">
-                      <Properties>
-                        <Property name="editable" type="boolean" value="false"/>
-                      </Properties>
-                    </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane21">
                       <AuxValues>
                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -1695,15 +1688,11 @@
                         <Property name="text" type="java.lang.String" value="T&#x1ed5;ng Ti&#x1ec1;n"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtTongTienCTPN_PhieuNhap_235">
-                      <Properties>
-                        <Property name="editable" type="boolean" value="false"/>
-                      </Properties>
-                    </Component>
                     <Component class="javax.swing.JTextField" name="txtMaPhieuNhap_CTPN_235">
-                      <Properties>
-                        <Property name="editable" type="boolean" value="false"/>
-                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtTongTienCTPN_PhieuNhap_235">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMaCTPN_PhieuNhap_235">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -4175,7 +4164,7 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jPanel14" pref="239" max="32767" attributes="0"/>
+                                  <Component id="jPanel14" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel19" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -4308,7 +4297,7 @@
                                               <Component id="txtMaPhieuMua_HoaDon326" min="-2" pref="142" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                               <Component id="jLabel33" min="-2" pref="66" max="-2" attributes="0"/>
-                                              <EmptySpace pref="199" max="32767" attributes="0"/>
+                                              <EmptySpace pref="202" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -4575,7 +4564,7 @@
                                       <Component id="btnSua_ChiTietHoaDon326" min="-2" pref="96" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="btnReset_ChiTietHoaDon326" min="-2" pref="90" max="-2" attributes="0"/>
-                                      <EmptySpace pref="49" max="32767" attributes="0"/>
+                                      <EmptySpace pref="57" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -4584,7 +4573,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="23" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel36" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
