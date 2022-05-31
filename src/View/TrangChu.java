@@ -3436,7 +3436,33 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnThem_HoaDon326ActionPerformed
 
     private void btnXoa_HoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_HoaDon326ActionPerformed
-       
+     {                                              
+        if (!txtMaPhieuMua_HoaDon326.getText().equals("")) {
+            String MaHoaDon = txtMaPhieuMua_HoaDon326.getText();
+            String cautruyvan = "delete HoaDon where MaHoaDon=" + MaHoaDon;
+            String ctvKiemThu = "select count(MaCTHD) as SoChiTietPhieuMua"
+            + " from HoaDon,ChiTietHoaDon where HoaDon.MaHoaDon=ChiTietHoaDon.MaHoaDon and HoaDon.MaHoaDon=" + MaHoaDon;
+            ResultSet rs1 = main.connection.ExcuteQueryGetTable(ctvKiemThu);
+            System.out.println(ctvKiemThu);
+            int so1 = 0;
+            try {
+                if (rs1.next()) {
+                    so1 = rs1.getInt("SoChiTietPhieuMua");
+                    if (rs1.getInt("SoChiTietPhieuMua") == 0) {
+                        main.connection.ExcuteQueryUpdateDB(cautruyvan);
+                        System.out.println("đã xóa");
+                        LayDuLieuHoaDon();
+                    } else {
+                        ThongBao("không thể xóa bởi hóa đơn đã có " + so1 + " chi tiết hóa đơn!", "báo lỗi", 2);
+                    }
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(TrangChu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            ThongBao("bạn chưa chọn hóa đơn để xóa", "xóa bằng niềm tin à!khi không biết xóa cái nào", 2);
+        }
+    }                                              
     }//GEN-LAST:event_btnXoa_HoaDon326ActionPerformed
 
     private void btnSua_HoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_HoaDon326ActionPerformed
