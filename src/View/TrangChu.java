@@ -1763,7 +1763,7 @@ public class TrangChu extends javax.swing.JFrame {
                                     .addComponent(cbbLoaiKhachHang_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel_KhachHang231Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane25, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane25, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
                                     .addGroup(jPanel_KhachHang231Layout.createSequentialGroup()
                                         .addComponent(jLabel85)
                                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -2652,7 +2652,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addComponent(jLabel43)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(130, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTaiKhoan1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2706,7 +2706,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel1.setText("Nhà phân phối");
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thay đổi thông tin đối tác ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 0, 0))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thay đổi thông tin đối tác ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 0, 0))); // NOI18N
 
         jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel75.setText("Mã NPP :");
@@ -2880,7 +2880,7 @@ public class TrangChu extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanelDoiTac231Layout.createSequentialGroup()
                         .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 75, Short.MAX_VALUE)))
+                        .addGap(0, 86, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -3064,7 +3064,7 @@ public class TrangChu extends javax.swing.JFrame {
                                 .addComponent(txtMaPhieuMua_HoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(63, 63, 63)
                                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(202, Short.MAX_VALUE))))
+                                .addContainerGap(206, Short.MAX_VALUE))))
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(btnXoa_HoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3224,12 +3224,12 @@ public class TrangChu extends javax.swing.JFrame {
                         .addComponent(btnSua_ChiTietHoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnReset_ChiTietHoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(57, Short.MAX_VALUE))))
+                        .addContainerGap(55, Short.MAX_VALUE))))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(24, Short.MAX_VALUE)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3294,7 +3294,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addGroup(jPanelHoaDon326Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelHoaDon326Layout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelHoaDon326Layout.createSequentialGroup()
@@ -3326,7 +3326,7 @@ public class TrangChu extends javax.swing.JFrame {
         );
         jPanelDangXuatLayout.setVerticalGroup(
             jPanelDangXuatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 628, Short.MAX_VALUE)
+            .addGap(0, 633, Short.MAX_VALUE)
         );
 
         tbljpanel.addTab("Đăng Xuất", new javax.swing.ImageIcon(getClass().getResource("/img/thoat.png")), jPanelDangXuat); // NOI18N
@@ -3415,11 +3415,28 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_txtTongTien_HoaDon326ActionPerformed
 
     private void btnThem_HoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_HoaDon326ActionPerformed
-
+    {                                               
+        String MaKhachHang, MaNhanVien, NgayLapHoaDon, TongTien, ChuThich;
+        MaKhachHang = GetCbbSelected(cbbKhachHang_HoaDon326);
+        MaNhanVien = GetCbbSelected(cbbNhanVien_HoaDon326);
+        NgayLapHoaDon = txtNgayLapHoaDon_HoaDon326.getText();
+        TongTien = txtTongTien_HoaDon326.getText();
+        ChuThich = txtGhiChu_HoaDon326.getText();
+        String cautruyvan = "insert into HoaDon(MaKhachHang,MaNhanVien,TongTien,GhiChu) values(" + MaKhachHang + "," + MaNhanVien + "," + 0 + ",N'" + ChuThich + "')";
+        System.out.println(cautruyvan);
+        boolean kiemtra = KiemTraNhapHoaDon(0);
+        if (kiemtra) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+            System.out.println("Đã Thêm Thành Công");
+        } else {
+            System.out.println("thất bại");
+        }
+        LayDuLieuHoaDon();
+    }                  
     }//GEN-LAST:event_btnThem_HoaDon326ActionPerformed
 
     private void btnXoa_HoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_HoaDon326ActionPerformed
-
+       
     }//GEN-LAST:event_btnXoa_HoaDon326ActionPerformed
 
     private void btnSua_HoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_HoaDon326ActionPerformed
@@ -5485,6 +5502,43 @@ public class TrangChu extends javax.swing.JFrame {
         } catch (SQLException ex) {
             System.out.println(ex.toString());
         }
+    }
+      public boolean KiemTraNhapHoaDon(int ts) {
+        String MaHoaDon, MaNhanVien, KhachHang, NgayLap, TongTien,ThongBao="";
+        boolean kiemtra = false;
+        MaHoaDon = txtMaPhieuMua_HoaDon326.getText();
+        MaNhanVien = GetCbbSelected(cbbNhanVien_HoaDon326);
+        
+        KhachHang =  GetCbbSelected(cbbKhachHang_HoaDon326);
+        NgayLap = txtNgayLapHoaDon_HoaDon326.getText();
+          TongTien = txtTongTien_HoaDon326.getText();
+        if (MaHoaDon.equals("") && ts == 1) {
+            ThongBao += "bạn chưa chọn Hóa Đơn để lấy  Mã Hóa Dơn\n";
+            lblMaHoaDon_HoaDon.setForeground(Color.red);
+        }
+        if (MaNhanVien.equals("")) {
+            ThongBao += "bạn chưa Chọn Nhân Viên\n";
+        }
+        if (KhachHang.equals("")) {
+            ThongBao += "bạn chưa Chọn Khách Hàng\n";
+        }
+        if (NgayLap.equals("")) {
+            lblNgayLap.setForeground(Color.red);
+            ThongBao += "bạn chưa Nhập Ngày Lập\n";
+        }
+          if (TongTien.equals("")) {
+           txtTongTien_HoaDon326.setText("0");
+        }
+        if (ThongBao.equals("")) {
+            kiemtra = true;
+            lblDiaChi_KhachHang231.setForeground(Color.black);
+            lblNgayLap.setForeground(Color.black);
+            lblTongTien_HoaDon.setForeground(Color.black);
+        } else {
+            kiemtra = false;
+            ThongBao(ThongBao, "lỗi nhập liệu", 2);
+        }
+        return kiemtra;
     }
 
     public void reset_chitiethoadon() {
