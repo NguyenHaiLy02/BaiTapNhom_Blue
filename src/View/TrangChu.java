@@ -1473,6 +1473,11 @@ public class TrangChu extends javax.swing.JFrame {
 
         jLabel88.setText("Tên");
 
+        txtTimKiem_KhachHang231.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTimKiem_KhachHang231ActionPerformed(evt);
+            }
+        });
         txtTimKiem_KhachHang231.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtTimKiem_KhachHang231KeyReleased(evt);
@@ -1500,6 +1505,11 @@ public class TrangChu extends javax.swing.JFrame {
                 cbbTimKiemLoaiKhachHang_KhachHang231ItemStateChanged(evt);
             }
         });
+        cbbTimKiemLoaiKhachHang_KhachHang231.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbbTimKiemLoaiKhachHang_KhachHang231ActionPerformed(evt);
+            }
+        });
 
         ckbTimKiem_KhachHang231.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         ckbTimKiem_KhachHang231.setText("Tìm Kiếm");
@@ -1508,10 +1518,20 @@ public class TrangChu extends javax.swing.JFrame {
                 ckbTimKiem_KhachHang231ItemStateChanged(evt);
             }
         });
+        ckbTimKiem_KhachHang231.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ckbTimKiem_KhachHang231ActionPerformed(evt);
+            }
+        });
 
         cbbTimKiemTuoi2_KhachHang231.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cbbTimKiemTuoi2_KhachHang231ItemStateChanged(evt);
+            }
+        });
+        cbbTimKiemTuoi2_KhachHang231.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbbTimKiemTuoi2_KhachHang231ActionPerformed(evt);
             }
         });
 
@@ -3516,7 +3536,11 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_cbbTuoi_KhachHang231ItemStateChanged
 
     private void cbbTuoi_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbTuoi_KhachHang231ActionPerformed
-
+        DefaultComboBoxModel cbbmodel = new DefaultComboBoxModel();
+        cbbTimKiemTuoi2_KhachHang231.setModel(cbbmodel);
+        for (int i = cbbTuoi_KhachHang231.getSelectedIndex() + 1; i < 80; i++) {
+            cbbTimKiemTuoi2_KhachHang231.addItem(String.valueOf(i));
+        }
     }//GEN-LAST:event_cbbTuoi_KhachHang231ActionPerformed
 
     private void cbbTimKiemLoaiKhachHang_KhachHang231ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbTimKiemLoaiKhachHang_KhachHang231ItemStateChanged
@@ -4843,7 +4867,72 @@ public boolean KiemTraNhapNhanVien_361(int ts) {
         // TODO add your handling code here:
         ResLoaiSanPham();
     }//GEN-LAST:event_jButton1ActionPerformed
-    
+
+    private void txtTimKiem_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTimKiem_KhachHang231ActionPerformed
+        if (ckbTimKiem_KhachHang231.isSelected()) {
+            TimKiemKhachHang("TenKhachHang like N'%" + txtTimKiem_KhachHang231.getText() + "%'");
+            ResKhachHang_231();
+        }
+    }//GEN-LAST:event_txtTimKiem_KhachHang231ActionPerformed
+
+    private void cbbTimKiemLoaiKhachHang_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbTimKiemLoaiKhachHang_KhachHang231ActionPerformed
+        // TODO add your handling code here:
+        if (ckbTimKiem_KhachHang231.isSelected()) {
+            TimKiemKhachHang("LoaiKhachHang= " + GetCbbSelected(cbbTimKiemLoaiKhachHang_KhachHang231));
+            ResKhachHang_231();
+        }
+    }//GEN-LAST:event_cbbTimKiemLoaiKhachHang_KhachHang231ActionPerformed
+
+    private void cbbTimKiemTuoi2_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbTimKiemTuoi2_KhachHang231ActionPerformed
+        // TODO add your handling code here:
+        if (ckbTimKiem_KhachHang231.isSelected()) {
+
+            TimKiemKhachHang("year(Getdate())-  year(Ngaysinh) >"
+                    + " " + cbbTuoi_KhachHang231.getSelectedItem().toString() + " and year(Getdate())- "
+                    + " year(Ngaysinh)<" + cbbTimKiemTuoi2_KhachHang231.getSelectedItem().toString());
+            ResKhachHang_231();
+        }
+    }//GEN-LAST:event_cbbTimKiemTuoi2_KhachHang231ActionPerformed
+
+    private void ckbTimKiem_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ckbTimKiem_KhachHang231ActionPerformed
+        // TODO add your handling code here:
+        if (ckbTimKiem_KhachHang231.isSelected()) {
+            layDuLieuKhachHang_231();
+        }
+    }//GEN-LAST:event_ckbTimKiem_KhachHang231ActionPerformed
+        public void TimKiemKhachHang(String wheretk) {
+        String cautruyvan = "";
+
+        cautruyvan = "select * from KhachHang,LoaiKhachHang "
+                + "where KhachHang.LoaiKhachHang=LoaiKhachHang.MaLoaiKhachHang and " + wheretk;
+        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
+        Object[] obj = new Object[]{"STT", "Mã Khách Hàng", "Tên Khách Hàng", "Ngày Sinh", "Giới Tính", "Dịa Chỉ", "SDT", "Loại Khách Hàng", "Chú Thích"};
+        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
+        tblKhachHang_KhachHang231.setModel(tableModel);
+        int c = 0;
+        try {
+            while (rs.next()) {
+                c++;
+                Object[] item = new Object[9];
+                item[0] = c;
+                item[1] = rs.getInt("MaKhachHang");
+                item[2] = rs.getString("TenKhachHang");
+                item[3] = rs.getString("NgaySinh");
+                if (rs.getInt("GioiTinh") == 1) {
+                    item[4] = "Nam";
+                } else {
+                    item[4] = "Nữ";
+                }
+                item[5] = rs.getString("DiaChi");
+                item[6] = rs.getString("SDT");
+                item[7] = rs.getString("TenLoaiKhachHang");
+                item[8] = rs.getString("GhiChu");
+                tableModel.addRow(item);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
     public void ResLoaiSanPham() {
         txtMaLoaiSanPham_LoaiSanPham_235.setText("");
         txtTenLoaiSanPham_LoaiSanPham_235.setText("");
