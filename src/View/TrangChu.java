@@ -3440,7 +3440,26 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnXoa_HoaDon326ActionPerformed
 
     private void btnSua_HoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_HoaDon326ActionPerformed
-
+     {                                              
+        String MaHoaDon, MaKhachHang, MaNhanVien, NgayLapHoaDon, TongTien, ChuThich;
+        MaHoaDon = txtMaPhieuMua_HoaDon326.getText();
+        MaKhachHang = GetCbbSelected(cbbKhachHang_HoaDon326);
+        MaNhanVien = GetCbbSelected(cbbNhanVien_HoaDon326);
+        NgayLapHoaDon = txtNgayLapHoaDon_HoaDon326.getText();
+        TongTien = txtTongTien_HoaDon326.getText();
+        ChuThich = txtGhiChu_HoaDon326.getText();
+        String cautruyvan = "update HoaDon set MaKhachHang=" + MaKhachHang + ",TongTien="
+        + TongTien + ",NgayLapHoaDon='" + NgayLapHoaDon + "',GhiChu=N'" + ChuThich + "' where MaHoaDon=" + MaHoaDon;
+        System.out.println(cautruyvan);
+        boolean kiemtra = KiemTraNhapHoaDon(1);
+        if (kiemtra) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+            System.out.println("Đã Thêm Thành Công");
+        } else {
+            ThongBao("Không thể ", "Thêm Hóa Đơn", 2);
+        }
+        LayDuLieuHoaDon();
+    }
     }//GEN-LAST:event_btnSua_HoaDon326ActionPerformed
 
     private void btnReset_HoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_HoaDon326ActionPerformed
