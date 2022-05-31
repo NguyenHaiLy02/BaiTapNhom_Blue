@@ -161,12 +161,11 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel88 = new javax.swing.JLabel();
         txtTimKiem_KhachHang231 = new javax.swing.JTextField();
-        jLabel89 = new javax.swing.JLabel();
-        cbbTuoi_KhachHang231 = new javax.swing.JComboBox<>();
         jLabel90 = new javax.swing.JLabel();
-        cbbTimKiemLoaiKhachHang_KhachHang231 = new javax.swing.JComboBox<>();
         ckbTimKiem_KhachHang231 = new javax.swing.JCheckBox();
-        cbbTimKiemTuoi2_KhachHang231 = new javax.swing.JComboBox<>();
+        txtTimKiem_maKhachHang231 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        cbbTimKiemLoaiKhachHang_KhachHang231 = new javax.swing.JComboBox<>();
         cbbNgay231 = new javax.swing.JComboBox<>();
         cbbThang231 = new javax.swing.JComboBox<>();
         cbbNam231 = new javax.swing.JComboBox<>();
@@ -334,6 +333,7 @@ public class TrangChu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Trang Chính");
+        setBackground(new java.awt.Color(153, 255, 255));
 
         tbljpanel.setBackground(new java.awt.Color(153, 204, 255));
         tbljpanel.setTabPlacement(javax.swing.JTabbedPane.LEFT);
@@ -1432,8 +1432,10 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(rbtnNam_KhachHang231);
         rbtnNam_KhachHang231.setText("Nam");
 
+        buttonGroup1.add(rbtnNu_KhachHang231);
         rbtnNu_KhachHang231.setText("Nữ");
 
         lblNgaySinh_KhachHang.setText("Ngày Sinh");
@@ -1471,8 +1473,13 @@ public class TrangChu extends javax.swing.JFrame {
 
         jPanel5.setBackground(new java.awt.Color(153, 204, 255));
 
-        jLabel88.setText("Tên");
+        jLabel88.setText("Tên Khách Hàng :");
 
+        txtTimKiem_KhachHang231.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtTimKiem_KhachHang231MouseClicked(evt);
+            }
+        });
         txtTimKiem_KhachHang231.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTimKiem_KhachHang231ActionPerformed(evt);
@@ -1484,32 +1491,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
-        jLabel89.setText("Tuổi");
-
-        cbbTuoi_KhachHang231.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                cbbTuoi_KhachHang231ItemStateChanged(evt);
-            }
-        });
-        cbbTuoi_KhachHang231.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbbTuoi_KhachHang231ActionPerformed(evt);
-            }
-        });
-
-        jLabel90.setText("Loại Khách Hàng");
-
-        cbbTimKiemLoaiKhachHang_KhachHang231.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbbTimKiemLoaiKhachHang_KhachHang231.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                cbbTimKiemLoaiKhachHang_KhachHang231ItemStateChanged(evt);
-            }
-        });
-        cbbTimKiemLoaiKhachHang_KhachHang231.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbbTimKiemLoaiKhachHang_KhachHang231ActionPerformed(evt);
-            }
-        });
+        jLabel90.setText("Loại Khách Hàng :");
 
         ckbTimKiem_KhachHang231.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         ckbTimKiem_KhachHang231.setText("Tìm Kiếm");
@@ -1524,14 +1506,29 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
-        cbbTimKiemTuoi2_KhachHang231.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                cbbTimKiemTuoi2_KhachHang231ItemStateChanged(evt);
+        txtTimKiem_maKhachHang231.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtTimKiem_maKhachHang231MouseClicked(evt);
             }
         });
-        cbbTimKiemTuoi2_KhachHang231.addActionListener(new java.awt.event.ActionListener() {
+        txtTimKiem_maKhachHang231.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbbTimKiemTuoi2_KhachHang231ActionPerformed(evt);
+                txtTimKiem_maKhachHang231ActionPerformed(evt);
+            }
+        });
+        txtTimKiem_maKhachHang231.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtTimKiem_maKhachHang231KeyReleased(evt);
+            }
+        });
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Mã Khách Hàng :");
+
+        cbbTimKiemLoaiKhachHang_KhachHang231.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbbTimKiemLoaiKhachHang_KhachHang231.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbbTimKiemLoaiKhachHang_KhachHang231ItemStateChanged(evt);
             }
         });
 
@@ -1542,43 +1539,41 @@ public class TrangChu extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel88)
-                            .addComponent(jLabel89)
-                            .addComponent(jLabel90))
-                        .addGap(13, 13, 13)
+                        .addGap(85, 85, 85)
+                        .addComponent(ckbTimKiem_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(cbbTuoi_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbbTimKiemTuoi2_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel90, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                                    .addComponent(jLabel88, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtTimKiem_KhachHang231)
-                            .addComponent(cbbTimKiemLoaiKhachHang_KhachHang231, 0, 159, Short.MAX_VALUE)))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(ckbTimKiem_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                            .addComponent(txtTimKiem_maKhachHang231, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                            .addComponent(cbbTimKiemLoaiKhachHang_KhachHang231, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(ckbTimKiem_KhachHang231)
+                .addGap(16, 16, 16)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTimKiem_maKhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel88)
                     .addComponent(txtTimKiem_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel89)
-                    .addComponent(cbbTuoi_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbbTimKiemTuoi2_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel90)
                     .addComponent(cbbTimKiemLoaiKhachHang_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         cbbThang231.addItemListener(new java.awt.event.ItemListener() {
@@ -1704,7 +1699,7 @@ public class TrangChu extends javax.swing.JFrame {
                     .addComponent(btnXoa_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReset_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(348, Short.MAX_VALUE))
+                .addContainerGap(361, Short.MAX_VALUE))
             .addGroup(jPanel_KhachHang231Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel_KhachHang231Layout.createSequentialGroup()
                     .addGap(145, 145, 145)
@@ -1756,7 +1751,7 @@ public class TrangChu extends javax.swing.JFrame {
                                     .addComponent(cbbLoaiKhachHang_KhachHang231, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel_KhachHang231Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane25, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane25, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
                                     .addGroup(jPanel_KhachHang231Layout.createSequentialGroup()
                                         .addComponent(jLabel85)
                                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -3528,32 +3523,15 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_txtSDT_KhachHang231FocusLost
 
     private void txtTimKiem_KhachHang231KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTimKiem_KhachHang231KeyReleased
-
-    }//GEN-LAST:event_txtTimKiem_KhachHang231KeyReleased
-
-    private void cbbTuoi_KhachHang231ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbTuoi_KhachHang231ItemStateChanged
-
-    }//GEN-LAST:event_cbbTuoi_KhachHang231ItemStateChanged
-
-    private void cbbTuoi_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbTuoi_KhachHang231ActionPerformed
-        DefaultComboBoxModel cbbmodel = new DefaultComboBoxModel();
-        cbbTimKiemTuoi2_KhachHang231.setModel(cbbmodel);
-        for (int i = cbbTuoi_KhachHang231.getSelectedIndex() + 1; i < 80; i++) {
-            cbbTimKiemTuoi2_KhachHang231.addItem(String.valueOf(i));
+        if (ckbTimKiem_KhachHang231.isSelected()) {
+            TimKiemKhachHang("TenKhachHang like N'%" + txtTimKiem_KhachHang231.getText() + "%'");
+            ResKhachHang_231();
         }
-    }//GEN-LAST:event_cbbTuoi_KhachHang231ActionPerformed
-
-    private void cbbTimKiemLoaiKhachHang_KhachHang231ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbTimKiemLoaiKhachHang_KhachHang231ItemStateChanged
-
-    }//GEN-LAST:event_cbbTimKiemLoaiKhachHang_KhachHang231ItemStateChanged
+    }//GEN-LAST:event_txtTimKiem_KhachHang231KeyReleased
 
     private void ckbTimKiem_KhachHang231ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbTimKiem_KhachHang231ItemStateChanged
 
     }//GEN-LAST:event_ckbTimKiem_KhachHang231ItemStateChanged
-
-    private void cbbTimKiemTuoi2_KhachHang231ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbTimKiemTuoi2_KhachHang231ItemStateChanged
-
-    }//GEN-LAST:event_cbbTimKiemTuoi2_KhachHang231ItemStateChanged
 
     private void btnThem_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_KhachHang231ActionPerformed
         String MaKhachHang231, TenKhachHang231, NgaySinh231, GioiTinh231, DiaChi231, SDT231, LoaiKhachHang231, ChuThich231;
@@ -4814,12 +4792,7 @@ public class TrangChu extends javax.swing.JFrame {
         for (int i = year; i > 1950; i--) {
             cbbNam231.addItem(String.valueOf(i));
         }
-        for (int i = 1; i < 70; i++) {
-            cbbTuoi_KhachHang231.addItem(String.valueOf(i));
-        }
-        for (int i = 1; i < 70; i++) {
-            cbbTimKiemTuoi2_KhachHang231.addItem(String.valueOf(i));
-        }
+        
         cbbTimKiemLoaiKhachHang_KhachHang231.setModel(LayDuLieucbb("LoaiKhachHang", "TenLoaiKhachHang", "MaLoaiKhachHang"));
     }//GEN-LAST:event_jPanel_KhachHangComponentShown
 
@@ -4908,59 +4881,70 @@ public class TrangChu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtTimKiem_KhachHang231ActionPerformed
 
-    private void cbbTimKiemLoaiKhachHang_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbTimKiemLoaiKhachHang_KhachHang231ActionPerformed
-        // TODO add your handling code here:
-        if (ckbTimKiem_KhachHang231.isSelected()) {
-            TimKiemKhachHang("LoaiKhachHang= " + GetCbbSelected(cbbTimKiemLoaiKhachHang_KhachHang231));
-            ResKhachHang_231();
-        }
-    }//GEN-LAST:event_cbbTimKiemLoaiKhachHang_KhachHang231ActionPerformed
-
-    private void cbbTimKiemTuoi2_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbTimKiemTuoi2_KhachHang231ActionPerformed
-        // TODO add your handling code here:
-        if (ckbTimKiem_KhachHang231.isSelected()) {
-
-            TimKiemKhachHang("year(Getdate())-  year(Ngaysinh) >"
-                    + " " + cbbTuoi_KhachHang231.getSelectedItem().toString() + " and year(Getdate())- "
-                    + " year(Ngaysinh)<" + cbbTimKiemTuoi2_KhachHang231.getSelectedItem().toString());
-            ResKhachHang_231();
-        }
-    }//GEN-LAST:event_cbbTimKiemTuoi2_KhachHang231ActionPerformed
-
     private void ckbTimKiem_KhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ckbTimKiem_KhachHang231ActionPerformed
         // TODO add your handling code here:
         if (ckbTimKiem_KhachHang231.isSelected()) {
             layDuLieuKhachHang_231();
         }
     }//GEN-LAST:event_ckbTimKiem_KhachHang231ActionPerformed
-    public void TimKiemKhachHang(String wheretk) {
-        String cautruyvan = "";
 
-        cautruyvan = "select * from KhachHang,LoaiKhachHang "
-                + "where KhachHang.LoaiKhachHang=LoaiKhachHang.MaLoaiKhachHang and " + wheretk;
-        ResultSet rs = main.connection.ExcuteQueryGetTable(cautruyvan);
-        Object[] obj = new Object[]{"STT", "Mã Khách Hàng", "Tên Khách Hàng", "Ngày Sinh", "Giới Tính", "Dịa Chỉ", "SDT", "Loại Khách Hàng", "Chú Thích"};
-        DefaultTableModel tableModel = new DefaultTableModel(obj, 0);
-        tblKhachHang_KhachHang231.setModel(tableModel);
-        int c = 0;
+    private void txtTimKiem_maKhachHang231ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTimKiem_maKhachHang231ActionPerformed
+       
+    }//GEN-LAST:event_txtTimKiem_maKhachHang231ActionPerformed
+
+    private void txtTimKiem_maKhachHang231KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTimKiem_maKhachHang231KeyReleased
+        // TODO add your handling code here:
+        if (ckbTimKiem_KhachHang231.isSelected()) {
+            TimKiemKhachHang("MaKhachHang like N'%" + txtTimKiem_maKhachHang231.getText() + "%'");
+            ResKhachHang_231();
+        }
+    }//GEN-LAST:event_txtTimKiem_maKhachHang231KeyReleased
+
+    private void txtTimKiem_maKhachHang231MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTimKiem_maKhachHang231MouseClicked
+        txtTimKiem_KhachHang231.setText("");
+        
+    }//GEN-LAST:event_txtTimKiem_maKhachHang231MouseClicked
+
+    private void txtTimKiem_KhachHang231MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTimKiem_KhachHang231MouseClicked
+         txtTimKiem_maKhachHang231.setText("");
+    }//GEN-LAST:event_txtTimKiem_KhachHang231MouseClicked
+
+    private void cbbTimKiemLoaiKhachHang_KhachHang231ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbTimKiemLoaiKhachHang_KhachHang231ItemStateChanged
+        if (ckbTimKiem_KhachHang231.isSelected()) {
+            TimKiemKhachHang("LoaiKhachHang= " + GetCbbSelected(cbbTimKiemLoaiKhachHang_KhachHang231));
+            txtTimKiem_maKhachHang231.setText("");
+            txtTimKiem_KhachHang231.setText("");
+            ResKhachHang_231();
+        }
+    }//GEN-LAST:event_cbbTimKiemLoaiKhachHang_KhachHang231ItemStateChanged
+    public void TimKiemKhachHang(String wheretk231) {
+        String cautruyvan231 = "";
+
+        cautruyvan231 = "select * from KhachHang,LoaiKhachHang "
+                + "where KhachHang.LoaiKhachHang=LoaiKhachHang.MaLoaiKhachHang and " + wheretk231;
+        ResultSet rs231 = main.connection.ExcuteQueryGetTable(cautruyvan231);
+        Object[] obj231 = new Object[]{"STT", "Mã Khách Hàng", "Tên Khách Hàng", "Ngày Sinh", "Giới Tính", "Dịa Chỉ", "SDT", "Loại Khách Hàng", "Chú Thích"};
+        DefaultTableModel tableModel231 = new DefaultTableModel(obj231, 0);
+        tblKhachHang_KhachHang231.setModel(tableModel231);
+        int c231 = 0;
         try {
-            while (rs.next()) {
-                c++;
-                Object[] item = new Object[9];
-                item[0] = c;
-                item[1] = rs.getInt("MaKhachHang");
-                item[2] = rs.getString("TenKhachHang");
-                item[3] = rs.getString("NgaySinh");
-                if (rs.getInt("GioiTinh") == 1) {
-                    item[4] = "Nam";
+            while (rs231.next()) {
+                c231++;
+                Object[] item231 = new Object[9];
+                item231[0] = c231;
+                item231[1] = rs231.getInt("MaKhachHang");
+                item231[2] = rs231.getString("TenKhachHang");
+                item231[3] = rs231.getString("NgaySinh");
+                if (rs231.getInt("GioiTinh") == 1) {
+                    item231[4] = "Nam";
                 } else {
-                    item[4] = "Nữ";
+                    item231[4] = "Nữ";
                 }
-                item[5] = rs.getString("DiaChi");
-                item[6] = rs.getString("SDT");
-                item[7] = rs.getString("TenLoaiKhachHang");
-                item[8] = rs.getString("GhiChu");
-                tableModel.addRow(item);
+                item231[5] = rs231.getString("DiaChi");
+                item231[6] = rs231.getString("SDT");
+                item231[7] = rs231.getString("TenLoaiKhachHang");
+                item231[8] = rs231.getString("GhiChu");
+                tableModel231.addRow(item231);
             }
         } catch (SQLException ex) {
             System.out.println(ex.toString());
@@ -5282,7 +5266,6 @@ public class TrangChu extends javax.swing.JFrame {
     }
 
     public void ResKhachHang_231() {
-        String MaKhachHang231, TenKhachHang231, NgaySinh231, GioiTinh231, DiaChi231, SDT231, LoaiKhachHang231, ChuThich231;
         txtMaKhachHang_KhachHang231.setText("");
         txtTenKhachHang_KhachHang231.setText("");
         cbbNgay231.setSelectedIndex(1);
@@ -5292,6 +5275,7 @@ public class TrangChu extends javax.swing.JFrame {
         txtSDT_KhachHang231.setText("");
         txtGhiChu_KhachHang231.setText("");
     }
+ 
 
     public void layDuLieuDoiTac() {
         String cautruyvan231 = "";
@@ -5681,8 +5665,6 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbbThang_PhieuNhap_235;
     private javax.swing.JComboBox<String> cbbTimKiemLoaiKhachHang_KhachHang231;
     private javax.swing.JComboBox<String> cbbTimKiemLoaiSanPham_SanPham_235;
-    private javax.swing.JComboBox<String> cbbTimKiemTuoi2_KhachHang231;
-    private javax.swing.JComboBox<String> cbbTuoi_KhachHang231;
     private javax.swing.JCheckBox ckbTimKiem_KhachHang231;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -5694,6 +5676,7 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -5745,7 +5728,6 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel85;
     private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JPanel jPanel1;
@@ -5898,6 +5880,7 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JTextField txtTimKiem_KhachHang231;
     private javax.swing.JTextField txtTimKiem_NhanVien_361;
     private javax.swing.JTextField txtTimKiem_SanPham235;
+    private javax.swing.JTextField txtTimKiem_maKhachHang231;
     private javax.swing.JTextField txtTonKho_SanPham_235;
     private javax.swing.JTextField txtTongTienCTPN_PhieuNhap_235;
     private javax.swing.JTextField txtTongTien_ChiTietHoaDon326;
