@@ -1960,7 +1960,7 @@
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="67" max="32767" attributes="0"/>
+                                  <EmptySpace pref="108" max="32767" attributes="0"/>
                                   <Component id="btnXoa_KhachHang231" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="btnReset_KhachHang231" min="-2" max="-2" attributes="0"/>
@@ -4205,7 +4205,7 @@
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                   <Component id="jScrollPane10" min="-2" pref="224" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jPanel14" alignment="1" pref="275" max="32767" attributes="0"/>
+                              <Component id="jPanel14" alignment="1" pref="295" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -4231,6 +4231,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JTable" name="tblHoaDon_HoaDon326">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                        </Property>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="7" rowCount="10">
                             <Column editable="false" title="STT" type="java.lang.Object"/>
@@ -4261,6 +4264,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JTable" name="tblCTHoaDon_ChiTietHoaDon326">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                        </Property>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="7" rowCount="4">
                             <Column editable="true" title="STT" type="java.lang.Object"/>
@@ -4479,6 +4485,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JTextArea" name="txtGhiChu_HoaDon326">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                            </Property>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
                           </Properties>
@@ -4487,6 +4496,9 @@
                     </Container>
                     <Component class="javax.swing.JButton" name="btnThem_HoaDon326">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="33" red="33" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Th&#xea;m "/>
                       </Properties>
                       <Events>
@@ -4495,6 +4507,9 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="btnXoa_HoaDon326">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="33" red="33" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="X&#xf3;a"/>
                       </Properties>
                       <Events>
@@ -4503,6 +4518,9 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="btnSua_HoaDon326">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="33" red="33" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
                       </Properties>
                       <Events>
@@ -4511,6 +4529,9 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="btnReset_HoaDon326">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="33" red="33" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Reset"/>
                       </Properties>
                       <Events>
@@ -4726,6 +4747,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JTextArea" name="txtGhiChu_ChiTietHoaDon326">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                            </Property>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
                           </Properties>
@@ -4734,6 +4758,9 @@
                     </Container>
                     <Component class="javax.swing.JButton" name="btnThem_ChiTietHoaDon326">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="33" red="33" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
                       </Properties>
                       <Events>
@@ -4742,6 +4769,9 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="btnXoa_ChiTietHoaDon326">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="33" red="33" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="X&#xf3;a"/>
                       </Properties>
                       <Events>
@@ -4750,6 +4780,9 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="btnSua_ChiTietHoaDon326">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="33" red="33" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
                       </Properties>
                       <Events>
@@ -4758,6 +4791,9 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="btnReset_ChiTietHoaDon326">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="33" red="33" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Reset"/>
                       </Properties>
                       <Events>
