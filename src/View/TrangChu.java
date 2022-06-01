@@ -236,6 +236,7 @@ public class TrangChu extends javax.swing.JFrame {
         tblNhanVien_ChucVu_361 = new javax.swing.JTable();
         jLabel10 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        btnXoa_ChucVu150 = new javax.swing.JButton();
         jPanelTaiKhoan1 = new javax.swing.JPanel();
         jScrollPane29 = new javax.swing.JScrollPane();
         tblTaiKhoan_TaiKhoan_361 = new javax.swing.JTable();
@@ -486,6 +487,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        tblSanPham_235.setBackground(new java.awt.Color(255, 255, 204));
         tblSanPham_235.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -576,6 +578,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
+        bntQuayLai_150.setBackground(new java.awt.Color(204, 204, 255));
         bntQuayLai_150.setText("Quay Lại");
         bntQuayLai_150.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -738,6 +741,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
+        tblLoaiSanPham_LoaiSanPham_235.setBackground(new java.awt.Color(255, 255, 204));
         tblLoaiSanPham_LoaiSanPham_235.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -868,6 +872,7 @@ public class TrangChu extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(153, 204, 255));
 
+        tblSanPham_LoaiSanPham_235.setBackground(new java.awt.Color(255, 204, 204));
         tblSanPham_LoaiSanPham_235.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -962,6 +967,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
+        tblChiTietPhieuNhap_PhieuNhap_235.setBackground(new java.awt.Color(255, 204, 204));
         tblChiTietPhieuNhap_PhieuNhap_235.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -985,6 +991,7 @@ public class TrangChu extends javax.swing.JFrame {
         });
         jScrollPane14.setViewportView(tblChiTietPhieuNhap_PhieuNhap_235);
 
+        tblPhieuNhap_PhieuNhap_235.setBackground(new java.awt.Color(255, 255, 204));
         tblPhieuNhap_PhieuNhap_235.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -1405,6 +1412,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
+        tblKhachHang_KhachHang231.setBackground(new java.awt.Color(255, 255, 204));
         tblKhachHang_KhachHang231.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         tblKhachHang_KhachHang231.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1826,6 +1834,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
+        tblNhanVien_NhanVien_361.setBackground(new java.awt.Color(255, 255, 204));
         tblNhanVien_NhanVien_361.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -2005,7 +2014,7 @@ public class TrangChu extends javax.swing.JFrame {
                             .addComponent(cbbChucVu_NhanVien_361, 0, 169, Short.MAX_VALUE)))
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                         .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(39, 39, 39)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2211,6 +2220,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
+        tblChucVu_ChucVu_361.setBackground(new java.awt.Color(255, 255, 204));
         tblChucVu_ChucVu_361.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -2340,6 +2350,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        tblNhanVien_ChucVu_361.setBackground(new java.awt.Color(255, 204, 204));
         tblNhanVien_ChucVu_361.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -2374,6 +2385,16 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(0, 51, 225));
         jLabel15.setText("Nhân Viên");
 
+        btnXoa_ChucVu150.setBackground(new java.awt.Color(255, 255, 0));
+        btnXoa_ChucVu150.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnXoa_ChucVu150.setForeground(new java.awt.Color(255, 0, 0));
+        btnXoa_ChucVu150.setText("Xóa Nếu Rổng");
+        btnXoa_ChucVu150.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoa_ChucVu150ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelChucVu1Layout = new javax.swing.GroupLayout(jPanelChucVu1);
         jPanelChucVu1.setLayout(jPanelChucVu1Layout);
         jPanelChucVu1Layout.setHorizontalGroup(
@@ -2390,12 +2411,17 @@ public class TrangChu extends javax.swing.JFrame {
                             .addGroup(jPanelChucVu1Layout.createSequentialGroup()
                                 .addGap(254, 254, 254)
                                 .addComponent(jLabel15)))
-                        .addGap(32, 32, 32)
-                        .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanelChucVu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelChucVu1Layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelChucVu1Layout.createSequentialGroup()
+                                .addGap(148, 148, 148)
+                                .addComponent(btnXoa_ChucVu150, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanelChucVu1Layout.createSequentialGroup()
                         .addGap(275, 275, 275)
                         .addComponent(jLabel10)))
-                .addContainerGap(360, Short.MAX_VALUE))
+                .addContainerGap(348, Short.MAX_VALUE))
         );
         jPanelChucVu1Layout.setVerticalGroup(
             jPanelChucVu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2404,7 +2430,9 @@ public class TrangChu extends javax.swing.JFrame {
                 .addGroup(jPanelChucVu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelChucVu1Layout.createSequentialGroup()
                         .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 322, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnXoa_ChucVu150)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanelChucVu1Layout.createSequentialGroup()
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2412,7 +2440,7 @@ public class TrangChu extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel15)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane28, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane28, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
                         .addGap(89, 89, 89))))
         );
 
@@ -2425,6 +2453,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
+        tblTaiKhoan_TaiKhoan_361.setBackground(new java.awt.Color(255, 255, 204));
         tblTaiKhoan_TaiKhoan_361.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -2642,6 +2671,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
+        tblDoiTac_DoiTac231.setBackground(new java.awt.Color(255, 255, 204));
         tblDoiTac_DoiTac231.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -2673,7 +2703,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel1.setText("Nhà phân phối");
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thay đổi thông tin đối tác ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 0, 0))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thay đổi thông tin đối tác ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 0, 0))); // NOI18N
 
         jLabel75.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -2883,7 +2913,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
-        tblHoaDon_HoaDon326.setBackground(new java.awt.Color(204, 204, 255));
+        tblHoaDon_HoaDon326.setBackground(new java.awt.Color(255, 255, 204));
         tblHoaDon_HoaDon326.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -2916,7 +2946,7 @@ public class TrangChu extends javax.swing.JFrame {
         });
         jScrollPane10.setViewportView(tblHoaDon_HoaDon326);
 
-        tblCTHoaDon_ChiTietHoaDon326.setBackground(new java.awt.Color(204, 204, 255));
+        tblCTHoaDon_ChiTietHoaDon326.setBackground(new java.awt.Color(255, 204, 204));
         tblCTHoaDon_ChiTietHoaDon326.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -2976,7 +3006,7 @@ public class TrangChu extends javax.swing.JFrame {
         txtGhiChu_HoaDon326.setRows(5);
         jScrollPane16.setViewportView(txtGhiChu_HoaDon326);
 
-        btnThem_HoaDon326.setBackground(new java.awt.Color(51, 51, 255));
+        btnThem_HoaDon326.setBackground(new java.awt.Color(204, 204, 255));
         btnThem_HoaDon326.setText("Thêm ");
         btnThem_HoaDon326.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2984,7 +3014,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
-        btnXoa_HoaDon326.setBackground(new java.awt.Color(51, 51, 255));
+        btnXoa_HoaDon326.setBackground(new java.awt.Color(153, 255, 153));
         btnXoa_HoaDon326.setText("Xóa");
         btnXoa_HoaDon326.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2992,7 +3022,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
-        btnSua_HoaDon326.setBackground(new java.awt.Color(51, 51, 255));
+        btnSua_HoaDon326.setBackground(new java.awt.Color(255, 153, 153));
         btnSua_HoaDon326.setText("Sửa");
         btnSua_HoaDon326.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3000,7 +3030,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
-        btnReset_HoaDon326.setBackground(new java.awt.Color(51, 51, 255));
+        btnReset_HoaDon326.setBackground(new java.awt.Color(102, 204, 255));
         btnReset_HoaDon326.setText("Reset");
         btnReset_HoaDon326.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3038,7 +3068,7 @@ public class TrangChu extends javax.swing.JFrame {
                                 .addComponent(txtMaPhieuMua_HoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(47, 47, 47)
                                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(236, Short.MAX_VALUE))
+                                .addContainerGap(233, Short.MAX_VALUE))
                             .addGroup(jPanel14Layout.createSequentialGroup()
                                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(txtTongTien_HoaDon326)
@@ -3127,7 +3157,7 @@ public class TrangChu extends javax.swing.JFrame {
         txtGhiChu_ChiTietHoaDon326.setRows(5);
         jScrollPane17.setViewportView(txtGhiChu_ChiTietHoaDon326);
 
-        btnThem_ChiTietHoaDon326.setBackground(new java.awt.Color(51, 51, 255));
+        btnThem_ChiTietHoaDon326.setBackground(new java.awt.Color(204, 204, 255));
         btnThem_ChiTietHoaDon326.setText("Thêm");
         btnThem_ChiTietHoaDon326.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3135,7 +3165,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
-        btnXoa_ChiTietHoaDon326.setBackground(new java.awt.Color(51, 51, 255));
+        btnXoa_ChiTietHoaDon326.setBackground(new java.awt.Color(153, 255, 153));
         btnXoa_ChiTietHoaDon326.setText("Xóa");
         btnXoa_ChiTietHoaDon326.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3143,7 +3173,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
-        btnSua_ChiTietHoaDon326.setBackground(new java.awt.Color(51, 51, 255));
+        btnSua_ChiTietHoaDon326.setBackground(new java.awt.Color(255, 153, 153));
         btnSua_ChiTietHoaDon326.setText("Sửa");
         btnSua_ChiTietHoaDon326.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3151,7 +3181,7 @@ public class TrangChu extends javax.swing.JFrame {
             }
         });
 
-        btnReset_ChiTietHoaDon326.setBackground(new java.awt.Color(51, 51, 255));
+        btnReset_ChiTietHoaDon326.setBackground(new java.awt.Color(102, 204, 255));
         btnReset_ChiTietHoaDon326.setText("Reset");
         btnReset_ChiTietHoaDon326.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3207,7 +3237,7 @@ public class TrangChu extends javax.swing.JFrame {
                                                     .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(txtMaHoaDon_ChiTietHoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(txtMaCTH_ChiTietHoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 14, Short.MAX_VALUE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -3225,7 +3255,7 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMaCTPM, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtMaCTH_ChiTietHoaDon326, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3295,7 +3325,7 @@ public class TrangChu extends javax.swing.JFrame {
                         .addComponent(jLabel35)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE))
+                    .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelHoaDon326Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelHoaDon326Layout.createSequentialGroup()
@@ -3463,7 +3493,7 @@ public class TrangChu extends javax.swing.JFrame {
                     Logger.getLogger(TrangChu.class.getName()).log(Level.SEVERE, null, ex);
                 }
             } else {
-                ThongBao("bạn chưa chọn hóa đơn để xóa", "xóa bằng niềm tin à!khi không biết xóa cái nào", 2);
+                ThongBao("bạn chưa chọn hóa đơn để xóa", "Lỗi", 2);
             }
         }
     }//GEN-LAST:event_btnXoa_HoaDon326ActionPerformed
@@ -3483,9 +3513,9 @@ public class TrangChu extends javax.swing.JFrame {
             boolean kiemtra = KiemTraNhapHoaDon326(1);
             if (kiemtra) {
                 main.connection.ExcuteQueryUpdateDB(cautruyvan);
-                System.out.println("Đã Thêm Thành Công");
+                System.out.println("Đã Sửa Thành Công");
             } else {
-                ThongBao("Không thể ", "Thêm Hóa Đơn", 2);
+                ThongBao("Sửa Thất Bại ", "Lỗi", 2);
             }
             LayDuLieuHoaDon();
         }
@@ -4128,7 +4158,7 @@ public class TrangChu extends javax.swing.JFrame {
                 Logger.getLogger(TrangChu.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
-            ThongBao("bạn chưa click chuột vô bảng!", "làm ơn! hãy chứng minh bạn còn khả năng của cánh tay!!", 2);
+            ThongBao("bạn chưa click chuột vô bảng!", "Lỗi!!", 2);
         }
     }//GEN-LAST:event_btnXoa_LoaiSanPham_235ActionPerformed
 
@@ -4242,7 +4272,7 @@ public class TrangChu extends javax.swing.JFrame {
                 Logger.getLogger(TrangChu.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
-            ThongBao("bạn chưa chọn Phiếu nhập để xóa", "xóa bằng niềm tin à!khi không biết xóa cái nào", 2);
+            ThongBao("bạn chưa chọn Phiếu nhập để xóa", "Lỗi", 2);
         }
     }//GEN-LAST:event_btnXoa_PhieuNhap_235ActionPerformed
 
@@ -4460,7 +4490,7 @@ public class TrangChu extends javax.swing.JFrame {
             main.connection.ExcuteQueryUpdateDB(cautruyvan);
             System.out.println("Đã sửa Thành Công");
         } else {
-            ThongBao("Không thể Thêm ", "lỗi", 2);
+            ThongBao("Không thể Sửa ", "lỗi", 2);
         }
         LayDuLieuChiTietPhieuNhap(txtMaPhieuNhap_CTPN_235.getText());
     }//GEN-LAST:event_btnSuaCTPN_PhieuNhap_235ActionPerformed
@@ -4697,7 +4727,7 @@ public class TrangChu extends javax.swing.JFrame {
                 System.out.println(ex.toString());
             }
         } else {
-            ThongBao("bạn chưa nhập mã nhân viên", "lỗi khi cố xóa nhân viên mà chưa click chuột vô anh ấy", 2);
+            ThongBao("bạn chưa nhập mã nhân viên", "lỗi ", 2);
         }
     }//GEN-LAST:event_btnXoa_NhanVien_361ActionPerformed
     public void ResNhanVien_361() {
@@ -5191,6 +5221,34 @@ public class TrangChu extends javax.swing.JFrame {
             layDuLieuNhanVien_361();
         }
     }//GEN-LAST:event_rbtnTenNhanVien_NhanVien_361ItemStateChanged
+
+    private void btnXoa_ChucVu150ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_ChucVu150ActionPerformed
+        String MaCV150 = txtMaChucVu_ChucVu_361.getText();
+        if (!MaCV150.equals("")) {
+            String cautruyvan150 = "delete ChucVu where MaChucVu=" + MaCV150;
+            String ctvKiemThu150 =  "select count(MaNhanVien) as SoSanPham from NhanVien,ChucVu "
+                + "where NhanVien.ChucVu=ChucVu.MaChucVu and ChucVu=" + MaCV150;
+            ResultSet rs1_150 = main.connection.ExcuteQueryGetTable(ctvKiemThu150);
+            System.out.println(ctvKiemThu150);
+            int so1_150 = 0;
+            try {
+                if (rs1_150.next()) {
+                    so1_150 = rs1_150.getInt("SoSanPham");
+                    if (rs1_150.getInt("SoSanPham") == 0) {
+                        main.connection.ExcuteQueryUpdateDB(cautruyvan150);
+                        System.out.println("đã xóa");
+                        layDuLieuChucVu_361();
+                    } else {
+                        ThongBao("không thể xóa bởi Chức Vụ đã có " + so1_150 + " Nhân Viên !", "báo lỗi", 2);
+                    }
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(TrangChu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            ThongBao("bạn chưa click chuột vô bảng!", "Lỗi!!", 2);
+        }
+    }//GEN-LAST:event_btnXoa_ChucVu150ActionPerformed
     public void TimKiemKhachHang(String wheretk231) {
         String cautruyvan231 = "";
 
@@ -5953,6 +6011,7 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JButton btnThem_TaiKhoan_361;
     private javax.swing.JButton btnXoaXTPN_PhieuNhap_235;
     private javax.swing.JButton btnXoa_ChiTietHoaDon326;
+    private javax.swing.JButton btnXoa_ChucVu150;
     private javax.swing.JButton btnXoa_DoiTac231;
     private javax.swing.JButton btnXoa_HoaDon326;
     private javax.swing.JButton btnXoa_KhachHang231;
