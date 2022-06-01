@@ -5784,7 +5784,7 @@ public class TrangChu extends javax.swing.JFrame {
             lblTongTien_HoaDon.setForeground(Color.black);
         } else {
             kiemtra = false;
-            ThongBao(ThongBao326, "lỗi nhập liệu", 2);
+            ThongBao(ThongBao326, "lỗi nhập dữ liệu", 2);
         }
         return kiemtra;
     }

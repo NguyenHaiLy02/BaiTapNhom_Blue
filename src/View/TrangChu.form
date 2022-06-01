@@ -1944,7 +1944,7 @@
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jScrollPane25" pref="135" max="32767" attributes="0"/>
+                                              <Component id="jScrollPane25" pref="139" max="32767" attributes="0"/>
                                               <Group type="102" attributes="0">
                                                   <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -3329,7 +3329,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                               <Component id="btnXoaNeuRong_ChucVu_361" min="-2" pref="37" max="-2" attributes="0"/>
-                              <EmptySpace pref="105" max="32767" attributes="0"/>
+                              <EmptySpace pref="176" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -4183,7 +4183,7 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jPanel14" pref="226" max="32767" attributes="0"/>
+                                  <Component id="jPanel14" pref="273" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel19" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -4316,7 +4316,7 @@
                                               <Component id="txtMaPhieuMua_HoaDon326" min="-2" pref="142" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                               <Component id="jLabel33" min="-2" pref="66" max="-2" attributes="0"/>
-                                              <EmptySpace pref="199" max="32767" attributes="0"/>
+                                              <EmptySpace pref="206" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -4583,7 +4583,7 @@
                                       <Component id="btnSua_ChiTietHoaDon326" min="-2" pref="96" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="btnReset_ChiTietHoaDon326" min="-2" pref="90" max="-2" attributes="0"/>
-                                      <EmptySpace pref="49" max="32767" attributes="0"/>
+                                      <EmptySpace pref="55" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -4592,7 +4592,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="24" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel36" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
