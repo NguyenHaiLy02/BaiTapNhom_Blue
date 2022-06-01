@@ -1960,7 +1960,7 @@
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="108" max="32767" attributes="0"/>
+                                  <EmptySpace pref="110" max="32767" attributes="0"/>
                                   <Component id="btnXoa_KhachHang231" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="btnReset_KhachHang231" min="-2" max="-2" attributes="0"/>
@@ -2524,7 +2524,7 @@
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Component id="jLabel54" min="-2" pref="66" max="-2" attributes="0"/>
-                                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                       <Component id="jScrollPane19" min="-2" pref="169" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3069,17 +3069,14 @@
                                       </Group>
                                   </Group>
                                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jPanel26" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jPanel23" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jPanel23" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="275" max="-2" attributes="0"/>
                                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="314" max="32767" attributes="0"/>
+                          <EmptySpace pref="360" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3090,9 +3087,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jPanel23" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                                  <Component id="jPanel26" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                  <EmptySpace min="21" pref="322" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
@@ -3292,50 +3287,6 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="jPanel26">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="cc" red="99" type="rgb"/>
-                    </Property>
-                  </Properties>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-                              <Component id="btnXoaNeuRong_ChucVu_361" min="-2" pref="191" max="-2" attributes="0"/>
-                              <EmptySpace pref="111" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="btnXoaNeuRong_ChucVu_361" min="-2" pref="37" max="-2" attributes="0"/>
-                              <EmptySpace pref="176" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JButton" name="btnXoaNeuRong_ChucVu_361">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="66" green="33" red="ff" type="rgb"/>
-                        </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="11" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="X&#xf3;a N&#x1ebf;u R&#x1ed7;ng"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnXoaNeuRong_ChucVu_361ActionPerformed"/>
-                      </Events>
-                    </Component>
-                  </SubComponents>
-                </Container>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane28">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -3428,7 +3379,7 @@
                           <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jScrollPane29" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="130" max="32767" attributes="0"/>
+                          <EmptySpace pref="140" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -4205,7 +4156,7 @@
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                   <Component id="jScrollPane10" min="-2" pref="224" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jPanel14" alignment="1" pref="295" max="32767" attributes="0"/>
+                              <Component id="jPanel14" alignment="1" pref="298" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -4330,7 +4281,7 @@
                                               <Component id="txtMaPhieuMua_HoaDon326" min="-2" pref="142" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                                               <Component id="jLabel33" min="-2" pref="66" max="-2" attributes="0"/>
-                                              <EmptySpace pref="240" max="32767" attributes="0"/>
+                                              <EmptySpace pref="236" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -4620,7 +4571,7 @@
                                                               </Group>
                                                           </Group>
                                                       </Group>
-                                                      <EmptySpace type="unrelated" pref="18" max="32767" attributes="0"/>
+                                                      <EmptySpace type="unrelated" pref="14" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -4648,7 +4599,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="22" max="32767" attributes="0"/>
+                              <EmptySpace pref="21" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="lblMaCTPM" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                   <Component id="txtMaCTH_ChiTietHoaDon326" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4850,7 +4801,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="633" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="642" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
