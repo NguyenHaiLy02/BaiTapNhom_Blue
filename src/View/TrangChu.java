@@ -3492,15 +3492,15 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void btnSua_HoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_HoaDon326ActionPerformed
         {
-            String MaHoaDon, MaKhachHang, MaNhanVien, NgayLapHoaDon, TongTien, ChuThich;
-            MaHoaDon = txtMaPhieuMua_HoaDon326.getText();
-            MaKhachHang = GetCbbSelected(cbbKhachHang_HoaDon326);
-            MaNhanVien = GetCbbSelected(cbbNhanVien_HoaDon326);
-            NgayLapHoaDon = txtNgayLapHoaDon_HoaDon326.getText();
-            TongTien = txtTongTien_HoaDon326.getText();
-            ChuThich = txtGhiChu_HoaDon326.getText();
-            String cautruyvan = "update HoaDon set MaKhachHang=" + MaKhachHang + ",TongTien="
-                    + TongTien + ",NgayLapHoaDon='" + NgayLapHoaDon + "',GhiChu=N'" + ChuThich + "' where MaHoaDon=" + MaHoaDon;
+            String MaHoaDon326, MaKhachHang326, MaNhanVien326, NgayLapHoaDon326, TongTien326, ChuThich326;
+            MaHoaDon326 = txtMaPhieuMua_HoaDon326.getText();
+            MaKhachHang326 = GetCbbSelected(cbbKhachHang_HoaDon326);
+            MaNhanVien326 = GetCbbSelected(cbbNhanVien_HoaDon326);
+            NgayLapHoaDon326 = txtNgayLapHoaDon_HoaDon326.getText();
+            TongTien326 = txtTongTien_HoaDon326.getText();
+            ChuThich326 = txtGhiChu_HoaDon326.getText();
+            String cautruyvan = "update HoaDon set MaKhachHang=" + MaKhachHang326 + ",TongTien="
+                    + TongTien326 + ",NgayLapHoaDon='" + NgayLapHoaDon326 + "',GhiChu=N'" + ChuThich326 + "' where MaHoaDon=" + MaHoaDon326;
             System.out.println(cautruyvan);
             boolean kiemtra = KiemTraNhapHoaDon326(1);
             if (kiemtra) {
@@ -3531,13 +3531,13 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void btnThem_ChiTietHoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_ChiTietHoaDon326ActionPerformed
         {
-            String MaHoaDon, MaSanPham, SoLuong, TongTien, ChuThich;
-            MaHoaDon = txtMaHoaDon_ChiTietHoaDon326.getText();
-            MaSanPham = GetCbbSelected(cbbSanPham_ChiTietHoaDon326);
-            SoLuong = txtSoLuong_ChiTietHoaDon326.getText();
-            TongTien = txtTongTien_ChiTietHoaDon326.getText();
-            ChuThich = txtGhiChu_ChiTietHoaDon326.getText();
-            String cautruyvan = "insert into ChiTietHoaDon(MaHoaDon, MaSanPham, SoLuong, TongTien, GhiChu) values(" + MaHoaDon + "," + MaSanPham + "," + SoLuong + "," + TongTien + ",N'" + ChuThich + "')";
+            String MaHoaDon326, MaSanPham326, SoLuong326, TongTien326, ChuThich326;
+            MaHoaDon326 = txtMaHoaDon_ChiTietHoaDon326.getText();
+            MaSanPham326 = GetCbbSelected(cbbSanPham_ChiTietHoaDon326);
+            SoLuong326 = txtSoLuong_ChiTietHoaDon326.getText();
+            TongTien326 = txtTongTien_ChiTietHoaDon326.getText();
+            ChuThich326 = txtGhiChu_ChiTietHoaDon326.getText();
+            String cautruyvan = "insert into ChiTietHoaDon(MaHoaDon, MaSanPham, SoLuong, TongTien, GhiChu) values(" + MaHoaDon326 + "," + MaSanPham326 + "," + SoLuong326 + "," + TongTien326 + ",N'" + ChuThich326 + "')";
             System.out.println(cautruyvan);
             boolean kiemtra = KiemTraNhapChiTietHoaDon(0);
             if (kiemtra) {
@@ -3546,8 +3546,8 @@ public class TrangChu extends javax.swing.JFrame {
             } else {
                 System.out.println("thất bại");
             }
-            LayDuLieuChiTietHoaDon(MaHoaDon);
-            SetTongTien(MaHoaDon);
+            LayDuLieuChiTietHoaDon(MaHoaDon326);
+            SetTongTien(MaHoaDon326);
         }
     }//GEN-LAST:event_btnThem_ChiTietHoaDon326ActionPerformed
 

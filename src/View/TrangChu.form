@@ -1960,7 +1960,7 @@
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="25" max="32767" attributes="0"/>
+                                  <EmptySpace pref="67" max="32767" attributes="0"/>
                                   <Component id="btnXoa_KhachHang231" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="btnReset_KhachHang231" min="-2" max="-2" attributes="0"/>
@@ -2425,7 +2425,7 @@
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                          <Component id="jPanel22" min="-2" pref="351" max="-2" attributes="0"/>
+                                          <Component id="jPanel22" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jPanel18" max="32767" attributes="0"/>
                                       </Group>
@@ -2524,7 +2524,7 @@
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Component id="jLabel54" min="-2" pref="66" max="-2" attributes="0"/>
-                                      <EmptySpace pref="24" max="32767" attributes="0"/>
+                                      <EmptySpace pref="25" max="32767" attributes="0"/>
                                       <Component id="jScrollPane19" min="-2" pref="169" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -2834,7 +2834,7 @@
                                       <Component id="cbbThangVaoLam_NhanVien_361" min="-2" pref="66" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="cbbNamVaoLam_NhanVien_361" min="-2" pref="71" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="24" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -4205,7 +4205,7 @@
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                   <Component id="jScrollPane10" min="-2" pref="224" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jPanel14" alignment="1" pref="256" max="32767" attributes="0"/>
+                              <Component id="jPanel14" alignment="1" pref="275" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -4324,7 +4324,7 @@
                                               <Component id="txtMaPhieuMua_HoaDon326" min="-2" pref="142" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                                               <Component id="jLabel33" min="-2" pref="66" max="-2" attributes="0"/>
-                                              <EmptySpace pref="233" max="32767" attributes="0"/>
+                                              <EmptySpace pref="240" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -4599,7 +4599,7 @@
                                                               </Group>
                                                           </Group>
                                                       </Group>
-                                                      <EmptySpace type="unrelated" max="32767" attributes="0"/>
+                                                      <EmptySpace type="unrelated" pref="18" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -4627,7 +4627,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="22" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="lblMaCTPM" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                   <Component id="txtMaCTH_ChiTietHoaDon326" alignment="3" min="-2" max="-2" attributes="0"/>
