@@ -3541,37 +3541,37 @@ public class TrangChu extends javax.swing.JFrame {
     private void btnXoa_ChiTietHoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_ChiTietHoaDon326ActionPerformed
     {                                                     
 
-        String MaHoaDon = txtMaHoaDon_ChiTietHoaDon326.getText();
+        String MaHoaDon326 = txtMaHoaDon_ChiTietHoaDon326.getText();
         String MaChiTietHoaDon = txtMaCTH_ChiTietHoaDon326.getText();
         String cautruyvan = "delete ChiTietHoaDon where MaCTHD=" + MaChiTietHoaDon;
         Main.main.connection.ExcuteQueryUpdateDB(cautruyvan);
         System.out.println("đã xóa");
-        LayDuLieuChiTietHoaDon(MaHoaDon);
-        SetTongTien(MaHoaDon);
+        LayDuLieuChiTietHoaDon(MaHoaDon326);
+        SetTongTien(MaHoaDon326);
     }                                                   
     }//GEN-LAST:event_btnXoa_ChiTietHoaDon326ActionPerformed
 
     private void btnSua_ChiTietHoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_ChiTietHoaDon326ActionPerformed
      {                                                     
-        String MaHoaDon, MaChiTietHoaDon, MaSanPham, SoLuong, TongTien, GhiChu;
-        MaChiTietHoaDon = txtMaCTH_ChiTietHoaDon326.getText();
-        MaHoaDon = txtMaHoaDon_ChiTietHoaDon326.getText();
-        MaSanPham = GetCbbSelected(cbbSanPham_ChiTietHoaDon326);
-        SoLuong = txtSoLuong_ChiTietHoaDon326.getText();
-        GhiChu = txtGhiChu_ChiTietHoaDon326.getText();
-        TongTien = txtTongTien_ChiTietHoaDon326.getText();
-        String cautruyvan = "update  ChiTietHoaDon set MaSanPham=" + MaSanPham + ",SoLuong=" + SoLuong + ",TongTien="
-        + TongTien + ",GhiChu=N'" + GhiChu + "' where MaCTHD=" + MaChiTietHoaDon;
+        String MaHoaDon326, MaChiTietHoaDon326, MaSanPham326, SoLuong326, TongTien326, GhiChu326;
+        MaChiTietHoaDon326 = txtMaCTH_ChiTietHoaDon326.getText();
+        MaHoaDon326 = txtMaHoaDon_ChiTietHoaDon326.getText();
+        MaSanPham326 = GetCbbSelected(cbbSanPham_ChiTietHoaDon326);
+        SoLuong326 = txtSoLuong_ChiTietHoaDon326.getText();
+        GhiChu326 = txtGhiChu_ChiTietHoaDon326.getText();
+        TongTien326 = txtTongTien_ChiTietHoaDon326.getText();
+        String cautruyvan = "update  ChiTietHoaDon set MaSanPham=" + MaSanPham326 + ",SoLuong=" + SoLuong326 + ",TongTien="
+        + TongTien326 + ",GhiChu=N'" + GhiChu326 + "' where MaCTHD=" + MaChiTietHoaDon326;
         System.out.println(cautruyvan);
         boolean kiemtra = KiemTraNhapChiTietHoaDon(1);
-        if (kiemtra && !MaChiTietHoaDon.equals("")) {
+        if (kiemtra && !MaChiTietHoaDon326.equals("")) {
             main.connection.ExcuteQueryUpdateDB(cautruyvan);
             System.out.println("Đã sửa Thành Công");
         } else {
             System.out.println("thất bại");
         }
-        LayDuLieuChiTietHoaDon(MaHoaDon);
-        SetTongTien(MaHoaDon);
+        LayDuLieuChiTietHoaDon(MaHoaDon326);
+        SetTongTien(MaHoaDon326);
     }                                                    
     }//GEN-LAST:event_btnSua_ChiTietHoaDon326ActionPerformed
 
