@@ -3565,7 +3565,7 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSua_ChiTietHoaDon326ActionPerformed
 
     private void btnReset_ChiTietHoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_ChiTietHoaDon326ActionPerformed
-    
+    reset_chitiethoadon();
     }//GEN-LAST:event_btnReset_ChiTietHoaDon326ActionPerformed
 
     private void txtSoLuong_ChiTietHoaDon326KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSoLuong_ChiTietHoaDon326KeyPressed
