@@ -3412,6 +3412,7 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void txtTongTien_HoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTongTien_HoaDon326ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtTongTien_HoaDon326ActionPerformed
 
     private void btnThem_HoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_HoaDon326ActionPerformed
@@ -3505,19 +3506,66 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_cbbSanPham_ChiTietHoaDon326ItemStateChanged
 
     private void btnThem_ChiTietHoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem_ChiTietHoaDon326ActionPerformed
-
+     {                                                      
+        String MaHoaDon, MaSanPham, SoLuong, TongTien, ChuThich;
+        MaHoaDon = txtMaHoaDon_ChiTietHoaDon326.getText();
+        MaSanPham = GetCbbSelected(cbbSanPham_ChiTietHoaDon326);
+        SoLuong = txtSoLuong_ChiTietHoaDon326.getText();
+        TongTien = txtTongTien_ChiTietHoaDon326.getText();
+        ChuThich = txtGhiChu_ChiTietHoaDon326.getText();
+        String cautruyvan = "insert into ChiTietHoaDon(MaHoaDon, MaSanPham, SoLuong, TongTien, GhiChu) values(" + MaHoaDon + "," + MaSanPham + "," + SoLuong + "," + TongTien + ",N'" + ChuThich + "')";
+        System.out.println(cautruyvan);
+        boolean kiemtra = KiemTraNhapChiTietHoaDon(0);
+        if (kiemtra) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+            System.out.println("Đã Thêm Thành Công");
+        } else {
+            System.out.println("thất bại");
+        }
+        LayDuLieuChiTietHoaDon(MaHoaDon);
+        SetTongTien(MaHoaDon);
+    }                                                     
     }//GEN-LAST:event_btnThem_ChiTietHoaDon326ActionPerformed
 
     private void btnXoa_ChiTietHoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_ChiTietHoaDon326ActionPerformed
+    {                                                     
 
+        String MaHoaDon = txtMaHoaDon_ChiTietHoaDon326.getText();
+        String MaChiTietHoaDon = txtMaCTH_ChiTietHoaDon326.getText();
+        String cautruyvan = "delete ChiTietHoaDon where MaCTHD=" + MaChiTietHoaDon;
+        Main.main.connection.ExcuteQueryUpdateDB(cautruyvan);
+        System.out.println("đã xóa");
+        LayDuLieuChiTietHoaDon(MaHoaDon);
+        SetTongTien(MaHoaDon);
+    }                                                   
     }//GEN-LAST:event_btnXoa_ChiTietHoaDon326ActionPerformed
 
     private void btnSua_ChiTietHoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_ChiTietHoaDon326ActionPerformed
-
+     {                                                     
+        String MaHoaDon, MaChiTietHoaDon, MaSanPham, SoLuong, TongTien, GhiChu;
+        MaChiTietHoaDon = txtMaCTH_ChiTietHoaDon326.getText();
+        MaHoaDon = txtMaHoaDon_ChiTietHoaDon326.getText();
+        MaSanPham = GetCbbSelected(cbbSanPham_ChiTietHoaDon326);
+        SoLuong = txtSoLuong_ChiTietHoaDon326.getText();
+        GhiChu = txtGhiChu_ChiTietHoaDon326.getText();
+        TongTien = txtTongTien_ChiTietHoaDon326.getText();
+        String cautruyvan = "update  ChiTietHoaDon set MaSanPham=" + MaSanPham + ",SoLuong=" + SoLuong + ",TongTien="
+        + TongTien + ",GhiChu=N'" + GhiChu + "' where MaCTHD=" + MaChiTietHoaDon;
+        System.out.println(cautruyvan);
+        boolean kiemtra = KiemTraNhapChiTietHoaDon(1);
+        if (kiemtra && !MaChiTietHoaDon.equals("")) {
+            main.connection.ExcuteQueryUpdateDB(cautruyvan);
+            System.out.println("Đã sửa Thành Công");
+        } else {
+            System.out.println("thất bại");
+        }
+        LayDuLieuChiTietHoaDon(MaHoaDon);
+        SetTongTien(MaHoaDon);
+    }                                                    
     }//GEN-LAST:event_btnSua_ChiTietHoaDon326ActionPerformed
 
     private void btnReset_ChiTietHoaDon326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReset_ChiTietHoaDon326ActionPerformed
-
+    
     }//GEN-LAST:event_btnReset_ChiTietHoaDon326ActionPerformed
 
     private void txtSoLuong_ChiTietHoaDon326KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSoLuong_ChiTietHoaDon326KeyPressed
@@ -4718,6 +4766,27 @@ public class TrangChu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_cbbThangSinh_NhanVien_361ItemStateChanged
 
+     public void SetTongTien(String MaHoaDon) {
+        String cautruyvan = "select sum(ChiTietHoaDon.TongTien) as TongTienHienTai,HoaDon.MaHoaDon from HoaDon,ChiTietHoaDon "
+                + "where HoaDon.MaHoaDon=ChiTietHoaDon.MaHoaDon"
+                + " and HoaDon.MaHoaDon=" + MaHoaDon + "group by HoaDon.MaHoaDon";
+        ResultSet rs = Main.main.connection.ExcuteQueryGetTable(cautruyvan);
+        String ttht = "";
+
+        try {
+            if (rs.next()) {
+                ttht = rs.getString("TongTienHienTai");
+                txtTongTien_HoaDon326.setText(ttht);
+                String ctv = "update HoaDon set TongTien= " + ttht + "where MaHoaDon=" + MaHoaDon;
+                System.out.println(ctv);
+                main.connection.ExcuteQueryUpdateDB(ctv);
+                LayDuLieuHoaDon();
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+
+    }
     private void cbbThangVaoLam_NhanVien_361ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbThangVaoLam_NhanVien_361ItemStateChanged
         // TODO add your handling code here:
         String thang_361 = cbbThangVaoLam_NhanVien_361.getSelectedItem().toString();
@@ -5262,7 +5331,45 @@ public class TrangChu extends javax.swing.JFrame {
             System.out.println(ex.toString());
         }
     }
-
+     public boolean KiemTraNhapChiTietHoaDon(int ts) {
+        String MaHoaDon, MaChiTietHoaDon, SanPham, SoLuong,ThongBao="";
+        boolean kiemtra = false;
+        MaHoaDon = txtMaPhieuMua_HoaDon326.getText();
+        MaChiTietHoaDon = txtMaCTH_ChiTietHoaDon326.getText();
+        SanPham =  GetCbbSelected(cbbSanPham_ChiTietHoaDon326);
+          SoLuong = txtSoLuong_ChiTietHoaDon326.getText();
+        if (MaChiTietHoaDon.equals("") && ts == 1) {
+            ThongBao += "bạn chưa chọn Hóa Đơn để lấy  Mã Hóa Dơn\n";
+            lblMaCTPM.setForeground(Color.red);
+        }
+        if (MaHoaDon.equals("")) {
+            ThongBao += "bạn chưa chon trong hóa đơn nào cả\n";
+            lblMaHoaDon.setForeground(Color.red);
+        }
+        if (SoLuong.equals("")) {
+            ThongBao += "bạn chưa Nhập Số Lượng"
+                    + "\n";
+             lblSoLuong_CTPM.setForeground(Color.red);
+        }
+            try {
+                int bien=Integer.valueOf(SoLuong);
+            } catch (Exception e) {
+                 ThongBao += "Số lượng phải nhập Bằng số"
+                    + "\n";
+                
+            }
+      
+        if (ThongBao.equals("")) {
+            kiemtra = true;
+            lblSoLuong_CTPM.setForeground(Color.black);
+            lblMaHoaDon.setForeground(Color.black);
+            lblMaCTPM.setForeground(Color.black);
+        } else {
+            kiemtra = false;
+            ThongBao(ThongBao, "lỗi nhập liệu", 2);
+        }
+        return kiemtra;
+    }
     public String GetCbbSelected(JComboBox cbb) {
         Object[] obj = cbb.getSelectedObjects();
         displayvalueModel item = (displayvalueModel) obj[0];
