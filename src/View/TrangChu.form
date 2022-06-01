@@ -2736,6 +2736,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="T&#xea;n Nh&#xe2;n Vi&#xea;n"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="rbtnTenNhanVien_NhanVien_361ItemStateChanged"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JRadioButton" name="rbtnMaNhanVien_NhanVien_361">
                           <Properties>
@@ -2747,6 +2750,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="M&#xe3; Nh&#xe2;n Vi&#xea;n"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="rbtnMaNhanVien_NhanVien_361ItemStateChanged"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -4310,7 +4316,7 @@
                                               <Component id="txtMaPhieuMua_HoaDon326" min="-2" pref="142" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                               <Component id="jLabel33" min="-2" pref="66" max="-2" attributes="0"/>
-                                              <EmptySpace pref="202" max="32767" attributes="0"/>
+                                              <EmptySpace pref="199" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -4577,7 +4583,7 @@
                                       <Component id="btnSua_ChiTietHoaDon326" min="-2" pref="96" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="btnReset_ChiTietHoaDon326" min="-2" pref="90" max="-2" attributes="0"/>
-                                      <EmptySpace pref="57" max="32767" attributes="0"/>
+                                      <EmptySpace pref="49" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -4586,7 +4592,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="23" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel36" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
