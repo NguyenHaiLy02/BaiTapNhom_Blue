@@ -3440,7 +3440,7 @@ public class TrangChu extends javax.swing.JFrame {
         ChuThich = txtGhiChu_HoaDon326.getText();
         String cautruyvan = "insert into HoaDon(MaKhachHang,MaNhanVien,TongTien,GhiChu) values(" + MaKhachHang + "," + MaNhanVien + "," + 0 + ",N'" + ChuThich + "')";
         System.out.println(cautruyvan);
-        boolean kiemtra = KiemTraNhapHoaDon(0);
+        boolean kiemtra = KiemTraNhapHoaDon326(0);
         if (kiemtra) {
             main.connection.ExcuteQueryUpdateDB(cautruyvan);
             System.out.println("Đã Thêm Thành Công");
@@ -3493,7 +3493,7 @@ public class TrangChu extends javax.swing.JFrame {
         String cautruyvan = "update HoaDon set MaKhachHang=" + MaKhachHang + ",TongTien="
         + TongTien + ",NgayLapHoaDon='" + NgayLapHoaDon + "',GhiChu=N'" + ChuThich + "' where MaHoaDon=" + MaHoaDon;
         System.out.println(cautruyvan);
-        boolean kiemtra = KiemTraNhapHoaDon(1);
+        boolean kiemtra = KiemTraNhapHoaDon326(1);
         if (kiemtra) {
             main.connection.ExcuteQueryUpdateDB(cautruyvan);
             System.out.println("Đã Thêm Thành Công");
@@ -5679,40 +5679,40 @@ public class TrangChu extends javax.swing.JFrame {
             System.out.println(ex.toString());
         }
     }
-      public boolean KiemTraNhapHoaDon(int ts) {
-        String MaHoaDon, MaNhanVien, KhachHang, NgayLap, TongTien,ThongBao="";
+      public boolean KiemTraNhapHoaDon326(int ts) {
+        String MaHoaDon326, MaNhanVien326, KhachHang326, NgayLap326, TongTien326,ThongBao326="";
         boolean kiemtra = false;
-        MaHoaDon = txtMaPhieuMua_HoaDon326.getText();
-        MaNhanVien = GetCbbSelected(cbbNhanVien_HoaDon326);
+        MaHoaDon326 = txtMaPhieuMua_HoaDon326.getText();
+        MaNhanVien326 = GetCbbSelected(cbbNhanVien_HoaDon326);
         
-        KhachHang =  GetCbbSelected(cbbKhachHang_HoaDon326);
-        NgayLap = txtNgayLapHoaDon_HoaDon326.getText();
-          TongTien = txtTongTien_HoaDon326.getText();
-        if (MaHoaDon.equals("") && ts == 1) {
-            ThongBao += "bạn chưa chọn Hóa Đơn để lấy  Mã Hóa Dơn\n";
+        KhachHang326 =  GetCbbSelected(cbbKhachHang_HoaDon326);
+        NgayLap326 = txtNgayLapHoaDon_HoaDon326.getText();
+          TongTien326 = txtTongTien_HoaDon326.getText();
+        if (MaHoaDon326.equals("") && ts == 1) {
+            ThongBao326 += "bạn chưa chọn Hóa Đơn để lấy  Mã Hóa Dơn\n";
             lblMaHoaDon_HoaDon.setForeground(Color.red);
         }
-        if (MaNhanVien.equals("")) {
-            ThongBao += "bạn chưa Chọn Nhân Viên\n";
+        if (MaNhanVien326.equals("")) {
+            ThongBao326 += "bạn chưa Chọn Nhân Viên\n";
         }
-        if (KhachHang.equals("")) {
-            ThongBao += "bạn chưa Chọn Khách Hàng\n";
+        if (KhachHang326.equals("")) {
+            ThongBao326 += "bạn chưa Chọn Khách Hàng\n";
         }
-        if (NgayLap.equals("")) {
+        if (NgayLap326.equals("")) {
             lblNgayLap.setForeground(Color.red);
-            ThongBao += "bạn chưa Nhập Ngày Lập\n";
+            ThongBao326 += "bạn chưa Nhập Ngày Lập\n";
         }
-          if (TongTien.equals("")) {
+          if (TongTien326.equals("")) {
            txtTongTien_HoaDon326.setText("0");
         }
-        if (ThongBao.equals("")) {
+        if (ThongBao326.equals("")) {
             kiemtra = true;
             lblDiaChi_KhachHang231.setForeground(Color.black);
             lblNgayLap.setForeground(Color.black);
             lblTongTien_HoaDon.setForeground(Color.black);
         } else {
             kiemtra = false;
-            ThongBao(ThongBao, "lỗi nhập liệu", 2);
+            ThongBao(ThongBao326, "lỗi nhập liệu", 2);
         }
         return kiemtra;
     }
